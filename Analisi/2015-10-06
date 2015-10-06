@@ -1,0 +1,263 @@
+# Analisi I
+
+* elearning.unimib.it
+* diego.conti@unimib.it
+* Esercitazioni Lunedi 12:30-14:30
+	U1/10
+
+* G. Anichini, G. Conti - Analisi Matematica 1 - Pearson
+* Scritto Orale
+* Compitino a novembre * Matricole e chi segue il corso 
+	* Raccoglie firme 
+* Si puo seguire MZ
+
+## Numeri Interi e Razionali
+Identificati con l'insieme N = {1,2,3,...,N}
+Lo 0 non è nei numeri naturali
+
+Su questo insieme si definiscono due operazioni che sono sempre valide, derivate dal prodotto cartesiano. 
+Somma = NxN -> Somma(a,b) = a+b 
+Moltiplicazione = NxN -> Moltiplicazione(a,b) = a*b
+
+Sull'insieme N valogono alcune proprietà.
+Proprietà commutativa, associativa, distributiva
+
+Commutativa 
+Cambiando l'ordine degli operandi il risultato non cambia
+a+b = b+a
+a*b = b*a
+
+Associativa
+Cambiando l'ordine di esecuzione delle operazioni il risultato non cambia
+(a+b)+c = a+(b+c)
+a*(b*c) = (a*b)*c
+
+
+Distributiva
+(a+b)*c = ac+bc
+
+Nell'insieme N è prevista la presenza di un elemento neutro, almeno nel prodotto 
+Elemento neutro = numero e€N tale che A*e = A per ogni A€N
+
+
+Sull'insieme N è possibile definire una relazione di ordinamento
+Relazione di Ordinamento: dati due numeri naturali a,b posso dire quando a <= b
+
+Da questa relazione nascono diverse proprietà
+
+1) Se a<=b e b>=a allora a = b
+2) se a>=b e b>=c allora a<= c 
+3) Per ogni a,b o a<=b o b<=a
+
+
+Definizione Un insieme S con relazione di ordinamento e che soddisfa le tre condizioni si dice totalmente ordinato
+
+Ne deriva che ogni sottoinsieme di N è totalmente ordinato.
+
+?????  
+Che legame c'è tra ordinamento  che  > 0 -> non soddisfa il buon ordinamento perchè  { 1/n} non ha minimo
+Osservazione: grazie a il principio del buon oridnamento:
+Ogni sottoinsieme di N non vuoto ha un minimo.
+Q non può av
+Principio di induzione  -> ere il minimo perchè manca lo zerp
+N è l'unico che ha minimo tra  N e Q
+
+Se io prendo gli elementi di Q talic proprietà
+????
+
+Su N è quindi possibile definire delle condizioni di compatibilità:
+* Se a<=b e c€N allora (a+c)<=(b+c)
+* Se a<=b e c€N allora (a*c)<=(b*c)
+
+Principio del buon ordinamento
+Ogni insieme di numeri naturali non vuoto contiene un numero che è più piccolo di tutti gli altri.
+
+Visto che siamo in N non dobbiamo considerare il caso in cui c<0 che renderebbe non verificate le due condizioni di compatibilità
+
+Sempre per il fatto che siamo in N l'equazione n+x=m ha una sola soluzione se e solo se m > n. Ovvio perchè non ci sono i numeri negativi 
+
+Ogni insieme di numeri naturali non vuoto contiene un numero che è più piccolo di tutti gli altri.
+
+Se prendo un insieme qualunque che ha la somma, il prodotto, l'ordinamento ho soltanto N o ci sono altri insiemi che hanno queste caratteristiche? Mi accorgo che ci sono altri insiemi che hanno queste proprietà (esempio Q)! 
+
+
+Manca quindi una proprietà che caratterizza N! Anche Q soddisfa le condizioni sopra citate!  
+Q = numeri razionali = numeri con la virgola positivi 
+
+
+Il principio di induzione è qeuivalente a quello del buon ordinamento
+Il secondo è vero se e solo se è vero il primo
+
+Principio di induzione
+Il principio d'induzione è un enunciato sui numeri naturali che in matematica trova un ampio impiego nelle dimostrazioni, per provare che una certa proprietà è valida per tutti i numeri interi. 
+	L'idea intuitiva alla sua base è l'"effetto domino": affinché le tessere da domino disposte lungo una fila cadano tutte sono sufficienti due condizioni:
+	* che cada la prima tessera
+	* che ogni tessera sia posizionata in modo tale che cadendo provochi la caduta della successiva.
+
+Il principio d'induzione estende quest'idea al caso in cui la fila sia composta da infinite tessere.  
+Sia P una proprietà che vale per il numero 0 e se P(n)->P(n+1) per ogni n allora P(n) vale per ogni N
+
+Definizione 
+Dato un insieme totalmente ordinato  S dove  S è <= (con uan relazione d'ordine) x è il minimo di S se x€S e per ogni y €S vale che x<=y
+
+????
+Capendo il minimo enuncio il rpincipio
+
+Principio di induzione 
+
+Sia Pn un ennciato che dipende da n€Nn è pari dipende n da n , puo' essere vero o falso
+
+Supponiamo p1 vero e che valga l'implicazione pn -> Pn+1 allora Pn è vero per ogni N  <- principio di induzione 
+Eseempio 
+
+Dimostriamo per induzione Pn  somma per 1 che va da 1 a n i = 1/2(n+1)n
+Enunciato che dipende da N 
+
+
+Verifichiamo se è vero P1: Somma i=1->1 = 1/2 (1+1) * 1 = 
+p1 è ok 
+
+Pn -> Pn+1 ?? 
+Pn [i=1->n i = 1/2 n(n+1)
+sommatoria n+1 = sommatoria n + (n+1)
+
+uasnSe vale per quello successivo oltre cher il primo allora è dimostrato 
+Dimostriamo il principio di induzione
+
+Prendiamo S = {n€N | Pn è falso} -> se fosse Pn insieme pari S = dispari
+
+Se S è vuoto non c'è nulla da dimostrare 
+
+Se S è vuoto Pn è sempre vero
+
+Se S non è vuoto per l principio del buon ordinamento ha per forza un minimo K -> Non puo' essere K = 1 perchè p1 è veroSe fosse k = 1 allora 1 € S e se 1 € S p1 è vero
+
+Essendo k>= 1 k-1 € N e k-1 non appartiene ad S 
+Allora se k-1 non sta in esse vuol dire che Pk-1 non è FALSO -> Pk-1 è vero-> Pk è vero per ipotesi
+Questo contraddice l'ipotesi perchè K € SQundi il caso S non vuoto non si verficia  
+
+Pausa
+???
+
+a+x=b ha soluzione in N se e solo se b>a 
+
+ax=b ha soluzione in N quando a è un divisore di b 
+Da cui ne deriva che x=b/a
+
+Z = {...,-1,0,1....} Insieme degli interi
+E' la più piccola estensione di N dove a+x=b ha sempre soluzione, indifferentemente dal segno di x e da a,b
+Z ha le stesse priorietà dei numeri naturali dal punto di vista del prodotto e della somma
+Z ha anche l'emento neutro  per la somma a+0 = 0+a = a per ogni a€z. Non c'era in N perchè lo 0 non era incluso. 
+Per la moltiplicazione il neutro è sempre 1.
+
+Su Z posso fare anche la differenza, dato a€Z esiste sempre un b€Z talee che a+b=0
+
+????
+Si scrive x=-a 
+b-a=b+(-a)
+
+Verifico che b-a soddisfa a+(b-a) = b
+
+E' la soluzone di a+x = b
+
+Voglio fare la stessa cosa con il prodotto
+Voglio fare ax=b non ha soluzone per a = 0 e b!= 0 
+ 
+Perchè 0x = 0 A sua volta discende da 1*x = 1+0 * x  = 1* + 0*x
+Posso sommare -(1*x) ad entrambi i termini 
+0 = 0 x
+????
+
+
+
+Q = {p/q | p,q € Z, q!=0 } = insieme dei razionali
+Ha le stesse proprietà di Z e inoltre per ogni (e non solo per i numeri divisibili) a!=0 esiste un x tale che ax = 1 x = 1/a
+
+????
+b/a = b (1*a) è una soluzione di ax=b -> a * b/a = a*b(1/a) = b(a(1/a)) = b * 1 = b
+????
+
+Considerazione: i razionali non vanno bene per l'analisi! 
+Supponiamo di voler misurare un segmento. Nei numeri razionali ci sono dei buchi. 
+Esempio con quadrato di lato 1: calcolare la diagonale. 
+
+Sia X la diagonale del quadrato di lato 1 
+x^2 = 1 + 1 = 2 
+Se x fosse razionale potrei scrivere x = p/q con p,q€Z e quindi p^2/q^2=2 <=> p^2=2q^2
+
+[Dimostrazione Wikipedia]
+2q^2 è pari, sempre
+e p^2 deve essere pari, visto che per ipotesi è uguale, p è pari perchè il quadrato di un dispari è dispari
+Esiste quindi un k per cui p=2k
+
+(2k)^2=2q^2
+2k^2=q^2
+2k^2 è pari e quindi anche q^2 è pari e q è pari
+che contraddice il fatto che p/q sia irriducibile, se sono entrambi pari si possono ridurre! sqrt(2) non puo' uscire da una frazione
+
+????
+[Teorema fondamentale dell'aritmetica]
+Preso un p lo posso scrivere come p = (2^k)*a, dove a è un numero dispari
+q = (2^h)*b con b numero dispari
+
+p^2 = 2^2k*a^2 = 2q^2 = 2*2^2h*b^2 
+2^2k*a^2 =2^2h+1*b^2
+????
+
+Ne deriva che 
+a^2 dispari e 
+b^2 anche 
+Ma uno ha una potenza pari e una dispari
+2k = 2h+1
+è assurdo: un pari non puo' essere uguale ad numero dispari
+Quindi x^2 = 2 non ha soluzioni 
+
+Definizione 
+AcQ è limitato superiormente se esiste un k€Q tale che ogni a€A, a<=k 
+Se k esiste si chiama maggiorante di A 
+Dato un AcQ non vuoto e limitato superiormente si dice estremo superiroe di A il minimo dei maggiornati, si indica con supA.
+Se A != 0 e non limitato superiormente -> si pone A=+inf
+
+Esempio 
+Prendiamo A = {x€Q|0<x<1}
+
+y è maggiorante di A se è un numero <= di tutto A 
+Che vuol dire y>x per ogni x€A
+
+A è limitato superiormente perchè -> k=2 è <= a per ogni a € A
+
+Se y€q, y>1 allora y è maggiorante o anche maggiore e uguale
+
+Per assurdo Se y < 1  metto y tra 0 e 1. Trovo un x tra y e 1 = 1/2(y+1) -> punto di mezzo tra y e 1
+Soddisfa x < 1 -> y non è maggiornate
+x > y e y non è maggiorante
+
+Se y è minore di 0 allora prendo un punto x tra 0 e 1 (esempio 1/2€A) da cui ne deriva che  x>y -> y non maggiorante
+
+I maggioranti di A sono {y€Q|y>=1}
+Esiste l'estremo superiore? Il minimo dei maggioranti?
+
+http://users.dma.unipi.it/berselli/dida/2008-09/infsup.pdf
+
+???????
+Se adesso 
+Esempio
+{x€Q | x^2 <= 2}
+Limitato superiormente  perchè per sempio 2  è un maggiorante
+Se x^se x€A x <= 2
+x
+
+Sia x € A, e per assurdo x > 2 allora x^2 >= 4 -> assurdo
+
+
+
+Riformuliamo 2 è maggiorante di A 
+PEr assurdo supponiamo che 2 non sia maggiornate allora non è vero che x <= 2 per ogni x € A Quindi esiste x€A tale che  x>2
+Allora se x> 2 ->  x^2>4 
+Assurdo perchè x^2 <= 2 
+A non ha estremo superiore in Q perchè è radice di 2 = minimo dei maggioranti
+
+Supponiamo che x è maggiorante allora x^2!=2
+se x^2<2  -> x+1/n)^2 = x^2+2/n+1/n^2
+se n è sufficientemente grane y=x+1/n -> y^2<2
+??????
