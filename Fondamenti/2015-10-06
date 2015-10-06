@@ -1,0 +1,33 @@
+# Fondamenti di Informatica
+
+
+Matematica Discreta
+Basata su elementi distinguibili tra di loro, cioè su un numero finito di elementi.
+Matematica del discontinuo e del numerabile
+
+Qualitativo e Quantitativo
+Qualitativo = "Bello" "Brutto"
+Quantitativo = 15, 20, 3.14
+	Discreto = Numeri interi 
+	Continuo = Incommensurabile: se ne occupa la fisica e l'analisi matematica
+
+I fenomeni reali sono generalmente discreti, tranne in rari casi. Allo stesso modo i sistemi informatici sono discreti, non si potrebbe fare altro. Ad esempio una curva (fenomeno continuo) viene tradotta in un insieme di N punti (quantificabili)
+
+Metodo matematica discreta
+Operazioni di classificazione
+Raggruppare oggetti/fenomeni in base a caratteristiche comuni
+
+Operazione di enumerazione
+Contare e dare un numero agli oggeti/fenomeni, a seconda di un indice
+
+Operazione di combinazione
+Permutare e cambiare gli oggetti/fenomeni (matrici, grafi)
+
+
+Logica
+Da logos, parola/pensiero
+Studio del ragionamento -> capire se le cose filano bene e se i ragionamenti sono validi
+
+Algebra Astratta
+Che studia le strutture algebrice
+Basata su gruppi, anelli, campi, spazi vettoriali
