@@ -1,0 +1,124 @@
+Teoria degli insiemi
+
+Contare
+Passare da un numero all'altro 
+
+Numeri Naturali
+Conformi alle leggi della natura
+Naturali perchè innati -> l'attività del contare dicono che è innata
+N = {0,1,2, ..., n, n+1, ...} = {0,1,2,...}
+
+N è inferiormente limitato da 0, ma non c'è un limite superiore
+N è costruibilie con la nozione di numero successore:
+* N è infinito
+* ogni numero ha un successivo
+* ogni numero ha un precedente, tranne lo 0
+* lo 0 è il minimo
+* non cè massimo
+
+N è costruibile con il principio di induzione:
+* Si parte da 0
+* Per ogni n c'è il successivo
+* nessun n è il successore di se stesso
+* nessun n ha più di un successore
+* nessun n è il successore di più di un n
+
+Successore di n = n+1
+
+Principio di induzione: sta alla base della programmazione ricorsiva e delle dimostrazioni in N
+
+Interi relativi
+Z {...,-n-1,-n,...,-1,0,1,...,n,n+1,...}
+Non c'è il minimo ne il massimo
+Non è limitato nè superiormente nè inferiormente 
+Include N = NcZ
+
+Due numeri si dicono concordi (m;n) se hanno lo stesso segno, altrimenti sono discordi (-m;n)
+Due numeri uguali aventi segno opposto si dicono opposti = -m;m
+Il modulo è una funzione che dato un n restituisce:
+* 0 se n è 0
+* -n se n è minore di 0
+* n se n è maggiroe di 0
+
+
+Razionali
+Insieme Q (quoto, quoziente)
+Esprimibili con una frazione (per questo la Q)
+p/q -> con p e q due numeri interi
+Include Z = ZcQ = NcZcQ
+
+Irrazionali
+Numeri decimali non periodici illimitati
+Non possono essere espressi con una f-razione
+Ad esempio le varie radici o pigreco
+Sono I=R-Q
+
+Reali
+Tutti i numeri che possono essere scritti in notazione decimale
+Usati per esprimere il continuo
+Ce ne sono infiniti e si posizionano tra altri due numeri reali
+
+Numeri complessi
+Numeri immaginari per fare operazioni altrimenti impossibili
+i = entità immaginaria = sqrt(-1)
+NcZcQcRcC
+
+Insieme
+Collezione, raccolta, aggregato = Concetto elementare ed innato che è difficile da spigare
+Insieme discreto
+Costituito da elementi numerabili isolati, non contigui/continui
+
+Proprietà di un insieme
+Regola che ci dice un oggetto appartiene oppure no all'insieme
+
+0 = insieme vuoto
+
+Diagramma di Eulero-Venn
+Modo di rappresentare insiemi
+
+x,y elemento di insieme
+X,Y insieme
+
+x=y oppure x!=y
+
+insieme A=A -> proprietà riflessiva
+A=B sse B=A ->  simmetria
+A=B e B=C -> A=C transitività
+
+Rappresentazione estensionale
+{x,y,z}
+{x,y,x} = {x,y} = {y,x}
+
+Singoletto
+Per ogni x esiste un {x} che contiene solo x
+
+0 = insieme vuoto
+
+Rappresentazione intensionale
+Mediante la proprietà
+S = {x|P} oppure {x:P}
+
+Appartenenza
+a€A oppure a!€A = vero funzionale
+
+Tutti e soli -> se gode di P è in S
+se è in S gode di P
+
+Sottoinsieme di A -> BcA oppure A)B
+Meglio BcA
+
+
+ScT = {x|se x € S allora x € T}
+S=T = {x|se x € S se e solo se x € T}
+
+Insieme potenza 
+{ X | Xc=S }
+Tutti i possiibli sottoinsiemi di S
+Esempio:
+{1,2} = {0,{1,2},{1},{2}} = 2^n elementi
+
+Proprietà di c=
+Sc=S per ogni insieme S
+Se S1c=S1 e S2c=S3 allora S1c=S3
+Ac=B e Bc=A -> A=B
+
