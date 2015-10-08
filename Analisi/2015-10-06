@@ -54,17 +54,6 @@ Definizione Un insieme S con relazione di ordinamento e che soddisfa le tre cond
 
 Ne deriva che ogni sottoinsieme di N è totalmente ordinato.
 
-?????  
-Che legame c'è tra ordinamento  che  > 0 -> non soddisfa il buon ordinamento perchè  { 1/n} non ha minimo
-Osservazione: grazie a il principio del buon oridnamento:
-Ogni sottoinsieme di N non vuoto ha un minimo.
-Q non può av
-Principio di induzione  -> ere il minimo perchè manca lo zerp
-N è l'unico che ha minimo tra  N e Q
-
-Se io prendo gli elementi di Q talic proprietà
-????
-
 Su N è quindi possibile definire delle condizioni di compatibilità:
 * Se a<=b e c€N allora (a+c)<=(b+c)
 * Se a<=b e c€N allora (a*c)<=(b*c)
@@ -168,14 +157,10 @@ Posso sommare -(1*x) ad entrambi i termini
 0 = 0 x
 ????
 
-
-
 Q = {p/q | p,q € Z, q!=0 } = insieme dei razionali
-Ha le stesse proprietà di Z e inoltre per ogni (e non solo per i numeri divisibili) a!=0 esiste un x tale che ax = 1 x = 1/a
+Ha le stesse proprietà di Z e inoltre per ogni (e non solo per i numeri divisibili) a!=0 esiste un x tale che ax = 1 e x=1/a
 
-????
 b/a = b (1*a) è una soluzione di ax=b -> a * b/a = a*b(1/a) = b(a(1/a)) = b * 1 = b
-????
 
 Considerazione: i razionali non vanno bene per l'analisi! 
 Supponiamo di voler misurare un segmento. Nei numeri razionali ci sono dei buchi. 
