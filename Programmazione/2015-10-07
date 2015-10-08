@@ -1,0 +1,52 @@
+# Programmazione 1 
+
+Concetto di astrazione
+Io ho un'idea in testa, al PC non posso comunicarla così come è, devo trasformarla.
+Ad esempio se io sto pensando al numero "20" al PC non posso comunicarlo come "20" ma devo trasformarlo in un "formato" che lui capisce, ad esempio il binario (1 e 0)
+
+Le "zone" su cui si lavora nell'informatica
+Lavoriamo su 3 zone
+
+1) Zona trascurabile
+Si lavora sui singoli componenti del PC e della CPU: porte logiche, giunzioni bipolari
+Nel corso di Programmazione 1 non le usiamo, non sappiamo come funzionano ed è già tanto che sappiamo che esistono.
+
+2) Zona intermedia
+Ad esempio concetti come la codifica di dati da Decimale a Binario o come i dati/file funzionano.
+Questi concetti vengono usati indirettamente nella programmazione, sono utili ad esempio per risolvere malfunzionamenti che ci potrebbero capitare o per definire meglio i programmi che andremo a scrivere.
+Pur non usandoli direttamente è importante conoscerli.
+
+3) Livello a cui lavoriamo
+Il terzo livello è quello dei linguaggi di programmazione. Noi li useremo direttamente e dovremmo anche sapere come funzionano. Useremo il linguaggio Java.
+
+
+Concetto di algoritmo
+Ci sono diverse definizioni. Quella semplice che va bene a noi è: serie di istruzioni dettagliate (molto specifiche e che non lasciano dubbi) ed eseguibili (a cui quindi corrisponde un cambiamento/conseguenza) per risolvere un problema (produrre un risultato). 
+Si deve astrarre un problema reale.
+
+Ad esempio
+Problema: lampeggiare un LED ogni secondo.
+Scriviamo un Algoritmo per astrarre il problema.
+Algoritmo: ->Avvio->Aspetta 1 secondo->Accendi il LED->Aspetta 1 secondo->Spegni il LED->Torna all'inizio->
+
+Il problema è che al PC non possiamo parlare in linguaggio naturale, come quello che usiamo per parlare tra di noi.
+E' necessario tradurre l'algoritmo in un linguaggio capibile dalla nostra CPU. 
+Inizialmente si può fare questo con un linguaggio di programmazione, ad esempio Java.
+
+Java è un linguaggio di programmazione di alto livello, molto astratto rispetto all'HW del PC.
+Si contrappone ai linguaggi a basso livello che sono notoriamente più difficili e complicati perchè sono molto vicini al PC (lavorano sui singoli componenti della CPU).
+
+Quando scriviamo un programma con un linguaggio di programmazione otteniamo un semplice file di testo, chiamato sorgente.
+La nostra CPU non può comprendere questo file di testo, è ancora scritto in un linguaggio troppo astratto. La nostra CPU comprende solo un linguaggio: quello delle istruzioni macchina (vedile come una serie di 1 e 0).
+
+C'è quindi da fare una trasformazione del linguaggio per passare dal linguaggio di programmazione (di alto livello) al codice macchina. Qui intervengono due strumenti importanti, un compilatore e un assemblatore.
+
+Il compilatore è un programma specifico al linguaggio che si sta usando e che "prende in pasto" un file sorgente. Il compilatore traduce il file sorgente scritto in linguaggio ad alto livello e lo traduce/trasforma in un linguaggio di basso livello, chiamato "Assembly": una via di mezzo tra l'alto livello e le istruzioni macchina. La macchina non può ancora capire questo Assembly perchè è ancora troppo "di alto livello" per la CPU. L'assembly è specifico al tipo di processore/macchina che stai usando.
+
+Interviene quindi un altro strumento/programma chiamato assemblatore. Questo programma prende l'assembly precedentemente generato e le trasforma in istruzioni macchina, che il nostro PC può finalmente eseguire.
+
+Tutto ciò funziona per i linguaggi tradizionali (ad esempio il C o C++) ma Java non è tradizionale e quindi funziona in modo leggermente diverso. 
+
+Il compilatore di Java prende il programma sorgente (di alto livello) e lo trasforma in Bytecode, una specie di assembly universale, un linguaggio di basso livello utilizzabile da tutte le macchine che supportano Java. Ma come è possibile questa cosa? L'assembly non dovrebbe essere specifico per ogni piattaforma? Il bytecode prodotto da Java non viene eseguito dalla CPU (e non passa direttamente da un assemblatore) ma da un Software chiamato JVM (Java Virtual Machine). La JVM è un software che è capace di eseguire programmi Bytecode indipendentemente dalla piattaforma/CPU su cui è installata. La JVM è anche chiamata interprete perchè interpreta un programma bytecode e lo esegue in modo compatibile alla piattaforma su cui è installata. La JVM è "platform specific": dipende dalla CPU/Tipologia sistema su cui la si sta usando.
+
+
