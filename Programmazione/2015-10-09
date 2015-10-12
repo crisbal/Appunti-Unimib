@@ -1,0 +1,108 @@
+AL non fa esercitazione lunedi
+
+
+PROG1516
+
+Rappresentazione dell'informazione
+
+Obiettivo: prima riga di codcie 
+
+Conversione -> deciciale binario
+
+1 = 00000001
+2 = 00000010
+
+Attraverlo pa rappresentazione a potenze
+
+1 = 0*2^7+0*2^6 etc
+
+
+La tabella rappresenta solo nmeri interi positivi
+Metodo piu' semplice di conversione
+
+Non è programma di esame
+
+
+Se in linguaggio naturale ho 255 (11111111) cosa succede se aggiungo 1??? Se ho solo 8 bit? In bianrio non c'è il 256 con 8 bit, si avrebbe un errore.
+255 fa 0 non 256!!!!
+Fa 0 perchè è binario 11-> 100 ma noi abbiamo 8 bit non si puo' aggiungere un bit aggiuntivo di riporto
+
+IN java di solito 32bit, da 2 miliardi a -2 miliardi -> se si vuole il segno, altrimenti 4 miliardi
+Qui non si ragiona in aritmetica, siamo in basso livello
+
+1 bit è un informazione o accesa o spenta
+
+Codifica dei caratteri
+Il carattere alla fine deve essere tradotto in un numero, il CPU non conosce caratteri. PEr una corrispondenza tra carattere grafico e numero binario in memoria.
+Esempio codifica ascii.
+
+y bit per carattere
+MA ci sono scelte varie e diverse, esempio unicode usa piu0 bit. A seconda delle necessità
+
+
+Unicode è standard java.
+
+Fino a 64 bit, ospita tutti i caratteri del mondo, anche lettere cinesi, arabi, cirillico, simboli vari etc.
+
+Ascii 7 bit
+128 caratteri disponibili 2^7 
+C sono 52 lettere (minuscole e maiuscole)
+10 cifre
+segni di punteggiatura
+operatori aritmetici
+carratteri speciali !"£$%
+Ascii esteso = 8 bit
+Con le lettere accentate e non è molto standard, varia da OS e da paese
+
+Si puo' fare da ascci a binario e binario ad ascii guardando la tabella e facendo conversione
+
+
+LA programmazione Java
+Concetto di JVM
+Interprete, traduce dal byte al codice macchina, platform specific
+E' una scatola chiusa, mi interessa il comportamento 
+
+pc HelloWorld
+
+	psvm
+		Sout("hello wrld")
+
+
+Case sensitive!!!
+
+Comilazione javac HellowWordl
+
+-> .class
+
+
+java HelloWrld no estensione!!!
+
+
+AProle chiave
+Tonde se si aprono vanno chiuse
+Nome senza spazi
+Tra virgolette qualsiasi sequenza di caratteri 
+
+
+Se non faccio le cose ene rischio errori
+ad esempio
+
+Grammaticali:
+se sbaglio a scrivere qualche termine, il compilatore capisce se le parole scritte vanno bene, se scrivo "pint" invece ceh print
+Non si compila se non si rispetta la grammatica
+^^^^ Errori SINTATTICI ^^^^
+
+Altri errori Run.Time 
+Errori nelle istruzioni mentre si eseguono: divisione per 0, appoure 127+1 se si lavora con 8 bit
+
+Oppure apro un file che non esiste
+
+Errori logici
+Il programma va, non  da errori, ma non fa quello che voglio
+Difficile trovare 
+Difficili da individuare, va rivistoi l programma unto per punto (o nei punti in cui c'è il problema)
+
+Identificatori: parole chiave
+Kojo per Java
+
+Scala
