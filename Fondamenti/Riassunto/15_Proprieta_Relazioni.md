@@ -9,7 +9,7 @@ Una **relazione binaria** $R$ (con Dominio $S$) puo' soddisfare le seguenti prop
 * **Antisimmetrica**, cioè che se $\langle x,y\rangle \in R$ e $\langle y,x\rangle \in R$ possiamo dire che $x = y$  
 * **Transitiva**, cioè se $\langle x,y\rangle \in R$ e $\langle y,z\rangle in R$ c'è anche $\langle x,z\rangle \in R$
 
-###Chiarimenti sulla proprietà Antisimmetrica
+## Chiarimenti sulla proprietà Antisimmetrica
 
 Se $x$ in relazione con $y$ e $y$ in relazione con $x$ allora $x=y$
 
@@ -21,7 +21,7 @@ La relazione e' antisimmetrica perche' perche' se un numero e' maggiore od ugual
 
 Nella rappresentazione a Grafi si capisce che è antisimmetrica perchè ha cicli di lunghezza massima 1 (Solo cappi ammessi)
 
-### Proposizioni derivate dalle proprietà
+## Proposizioni derivate dalle proprietà
 
 Dalla *riflessiva*:
 
@@ -43,3 +43,4 @@ Dall' *antisimmetrica*:
 Dalla *transitiva*:
 
 * Se $R$ e $R'$ sono transitive anche $R \cap R'$ è transitiva
+

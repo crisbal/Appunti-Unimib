@@ -1,7 +1,7 @@
 # Metodi di rappresentazione delle relazioni
 
 ## Tabella
-Le **relazioni n-arie** (cioè di *arietà pari a n*) possono essere *sempre* rappresentate mediante una **tabella**. La tabella a $n$ colonne. In particolare se la relazione da rappresentare (che chiamiamo $R$) è un sottoinsieme del prodotto cartesiano S
+Le **relazioni n-arie** (cioè di *arietà pari a n*) possono essere *sempre* rappresentate mediante una **tabella**. La tabella ha $n$ colonne. In particolare se la relazione da rappresentare (che chiamiamo $R$) è un sottoinsieme del prodotto cartesiano S *todo*
 
 
 ## Matrice
@@ -22,7 +22,7 @@ Un arco che va da $vi$ a $vj$ si dice **uscente** da $vi$ ed **entrante** in $vj
 Il **numero di archi uscenti** da un nodo è detto il **grado di uscita** del nodo. 
 Il **numero di archi entranti** da un nodo è detto il **grado di entrata** del nodo.
 
-**Nodo Sorgente** sefile_base_name non ha archi entranti. 
+**Nodo Sorgente** se non ha archi entranti. 
 **Nodo Pozzo** se non ha archi uscenti. 
 
 *Aggiungere cose sulle matrici*
@@ -58,3 +58,4 @@ $G$ è una relazione binaria.
 * Se $G$  è **simmetrica**  allora ogni volta che nel grafo c'è un arco tra due nodi c'è anche quello che va in direzione opposta. Similmente se è **asimmetrica** se un arco congiunge due nodi non c'è mai il suo opposto.
 
 * Se $G$ è **transitiva** allora ogni volta che nel grafo associato abbiamo una situazione $v1->v2 , v2->v3$ (si potrebbe dire che ci sono archi di fila tra tre nodi) ci sarà per forza anche un arco che collega v1 a v3 (che chiude il triangolo v1,v2,v3).
+

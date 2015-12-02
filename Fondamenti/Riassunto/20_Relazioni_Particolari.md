@@ -31,6 +31,7 @@ Un esempio di relazione di equivalenza è data dalla seguente.
 $R = { \langle a,b \rangle € Z | a^2=b^2 }$
 
 Essa infatti è:
+
 * *binaria* (ci sono due "termini" coinvolti nella relazione, $a$ e $b$)
 * *riflessiva* ($n^2 = n^2$ per ogni $n € Z$)
 * *simmetrica* (se $n^2=m^2$ anche $m^2=n^2$ per ogni $m,n € Z$ )
@@ -40,7 +41,7 @@ Essa infatti è:
 
 Data una relazione di equivalenza $R$ su un insieme $S$, la **classse di equivalenza** di un elemento $x€S$ è definita come 
 
-$[x] = {y|\langle x,y \rangle € R$
+$[x] = {y|\langle x,y \rangle € R}$
 
 Cioè la **classe di equivalenza** di un elemento $x€R$ è **l'insieme degli elementi di $R$ con cui $x$ si relaziona**.
 

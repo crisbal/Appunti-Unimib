@@ -1,3 +1,4 @@
-## Strutture Relazionali
+# Strutture Relazionali
 
 Definiamo una *struttura relazionale* come 
+
