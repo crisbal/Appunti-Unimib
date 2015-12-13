@@ -34,7 +34,7 @@ Un **quasi-ordine** è una struttura relazionale data da una coppia $\pangle{S,R
 
 Un **poset** (chiamato anche *ordine parziale* o *semiordinamento*) è una struttura relazionale data da una coppia $\pangle{S,R}$ in cui $S$ è un insieme e $R$ è una relazione **binaria**, **riflessiva**, **antisimmetrica** e **transitiva**.
 
-##Ordinamento##
+### Ordinamento
 
 **Particolare semiordinamento** che esiste se e solo se per ogni $x,y € S$ una ed una sola delle seguenti condizioni è soddisfatta:
 
