@@ -34,7 +34,7 @@ Un **quasi-ordine** è una struttura relazionale data da una coppia $\pangle{S,R
 
 Un **poset** (chiamato anche *ordine parziale* o *semiordinamento*) è una struttura relazionale data da una coppia $\pangle{S,R}$ in cui $S$ è un insieme e $R$ è una relazione **binaria**, **riflessiva**, **antisimmetrica** e **transitiva**.
 
-##Ordinamento##
+### Ordinamento
 
 **Particolare semiordinamento** che esiste se e solo se per ogni $x,y € S$ una ed una sola delle seguenti condizioni è soddisfatta:
 
@@ -44,5 +44,18 @@ Un **poset** (chiamato anche *ordine parziale* o *semiordinamento*) è una strut
 
 Detto semplicemente, in un ordinamento **presi due elementi** dell'insieme di partenza/universo **questi sono confrontabili**: posso dire se sono ugali o chi è il maggiore e il minore tra i due. 
 
-L'ordinamento prende anche il nome di **ordine totale**.
+L'ordinamento prende anche il nome di **ordine totale**. 
+
+### Buon Ordinamento
+
+**todo**
+ 
+### Oridini Totali vs Ordini Parziali
+
+Possiamo facilmente distingurere tra un poset (ordine parziale) e un ordinamento (ordine totale) osservando la rappresentazione del grafo associato ad entrambe le strutture. Nel caso di un ordine totale tutti gli elementi della struttura relazionale sono collegati e confrontabili tra loro, cosa che non è vera per gli ordini parziali, in cui alcuni elementi sono completamente isolati dagli altri.
+
+
+## Reticoli
+
+I reticoli sono poset in cui per ogni coppia di $\pangle{x,y}€S$ esistomo un mimino maggiorante e un massimo minorante.
 
