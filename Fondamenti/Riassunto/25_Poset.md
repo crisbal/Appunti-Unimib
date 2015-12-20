@@ -45,7 +45,7 @@ A partire da un grafo, per ottenre tutte le possibili coperture basta fare l'ope
 
 $A = {1,2,3,4,5,6,7,8}$
 
-$R$ è espressa dalla proprietà $\pangle{x,y} tale che x è divisibile per y$
+$R$ è espressa dalla proprietà $\pangle{x,y}$ tale che $x$ è divisibile per $y$
 
 Quindi 4 è copertura di 8.
 

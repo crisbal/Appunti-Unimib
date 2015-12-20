@@ -213,8 +213,6 @@ $endfor$
 \titlespacing\subsection{0pt}{15pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
 \titlespacing\subsubsection{0pt}{15pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
 
-\renewcommand\thesection{\thechapter.\arabic{section}}
-\renewcommand\thesubsection{\thesection.\arabic{subsection}}
 
 \usepackage{siunitx}
 
@@ -239,6 +237,9 @@ $endfor$
 \definecolor{dark}{HTML}{212121}
 \newcommand{\hsp}{\hspace{20pt}}
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{dark}{|}\hsp}{0pt}{\Huge\bfseries}
+
+\usepackage{amsthm}
+\newtheorem{theorem}{Teorema}[section]
 
 $if(title)$
 \title{$title$}

@@ -8,16 +8,25 @@ Le **relazioni n-arie** (cioè di *arietà pari a n*) possono essere *sempre* ra
 
 **Operazioni su Matrici Booleane**
 
+## grafo bipartito
 
-## Grafi
+
+## Grafo orientato
 
 Con **grafo orientato** (o grafo *diretto* o *disgrafo*) intendiamo un metodo di rappresentare una relazione binaria $G$ definitia su un solo insieme $V$ tale che $G \subseteq V \times V$.
+
+Un grafo viene generalmente raffigurato sul piano da punti, che	
+rappresentano i nodi; archi o spigoli sono rappresentati da segmenti o curve che	
+collegano due nodi. In questo caso, il posizionamento dei nodi e la forma degli archi o 
+spigoli è irrilevante, dal momento che a contare sono solo i nodi e le relazioni tra essi. 
+In altri termini, lo stesso grafo può essere disegnato in molti modi diversi senza 
+modificarne le proprietà.	
 
 ### Nodi e archi
 
 Gli elementi di $V$ sono detti **nodi** (o vertici), gli elementi di $G$ sono detti **archi**.
 
-Un arco che va da $vi$ a $vj$ si dice **uscente** da $vi$ ed **entrante** in $vj$.
+Un arco che va da $vi$ a $vj$ si dice **uscente** da $vi$ ed **entrante** in $vj$, o più generalmente **incidente** da $vi$ a $vj$ (e quindi $vi$ e $vj$ sono detti **adiacente** tra loro).
 
 Il **numero di archi uscenti** da un nodo è detto il **grado di uscita** del nodo. 
 Il **numero di archi entranti** da un nodo è detto il **grado di entrata** del nodo.
@@ -45,9 +54,16 @@ Un **semiciclo** intorno ad un nodo $v$ di un grafo è un semicammino in cui $v 
 
 Se il **ciclo di lunghezza 1** esso viene chiamato **cappio**, che è un arco che esce dal nodo per poi subito rientrare. 
 
+Il minimo numero di archi che compongono un cammino tra due nodi $vin$ e $vfin$ è detta distanza tra i due nodi.
+
 ### Grafo etichettato
 
 Un **grafo etichettato** è una funzione che **associa ad ogni arco** del grafo **un'etichetta**, cioè una sorta di nome.v 
+
+
+### Grafo completo
+
+Si ha un grafo completo quando ogni coppia di vertici del grafo ha un arco che li unisce.
 
 ### Grafi e proprietà delle relazioni
 

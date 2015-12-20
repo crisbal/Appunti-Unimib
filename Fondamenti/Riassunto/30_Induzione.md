@@ -27,4 +27,7 @@ Sia $A(n)$ una asserzione (proprietà da verificare) per ogni elemento dell'insi
 Allora per ogni $n€N e n>0$, $A(n)$ è vera.
 
 
+## Esempi di Dimostrazione per Induzione
 
+
+## Dichiarazione di insiemi tramite l'induzione

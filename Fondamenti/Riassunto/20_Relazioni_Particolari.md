@@ -20,6 +20,10 @@ Un particolare tipo di albero è l'**albero binario**, particolare relazione per
 
 Graficamente, quando disegnamo un albero, è possibile evitare di disegnare le frecce che connettono i nodi: infatti riconoscere la radice è semplice, basta trovare il nodo che non ha archi entranti. Una volta trovata la radice si sa che, essendo l'albero un DAG, tutti gli archi che "coinvolgono" un nodo vanno nella stessa direzione e mai nel senso opposto degli altri. Non ci sono quindi ambiguità. E' generalmente consigliabile mettere le frecce nel disegnare gli alberi.
 
+Preso un nodo dell'albero possiamo determinare la sua **profondità** all'interno dell'albero: il numero di archi necessari per andare dalla radice dell'albero al nodo stesso.
+
+Si dice invece **altezza** di un albero il valore di profondità massima raggiungibile dai nodi degli alberi, cioè la distanza massima che c'è da una foglia, tra tutte le foglie, e la radice dell'albero. 
+
 ## Relazioni di Equivalenza
 
 Diciamo che $R$ è una **relazione di equivalenza** su un insieme $S$ se e solo se $R$ è **binaria su $S$, riflessiva, simmetrica e transitiva**.

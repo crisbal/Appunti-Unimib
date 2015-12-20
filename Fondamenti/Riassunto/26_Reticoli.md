@@ -7,7 +7,7 @@ I reticoli sono poset in cui per ogni coppia di $\pangle{x,y}€S$ esistomo un m
 
 ### Complemento di un elemento
 
-Preso un reticolo $L$, un elemento $a'€L$ è detto complemento di $a€L$ se $a$ e $a'$ hanno lo stesso meet e join. (Non è la def del libro ma quella del Palmonari!)
+Preso un reticolo $L$, un elemento $a'€L$ è detto complemento di $a€L$ se $a$ e $a'$ hanno lo stesso meet e join. (Il libro dice se hanno lo stesso minimo minorante e massimo maggiorante)
 
 ## Reticoli particolari
 

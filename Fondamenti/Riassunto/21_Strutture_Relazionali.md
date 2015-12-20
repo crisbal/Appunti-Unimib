@@ -38,9 +38,9 @@ Un **poset** (chiamato anche *ordine parziale* o *semiordinamento*) è una strut
 
 **Particolare semiordinamento** che esiste se e solo se per ogni $x,y € S$ una ed una sola delle seguenti condizioni è soddisfatta:
 
-* $x = y$
-* $\pangle{x,y} €  R $
-* $\pangle{y,x} €  R $
+* $ x = y $
+* $ \pangle{x,y} €  R $
+* $ \pangle{y,x} €  R $
 
 Detto semplicemente, in un ordinamento **presi due elementi** dell'insieme di partenza/universo **questi sono confrontabili**: posso dire se sono ugali o chi è il maggiore e il minore tra i due. 
 

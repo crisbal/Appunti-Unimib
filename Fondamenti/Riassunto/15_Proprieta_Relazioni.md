@@ -13,9 +13,10 @@ Una **relazione binaria** $R$ (con Dominio $S$) puo' soddisfare le seguenti prop
 
 Se $x$ in relazione con $y$ e $y$ in relazione con $x$ allora $x=y$
 
+\begin{exmp}
 Considero l'insieme degli abitanti dell'Italia e considero la relazione "abita nella stessa citta'"
 la relazione non e' antisimmetrica: infatti se Maria abita nella stessa citta' di Carlo e Carlo abita nella stessa citta' di Maria non segue che Carlo e' uguale a Maria
-
+\end{exmp}
 Considero i numeri naturali e considero la relazione "e' maggiore od uguale a"
 La relazione e' antisimmetrica perche' perche' se un numero e' maggiore od uguale ad un secondo numero ed il secondo e' maggiore uguale del primo allora i due numeri sono uguali  
 
