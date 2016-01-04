@@ -5,7 +5,7 @@
 
 Si definisce **algebra booleana** un **reticolo** $\pangle{B,R}$ caratterizzato dall'essere **distributivo**, **limitato** e **complementato**.
 
-Più precisamente, si parla di algebra di Boole in riferimento ad un insieme B sul quale sono definite due operazioni binarie $\sqcap$ e $\sqcup$, un operazione unaria ($'$), e $\underline{1}$ e $\underline{0}$ due costanti, in modo da ottenere la sestupla ordinata(?) $\pangle{B,\sqcap,\sqcup,',\underline{0},\underline{1}}$, che costituisce un reticolo distributivo, limitato e complementato.
+Più precisamente, si parla di algebra di Boole in riferimento ad un insieme B sul quale sono definite due operazioni binarie $\sqcap$ e $\sqcup$, un operazione unaria ('), e $\underline{1}$ e $\underline{0}$ due costanti, in modo da ottenere la sestupla ordinata(?) $\pangle{B,\sqcap,\sqcup,',\underline{0},\underline{1}}$, che costituisce un reticolo distributivo, limitato e complementato.
 
 **Chiarimento**
 
@@ -21,7 +21,7 @@ Nell'algebra di Boole un enunciato è ottenuto dalla combinazione di **termini**
 
 I termini di un enunciato sono essi stessi degli enunciati, ovviamente meno complessi dell'enunciato che sto costruendo. Preso un termine posso infatti dire con certezza se è vero o falso.
 
-Tra tutti i termini riconosciamo dei termini elementari che possono essere o delle costanti ($\underlina{0}$ e $\underlina{1}$) o delle variabili, generalmente indicate con le lettere minuscole $a,b,c,...$, che come suggerisce il nome variano a seconda dei casi.
+Tra tutti i termini riconosciamo dei termini elementari che possono essere o delle costanti ($\underline{0}$ e $\underline{1}$) o delle variabili, generalmente indicate con le lettere minuscole $a,b,c,...$, che come suggerisce il nome variano a seconda dei casi.
 
 La presenza di variabili non lascia comunque spazio ad ambiguità perchè, sostituita una variabile con $\underline{0}$ o con $\underline{1}$, posso sempre dire se l'espressione che contiene le varibili è vera o falsa.
 

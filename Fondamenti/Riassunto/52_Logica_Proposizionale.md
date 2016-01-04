@@ -68,6 +68,15 @@ Il sistema di valutazione $S$ della logica proposizionale è così definito:
 * $T={1}$, i valori che assumono il valore di *vero*
 * $Op={operatori}$, gli operatori utilizzabili
 
+
+## Valutazione Booleana
+
+Una formula logica proposizionale $A$ è soddisfatta da una valutazione boolena $Iv$ se $Iv(A) = 1$. Cioè se per almeno un caso (o combinazione di veri e falsi) risulta vera.
+
+Una formula logica proposizionale è una tautologia se è soddisfatta per ogni valutazione boolena $Iv$. Cioè è vera in ogni caso (e quindi indipendentemene dai valori di verità degli enunciati che la compongono).
+
+Una formula logica proposizionale è una contraddizione se non è mai soddisfatta per ogni valutazione boolena $Iv$. Cioè è falsa in ogni caso (e quindi indipendentemene dai valori di verità degli enunciati che la compongono).
+
 ## Operatore negazione
 
 L'operatore $\neg$ è il più semplice tra tutti. $\neg$, come sappiamo dalla sintassi è un operatore unario. Preso un valore ne restituisce l'opposto logico.
@@ -141,5 +150,69 @@ Diciamo che due proposizioni A e B sono logicamente equivalenti se sono uguali p
 
 $A \land A = A$
 $A \lor A = A$
+<<<<<<< HEAD
+=======
 
-###
+### Associatività
+
+### Commutatività
+
+### Distribuitivià
+
+### Assorbimento
+
+### Doppia negazione
+
+### Leggi di De Morgan
+
+### Terzo escluso
+
+### Contrapposizione
+
+### Contraddizione
+
+## Modelli Proposizionali
+
+### Definzione 
+
+Un modello è un interpretazione di una formual proposizionale
+
+### Definizione ricorsiva
+
+Sia $M$ un insieme di simboli proposizionali, definiamo $\models \subseteq (M \times L)$ in modo ricorsivo in questo modo:
+
+* $M \models A$ se e solo se $A € M$
+* $M \models Vero$ e $M \not \models Falso$
+* $M \models \not A$ se e solo se non $(M \models A)$ se e solo se $M \not \models A$
+* $M \models A \land B$ se e solo se $M \models A$ e $M \models B$
+* $M \models A \lor B$ se e solo se $M \models A$ o $M \models B$
+* $M \models A imp B$ se e solo se $M \not \models A$ o $M \models B$
+* $M \models A coimp B$ se e solo se $M \models A$ e $M \models B$ oppure $M \not \models A$ e $M \not \models B$
+
+### Valutazione booleana e Modelli
+
+Per dare un significato più concreto a questa definizione possiamo dire che tutti i simboli che appartengono al sottoinsieme M sono quelli che hanno valutazione booleana 1, mentre quelli che non appartengono hanno valutazione booleana 0.
+
+In simboli $p € M se e solo se V(p)=1$
+
+**In particolare**
+
+Il passo base della definizione ricorsiva di $\models$ coincide con la definizione di assegnazione/valutazione booleana $V$.
+
+### Definizioni relative ai modelli
+
+Sia $A$ una formula, se $M \models A$ diciamo che M è un modello di A, cioè che M rende vera A.
+
+Se $M$ rende vere tutte le formule di un insieme $T$ ($M \models A$ per ogni formula $A$ in $T$) diciamo che $M$ è un modello per $T$ e indichiamo questo con $M \models T$. 
+
+Se $M \models A$ per qualche $M$ allora diciamo che $A$ è soddisfacibile.
+
+Se per nessun insieme di simboli proposizionali $M$, è verificato che $M$ \models A$ allora diciamo che $A$ è insoddisfacibile.
+
+
+## Decidibilità logica proposizionale
+
+La logica proposizionale è decidibile (posso sempre verificare il significato di una formula). Esiste infatti una procedure effettiva che stabilisce la validità o no di una formula, o se questa ad esempio è una tautologia.
+
+In particolare il verificare se una proposizione è tautologica o meno è l'operazione di decibilità principale che si svolge nel calcolo proposizonale.
+

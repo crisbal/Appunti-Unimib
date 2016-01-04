@@ -18,12 +18,12 @@ Visto che l'insieme delle $FBF$ è costruito induttivamente esso rende il lingua
 
 Per definire l'insieme delle formule ben formate $F$ di un linguaggio $L$ è necessario utilizzare l'induzione.
 
-Per prima cosa definiamo un insieme non vuoto che chiamiamo $Atom$ (insieme degli atomi) ed un insieme non vuoto $Op$ di operatori unari (che indichiamo con $#$) e binari (che indichiamo con $o$). Definiamo $L = Atom \bigcup Op \bigcup {(,)}$
+Per prima cosa definiamo un insieme non vuoto che chiamiamo $Atom$ (insieme degli atomi) ed un insieme non vuoto $Op$ di operatori unari (che indichiamo con $?$) e binari (che indichiamo con $o$). Definiamo $L = Atom \bigcup Op \bigcup {(,)}$
 
 Allora $F$ è definito induttivamente:
 
 * Se $A$ è un elemento di $Atom$ allora $A€F$
-* Se $A€F$ e $#$ è un operatore unario allora $(#A)€F$
+* Se $A€F$ e $?$ è un operatore unario allora $(?A)€F$
 * Se $A€F.B€F$ e $o$ è un operatore binario allora $(AoB)€F$
 
 ### Unicità della scomposizione
@@ -31,7 +31,7 @@ Allora $F$ è definito induttivamente:
 Per ogni FBF vale una (ed una sola) delle seguenti proprietà:
 
 * $A€Atom$ (formula atomica)
-* Esiste un unico operatore unario $#$ e un'unica formula $B$ tal che $A$ ha la forma $(#B)$
+* Esiste un unico operatore unario $?$ e un'unica formula $B$ tal che $A$ ha la forma $(?B)$
 * Esiste un unico operatore binario $o$ e due formule uniche $B$ e $C$ tali che $A$ ha la forma $(B o C)$ 
 
 ## Interpretazione del linguaggio
@@ -84,5 +84,5 @@ Un albero sintattico $T$ è un albero binario con nodi etichettati da simboli di
 
 * Se $X$ è una formula atomica, l'albero binario $X$ ha solo un nodo etichettato con $X$
 * Se $X = AoB$, $X$ è rappresentato dall'albero binario che ha la radice etichettata con $o$ il cui figlio sinistro è la rappresentazione di $A$ e quello destro quella di $B$.
-* Se $X=#A$, $X$ è la rappresentazione dell'albero binario che ha la radce etichettata con $#$ e il suo unico figlio è la rappresentazione di $A$
+* Se $X=?A$, $X$ è la rappresentazione dell'albero binario che ha la radce etichettata con $?$ e il suo unico figlio è la rappresentazione di $A$
 
