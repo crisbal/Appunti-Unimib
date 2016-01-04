@@ -35,7 +35,7 @@ Il concetto di copertura torna particolarmente utile quando si disegnano i diagr
 
 Diamo per prima cosa una definizione generica.
 
-Presi tre elementi diversi ${x, y, z}$ appartenenti alla relazione $R$. Si dice che $y$ è una copertura di $x$ se $\pangle{x,y} € R$ (cioè se $x$ è in relazione con $y$) e allo stesso tempo non esiste che $\pangle{x,z} € R& e non esiste che $\pangle{z,y} € R&. 
+Presi tre elementi diversi ${x, y, z}$ appartenenti alla relazione $R$. Si dice che $y$ è una copertura di $x$ se $\pangle{x,y} \in R$ (cioè se $x$ è in relazione con $y$) e allo stesso tempo non esiste che $\pangle{x,z} \in R& e non esiste che $\pangle{z,y} \in R&. 
 
 A parole potremmo dire che x$ è copertura di $y$ se non esiste $z$ che si mette in mezzo tra il confronto di $x$ e $y$.
 
@@ -59,17 +59,17 @@ In un poset è possibile individuare alcuni particolari elementi che godono di d
 
 ### Minimale e Massimale
 
-Dato un poset $S$, $s\_{min}$ è detto elemento minimale di S se per ogni elemento $s'€S$ $s\_{min} < s'$.
+Dato un poset $S$, $s\_{min}$ è detto elemento minimale di S se per ogni elemento $s'\in S$ $s\_{min} < s'$.
 
-Dato un poset $S$, $s\_{max}$ è detto elemento massimale di S se per ogni elemento $s'€S$ $s\_{max} > s'$.
+Dato un poset $S$, $s\_{max}$ è detto elemento massimale di S se per ogni elemento $s'\in S$ $s\_{max} > s'$.
 
 Dato un poset $S$, esiste almeno un elemento massimale e uno minimale.
 
 ### Minorante e Maggiorante
 
-Dato un poset $S$ e un sottoinsieme $A \subseteq S$, è detto **minorante** di $A$ un elemento di $SS tale che per ogni $a € A$ $s \le x$. Possono esistere piu' minoranti.
+Dato un poset $S$ e un sottoinsieme $A \subseteq S$, è detto **minorante** di $A$ un elemento di $SS tale che per ogni $a \in A$ $s \le x$. Possono esistere piu' minoranti.
 
-Dato un poset $S$ e un sottoinsieme $A \subseteq S$, è detto **maggiorante** di $A$ un elemento di $SS tale che per ogni $a € A$ $s \ge x$. Possono esistere piu' maggioranti.
+Dato un poset $S$ e un sottoinsieme $A \subseteq S$, è detto **maggiorante** di $A$ un elemento di $SS tale che per ogni $a \in A$ $s \ge x$. Possono esistere piu' maggioranti.
 
 ### Massimo Minorante e Minimo Maggiorante
 

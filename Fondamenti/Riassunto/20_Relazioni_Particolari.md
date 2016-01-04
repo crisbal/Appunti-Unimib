@@ -32,28 +32,28 @@ Diciamo che $R$ è una **relazione di equivalenza** su un insieme $S$ se e solo 
 
 Un esempio di relazione di equivalenza è data dalla seguente.
 
-$R = { \langle a,b \rangle € Z | a^2=b^2 }$
+$R = { \langle a,b \rangle \in Z | a^2=b^2 }$
 
 Essa infatti è:
 
 * *binaria* (ci sono due "termini" coinvolti nella relazione, $a$ e $b$)
-* *riflessiva* ($n^2 = n^2$ per ogni $n € Z$)
-* *simmetrica* (se $n^2=m^2$ anche $m^2=n^2$ per ogni $m,n € Z$ )
-* *transitiva* (se $n^2=o^2$ e $m^2=o^2$ allora $n^2=o^2$ per ogni $m,n,o € Z$)
+* *riflessiva* ($n^2 = n^2$ per ogni $n \in Z$)
+* *simmetrica* (se $n^2=m^2$ anche $m^2=n^2$ per ogni $m,n \in Z$ )
+* *transitiva* (se $n^2=o^2$ e $m^2=o^2$ allora $n^2=o^2$ per ogni $m,n,o \in Z$)
 
 ### Classe di Equivalenza
 
-Data una relazione di equivalenza $R$ su un insieme $S$, la **classse di equivalenza** di un elemento $x€S$ è definita come 
+Data una relazione di equivalenza $R$ su un insieme $S$, la **classse di equivalenza** di un elemento $x \in S$ è definita come 
 
-$[x] = {y|\langle x,y \rangle € R}$
+$[x] = {y|\langle x,y \rangle \in R}$
 
-Cioè la **classe di equivalenza** di un elemento $x€R$ è **l'insieme degli elementi di $R$ con cui $x$ si relaziona**.
+Cioè la **classe di equivalenza** di un elemento $x \in R$ è **l'insieme degli elementi di $R$ con cui $x$ si relaziona**.
 
 Se $R$ è una relazione di equivalenza su $S$ allora le classi di equivalenza generate da $R$ partizionano S. (Vedere i capitoli precedenti per la definizione di *classe di equivalenza*).
 
 ## Relazioni Composte
 
-Date due relazioni $R1$ e $R2$ con $R1$ definita su $S \times T$ e $R2$ definita su $T \times Q$ è possibile definire una nuova relazione che chiamiamo di composizione tra $R1$ e $R2$ su $S \times Q$ tale che $\langle a,c \rangle € R2 \circ R1$ se e solo se esiste un $b € T$ tale che $\langle a,b \rangle € R1$ e $\langle b,c \rangle € R2$.
+Date due relazioni $R1$ e $R2$ con $R1$ definita su $S \times T$ e $R2$ definita su $T \times Q$ è possibile definire una nuova relazione che chiamiamo di composizione tra $R1$ e $R2$ su $S \times Q$ tale che $\langle a,c \rangle \in R2 \circ R1$ se e solo se esiste un $b \in T$ tale che $\langle a,b \rangle \in R1$ e $\langle b,c \rangle \in R2$.
 
 $R2 \circ R1$ è detta composizione di $R1$ e $R2$.
 

@@ -150,8 +150,6 @@ Diciamo che due proposizioni A e B sono logicamente equivalenti se sono uguali p
 
 $A \land A = A$
 $A \lor A = A$
-<<<<<<< HEAD
-=======
 
 ### Associatività
 
@@ -181,7 +179,7 @@ Un modello è un interpretazione di una formual proposizionale
 
 Sia $M$ un insieme di simboli proposizionali, definiamo $\models \subseteq (M \times L)$ in modo ricorsivo in questo modo:
 
-* $M \models A$ se e solo se $A € M$
+* $M \models A$ se e solo se $A \in M$
 * $M \models Vero$ e $M \not \models Falso$
 * $M \models \not A$ se e solo se non $(M \models A)$ se e solo se $M \not \models A$
 * $M \models A \land B$ se e solo se $M \models A$ e $M \models B$
@@ -193,7 +191,7 @@ Sia $M$ un insieme di simboli proposizionali, definiamo $\models \subseteq (M \t
 
 Per dare un significato più concreto a questa definizione possiamo dire che tutti i simboli che appartengono al sottoinsieme M sono quelli che hanno valutazione booleana 1, mentre quelli che non appartengono hanno valutazione booleana 0.
 
-In simboli $p € M se e solo se V(p)=1$
+In simboli $p \in M se e solo se V(p)=1$
 
 **In particolare**
 

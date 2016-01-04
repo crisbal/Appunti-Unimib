@@ -36,11 +36,11 @@ Un **poset** (chiamato anche *ordine parziale* o *semiordinamento*) è una strut
 
 ### Ordinamento
 
-**Particolare semiordinamento** che esiste se e solo se per ogni $x,y € S$ una ed una sola delle seguenti condizioni è soddisfatta:
+**Particolare semiordinamento** che esiste se e solo se per ogni $x,y \in S$ una ed una sola delle seguenti condizioni è soddisfatta:
 
 * $ x = y $
-* $ \pangle{x,y} €  R $
-* $ \pangle{y,x} €  R $
+* $ \pangle{x,y} \in  R $
+* $ \pangle{y,x} \in  R $
 
 Detto semplicemente, in un ordinamento **presi due elementi** dell'insieme di partenza/universo **questi sono confrontabili**: posso dire se sono ugali o chi è il maggiore e il minore tra i due. 
 
@@ -57,5 +57,5 @@ Possiamo facilmente distingurere tra un poset (ordine parziale) e un ordinamento
 
 ## Reticoli
 
-I reticoli sono poset in cui per ogni coppia di $\pangle{x,y}€S$ esistomo un mimino maggiorante e un massimo minorante.
+I reticoli sono poset in cui per ogni coppia di $\pangle{x,y} \in S$ esistomo un mimino maggiorante e un massimo minorante.
 

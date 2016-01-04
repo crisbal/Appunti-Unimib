@@ -22,15 +22,15 @@ Per prima cosa definiamo un insieme non vuoto che chiamiamo $Atom$ (insieme degl
 
 Allora $F$ è definito induttivamente:
 
-* Se $A$ è un elemento di $Atom$ allora $A€F$
-* Se $A€F$ e $?$ è un operatore unario allora $(?A)€F$
-* Se $A€F.B€F$ e $o$ è un operatore binario allora $(AoB)€F$
+* Se $A$ è un elemento di $Atom$ allora $A \in F$
+* Se $A \in F$ e $?$ è un operatore unario allora $(?A) \in F$
+* Se $A \in F.B \in F$ e $o$ è un operatore binario allora $(AoB) \in F$
 
 ### Unicità della scomposizione
 
 Per ogni FBF vale una (ed una sola) delle seguenti proprietà:
 
-* $A€Atom$ (formula atomica)
+* $A \in Atom$ (formula atomica)
 * Esiste un unico operatore unario $?$ e un'unica formula $B$ tal che $A$ ha la forma $(?B)$
 * Esiste un unico operatore binario $o$ e due formule uniche $B$ e $C$ tali che $A$ ha la forma $(B o C)$ 
 
