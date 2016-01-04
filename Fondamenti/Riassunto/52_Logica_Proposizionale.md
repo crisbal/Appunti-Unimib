@@ -6,7 +6,7 @@ La sintassi ci permette di capire come scrivere le formule proposizionali e come
 
 Un alfabeto $\sum$ (chiamato anche $L$ se chiaro nel contesto) è costituito da:
 
-* Connettivi proposizionali unari ($\neg$) e binari ($\and,\or$,implica,co-implica)
+* Connettivi proposizionali unari ($\neg$) e binari ($\land,\lor$,implica,co-implica)
 * Costanti proposizionali (Vero e Falso)
 * Un insieme non vuoto di simboli proposizionali $P = {A,B,C,...}
 * I simboli separatori $($ e $)$
@@ -30,14 +30,14 @@ Data una formula $A$, è detta sottoformula di $A$ ogni B che appare come compon
 Sia $A$ una formula, l'insieme delle sottoformule è definito in questo modo:
 
 * Se $A$ è una costante o un simbolo proposizionale allora $A$ è sottoformula di se stessa.
-* Se $A$ è una formula $(\negQ)$, le sottoformule di $A$ sono $A$ stessa e le sottoformule di Q. $\neg$ è il connettivo logico principale e $Q$ è sottoformula immediata di $A$.
+* Se $A$ è una formula $(\neg Q)$, le sottoformule di $A$ sono $A$ stessa e le sottoformule di Q. $\neg$ è il connettivo logico principale e $Q$ è sottoformula immediata di $A$.
 * Se $A$ è una formula $(BoC)$, dove $o$ è un connettivo binario, le sottoformule di $A$ sono $A$ stessa e le sottoformule di $B$ e $C$. $o$ è il connettivo principale e $B$ e $C$ sono sottoformule immediate di $A$.
 
 ### Esempi di formule
 
 * $\neg A$
-* $(A \or B)$
-* $((\neg A) \and (A \or (\not (BimpC))))
+* $(A \lor B)$
+* $((\neg A) \land (A \lor (\not (BimpC))))
 
 ## Parentesi e precedenza tra gli operatori
 
@@ -45,14 +45,14 @@ Se seguissimo alla lettera la definizio di formula proposizionale ci ritroveremm
 
 In particolare nella logica proposizionale gli operatori seguono il seguente ordine di precedenza:
 
-$\neg,\or,\not,imp,coimp$
+$\neg,\lor,\not,imp,coimp$
 
 Ciò significa che se mancano le parentesi una formula ben formata va parentesizzata prioritizzando le sottoformule i cui connettivi principali hanno la precedenza più alta. A parità di precedenza si associa a destra.
 
 ### Esempi di priorità
 
-* $\neg A \or B \and C = (\neg(A)\or B)\and C$
-* $A \or B \or C$ = $A \or (B \or C)$
+* $\neg A \lor B \land C = (\neg(A)\lor B)\land C$
+* $A \lor B \lor C$ = $A \lor (B \lor C)$
 
 
 
@@ -81,29 +81,29 @@ Eccone la tabella di verità:
 
 ## Operatore AND
 
-L'operatore $\and$ è un operatore binario. Detto anche di congiunzione, fa un operazione che, in pratica, equivale al prodotto tra i valori di verità di due proposizioni.
+L'operatore $\land$ è un operatore binario. Detto anche di congiunzione, fa un operazione che, in pratica, equivale al prodotto tra i valori di verità di due proposizioni.
 
-|A|B|$A \and B$|
+|A|B|$A \land B$|
 |---|---|---|
 |0|0|0|
 |0|1|0|
 |1|0|0|
 |1|1|1|
 
-Letteralmente $\and$ ritorna 1 quando entrambi i "parametri" sono 1.
+Letteralmente $\land$ ritorna 1 quando entrambi i "parametri" sono 1.
 
 ## Operatore OR
 
-L'operatore $\or$ è un operatore binario. Detto anche di disgiunzione, fa un operazione che, in pratica, è molto simile alla somma tra i valori di verità di due proposizioni.
+L'operatore $\lor$ è un operatore binario. Detto anche di disgiunzione, fa un operazione che, in pratica, è molto simile alla somma tra i valori di verità di due proposizioni.
 
-|A|B|$A \or B$|
+|A|B|$A \lor B$|
 |---|---|---|
 |0|0|0|
 |0|1|1|
 |1|0|1|
 |1|1|1|
 
-Letteralmente $\or$ ritorna 1 quando almeno uno dei due parametri è a 1.
+Letteralmente $\lor$ ritorna 1 quando almeno uno dei due parametri è a 1.
 
 
 ## Operatore Implica
@@ -121,7 +121,7 @@ $A imp B$ è vero se $B$ è vero, o se sia $A$ che $B$ sono false.
 
 ## Operatore co-implica
 
-L'operatore $co-implica$ è un operatore binario è detto anche di co-implicazione. Esso puo' essere scritto come $(A imb B) \and (B imp A)$. 
+L'operatore $co-implica$ è un operatore binario è detto anche di co-implicazione. Esso puo' essere scritto come $(A imb B) \land (B imp A)$. 
 
 |A|B|$A CoIMP B$|
 |---|---|---|
@@ -139,7 +139,7 @@ Diciamo che due proposizioni A e B sono logicamente equivalenti se sono uguali p
 
 ### Idempotenza
 
-$A \and A = A$
-$A \or A = A$
+$A \land A = A$
+$A \lor A = A$
 
 ###
