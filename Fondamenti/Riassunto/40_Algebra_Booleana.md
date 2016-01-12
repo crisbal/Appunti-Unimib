@@ -25,20 +25,6 @@ Tra tutti i termini riconosciamo dei termini elementari che possono essere o del
 
 La presenza di variabili non lascia comunque spazio ad ambiguità perchè, sostituita una variabile con $\underline{0}$ o con $\underline{1}$, posso sempre dire se l'espressione che contiene le varibili è vera o falsa.
 
-## Operatori
-
-Nell'algebra di Boole usiamo degli operatori booleani che, per comodità, dividiamo in due categorie, quelli primitivi e quelli derivati.
-
-Un operazione puo' essere 
-### Operatori primitivi
-
-Come si intuisce dalla definizione dell'algebra di Boole gli operatori primitivi sono 3. 
-
-**AND**
-
-TODO
-
-
 ## Proprietà Algebra di Boole
 
 **Commutativa**

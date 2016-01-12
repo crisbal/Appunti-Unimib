@@ -6,10 +6,10 @@ La sintassi ci permette di capire come scrivere le formule proposizionali e come
 
 Un alfabeto $\sum$ (chiamato anche $L$ se chiaro nel contesto) è costituito da:
 
-* Connettivi proposizionali unari ($\neg$) e binari ($\land,\lor$,implica,co-implica)
-* Costanti proposizionali (Vero e Falso)
-* Un insieme non vuoto di simboli proposizionali $P = {A,B,C,...}
-* I simboli separatori $($ e $)$
+* Connettivi proposizionali unari (\neg) e binari ($\land,\lor,\implies,\iif$)
+* Costanti proposizionali \top e \bot (per detonatare Vero e Falso)
+* Un insieme non vuoto di simboli proposizionali $P = {A,B,C,...}$
+* I simboli separatori '(' e ')'
 
 Le costanti e i simboli proposizionali sono chiamati **atomi**,  le loro negazioni **atomi negati**. Entrambi sono detti *letterali*.
 
@@ -45,7 +45,7 @@ Se seguissimo alla lettera la definizio di formula proposizionale ci ritroveremm
 
 In particolare nella logica proposizionale gli operatori seguono il seguente ordine di precedenza:
 
-$\neg,\lor,\not,imp,coimp$
+$\neg,\lor,\not,\implies,\iif$
 
 Ciò significa che se mancano le parentesi una formula ben formata va parentesizzata prioritizzando le sottoformule i cui connettivi principali hanno la precedenza più alta. A parità di precedenza si associa a destra.
 
@@ -53,8 +53,6 @@ Ciò significa che se mancano le parentesi una formula ben formata va parentesiz
 
 * $\neg A \lor B \land C = (\neg(A)\lor B)\land C$
 * $A \lor B \lor C$ = $A \lor (B \lor C)$
-
-
 
 # Semantica Logica Proposizionale
 
@@ -92,12 +90,15 @@ Eccone la tabella di verità:
 
 L'operatore $\land$ è un operatore binario. Detto anche di congiunzione, fa un operazione che, in pratica, equivale al prodotto tra i valori di verità di due proposizioni.
 
-|A|B|$A \land B$|
-|---|---|---|
-|0|0|0|
-|0|1|0|
-|1|0|0|
-|1|1|1|
+---------------------------------------------------------------------------
+A 				B 				$A \land B$
+--------------  --------------  -------------- 
+0 				0 				0 
+0 				1 				0
+1 				0 				0 
+1 				1 				1 
+---------------------------------------------------------------------------
+
 
 Letteralmente $\land$ ritorna 1 quando entrambi i "parametri" sono 1.
 
@@ -105,12 +106,14 @@ Letteralmente $\land$ ritorna 1 quando entrambi i "parametri" sono 1.
 
 L'operatore $\lor$ è un operatore binario. Detto anche di disgiunzione, fa un operazione che, in pratica, è molto simile alla somma tra i valori di verità di due proposizioni.
 
-|A|B|$A \lor B$|
-|---|---|---|
-|0|0|0|
-|0|1|1|
-|1|0|1|
-|1|1|1|
+---------------------------------------------------------------------------
+A 				B 				$A \lor B$
+--------------  --------------  -------------- 
+0 				0 				0 
+0 				1 				1 
+1 				0 				1 
+1 				1 				1 
+---------------------------------------------------------------------------
 
 Letteralmente $\lor$ ritorna 1 quando almeno uno dei due parametri è a 1.
 
@@ -119,27 +122,32 @@ Letteralmente $\lor$ ritorna 1 quando almeno uno dei due parametri è a 1.
 
 L'operatore $Implica$ è un operatore binario è detto anche di implicazione. $A$ è chiamata premessa e $B$ è chiamata conseguenza.
 
-|A|B|$A IMP B$|
-|---|---|---|
-|0|0|1|
-|0|1|1|
-|1|0|0|
-|1|1|1|
+---------------------------------------------------------------------------
+A 				B 				$A \implies B$
+--------------  --------------  -------------- 
+0 				0 				1 
+0 				1 				1 
+1 				0 				0 
+1 				1 				1 
+---------------------------------------------------------------------------
 
-$A imp B$ è vero se $B$ è vero, o se sia $A$ che $B$ sono false.
+
+$A \implies B$ è vero se $B$ è vero, o se sia $A$ che $B$ sono false.
 
 ## Operatore co-implica
 
-L'operatore $co-implica$ è un operatore binario è detto anche di co-implicazione. Esso puo' essere scritto come $(A imb B) \land (B imp A)$. 
+L'operatore $co-implica$ è un operatore binario è detto anche di co-implicazione. Esso puo' essere scritto come $(A \implies B) \land (B \implies A)$. 
 
-|A|B|$A CoIMP B$|
-|---|---|---|
-|0|0|1|
-|0|1|0|
-|1|0|0|
-|1|1|1|
+---------------------------------------------------------------------------
+A 				B 				$A \iif B$
+--------------  --------------  -------------- 
+0 				0 				1 
+0 				1 				0
+1 				0 				0 
+1 				1 				1 
+---------------------------------------------------------------------------
 
-$A coimp B$ è vero se sia $A$ che $B$ sono entrambe vere o entrambe false, cioè se i loro valori coincidono.
+$A \iif B$ è vero se sia $A$ che $B$ sono entrambe vere o entrambe false, cioè se i loro valori coincidono.
 
 
 ## Equivalenza logica
@@ -173,7 +181,7 @@ $A \lor A = A$
 
 ### Definzione 
 
-Un modello è un interpretazione di una formual proposizionale
+Un modello è un interpretazione di una formuala proposizionale
 
 ### Definizione ricorsiva
 
