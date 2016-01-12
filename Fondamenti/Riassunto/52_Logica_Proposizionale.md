@@ -36,8 +36,8 @@ Sia $A$ una formula, l'insieme delle sottoformule è definito in questo modo:
 ### Esempi di formule
 
 * $\neg A$
-* $(A \lor B)$
-* $((\neg A) \land (A \lor (\not (BimpC))))
+* $A \lor B$
+* $(\neg A) \land (A \lor (\not (B\impliesC)))$
 
 ## Parentesi e precedenza tra gli operatori
 
