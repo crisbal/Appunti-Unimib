@@ -6,7 +6,7 @@ La sintassi ci permette di capire come scrivere le formule proposizionali e come
 
 Un alfabeto $\sum$ (chiamato anche $L$ se chiaro nel contesto) è costituito da:
 
-* Connettivi proposizionali unari (\neg) e binari ($\land,\lor,\implies,\iif$)
+* Connettivi proposizionali unari (\neg) e binari ($\land,\lor,\implies,\iff$)
 * Costanti proposizionali \top e \bot (per detonatare Vero e Falso)
 * Un insieme non vuoto di simboli proposizionali $P = {A,B,C,...}$
 * I simboli separatori '(' e ')'
@@ -45,7 +45,7 @@ Se seguissimo alla lettera la definizio di formula proposizionale ci ritroveremm
 
 In particolare nella logica proposizionale gli operatori seguono il seguente ordine di precedenza:
 
-$\neg,\lor,\not,\implies,\iif$
+$\neg,\lor,\not,\implies,\iff$
 
 Ciò significa che se mancano le parentesi una formula ben formata va parentesizzata prioritizzando le sottoformule i cui connettivi principali hanno la precedenza più alta. A parità di precedenza si associa a destra.
 
@@ -139,7 +139,7 @@ $A \implies B$ è vero se $B$ è vero, o se sia $A$ che $B$ sono false.
 L'operatore $co-implica$ è un operatore binario è detto anche di co-implicazione. Esso puo' essere scritto come $(A \implies B) \land (B \implies A)$. 
 
 ---------------------------------------------------------------------------
-A 				B 				$A \iif B$
+A 				B 				$A \iff B$
 --------------  --------------  -------------- 
 0 				0 				1 
 0 				1 				0
@@ -147,7 +147,7 @@ A 				B 				$A \iif B$
 1 				1 				1 
 ---------------------------------------------------------------------------
 
-$A \iif B$ è vero se sia $A$ che $B$ sono entrambe vere o entrambe false, cioè se i loro valori coincidono.
+$A \iff B$ è vero se sia $A$ che $B$ sono entrambe vere o entrambe false, cioè se i loro valori coincidono.
 
 
 ## Equivalenza logica
