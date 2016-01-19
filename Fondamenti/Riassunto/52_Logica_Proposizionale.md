@@ -1,5 +1,7 @@
 # Sintassi Logica Proposizionale
 
+La logica proposizionale si occupa di investigare il valore di verità di proposizioni (ben) formate da proposizioni elementari, dette anche atomiche. Più precisamente, lo scopo della logica proposizionale (semantica) è quello di assegnare un valore di verità a proposizioni atomiche (valutazione di verità, tecnicamente) e di capire quindi i valori di verità assunti dalle proposizioni costruite a partire da quelle atomiche secondo precise regole sintattiche. 
+
 La sintassi ci permette di capire come scrivere le formule proposizionali e come trattarle.
 
 ## Alfabeto proposizionale
