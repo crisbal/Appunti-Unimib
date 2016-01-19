@@ -39,7 +39,7 @@ Sia $A$ una formula, l'insieme delle sottoformule è definito in questo modo:
 
 * $\neg A$
 * $A \lor B$
-* $(\neg A) \land (A \lor (\not (B\impliesC)))$
+* $(\neg A) \land (A \lor (\not (B \implies C)))$
 
 ## Parentesi e precedenza tra gli operatori
 
