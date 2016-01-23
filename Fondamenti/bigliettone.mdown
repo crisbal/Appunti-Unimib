@@ -1,0 +1,105 @@
+**Diff simmetrica** (S1\\S2) \cup (S2\\S1)
+
+**Funzioni** 
+\quad **Funzione** \forall x \in Dom  \exists un y per cui f(x)=y
+\quad **Dom** \subeq Part
+\quad **Codom** \subeq Arrivo
+\quad **Iniettiva** \forall a,b se a \not \equals b allora f(a) \not \equals f(b)
+\quad **Suriettiva** \forall y \in Arrivo \exists x \in Part tale che f(x) = y
+\quad **Inversa** solo se iniettiva
+\quad **Composta** (g o f)(x) = g(f(x))
+\quad **Caratteristica** f(x) = 1 per x \in S, 0 per x \not \in S
+\quad **Piccionaia Def** Per ogni n non esiste una funzione biunivoca tra S,T con T \in S e con |S|=n
+\quad **Piccionaia Prop** se f: S \rightarrow T è biunivoca, |S|=|T|
+
+**Matrici**
+\quad **Join** \sqcup, 1 se a=1 o b=1
+\quad **Meet** \sqcap, 1 se a=1 e b=1
+
+**Grafi**
+\quad **Lunghezza cammino** numero archi, numero nodi-1
+\quad **DAG** senza cicli, si scende verso il basso
+
+**Relazioni**
+\quad **D'equivalenza** riflessiva, simmetrica, transitiva
+\quad **Classe di equivalenza** [x] = {y|\langle x,y \rangle \in R}
+
+**Strutture relazionali**
+\quad **SR** \langle Ins,Rel,Rel2 \rangle
+\quad **Preordine** riflessiva, transitiva
+\quad **Quasi-ordine** irriflessiva, transitiva
+\quad **Poset aka Ordine Parziale** riflessiva, simmetrica, transitiva
+\quad **Ordinamento** \forall x,y \in S una sola tra x=y, \langle x,y \rangle \in R, \langle y,x \rangle \in R. Tutti gli elementi sono confrontabili
+\quad **Ordinamento esempio** \lteq sull'insieme N
+
+**Estremali** (solo per poset) 
+\quad **Massimale** non esiste elemento più grande
+\quad **Minimale** non esiste elemento più piccolo
+\quad **Minorante** di X \in S, s \lteq \forall x \in X
+\quad **Massimo minorante** il minorante più grande tra tutti i minoranti \sqcap X
+\quad **Maggiorante** di X \in S, \forall x \in X, x \lteq s 
+\quad **Minimo maggiorante** il maggiorante più piccolo tra tutti i maggioranti \sqcup X
+\quad *Massimo** elemento piu' grande di tutti gli altri
+\quad *Minimo** elemento piu' piccolo di tutti gli altri
+
+**Reticoli**
+\quad **Reticolo** poset in cui per ogni x,y esistono un minimo maggiorante (aka \sqcup join) e un massimo minorante (aka \sqcap meet)
+\quad **Completo** Ogni sottoinsieme ha un minimo maggiorante e un massimo minorante
+\quad **Limitato** Il reticolo ha un minimo e un massimo assoluto
+\quad **Distributivo** Valgono le proprietà distributive
+\quad **Complemento di un elemento** a' è complemento di a se a \sqcup a = \underline{1} e a \sqcap a = \underline{0}
+\quad **Unicità complemento** In un reticolo distributivo limitato se a ha un complemento questo è unico
+
+**Algebra di Boole**
+\quad **Definizione** Reticolo distributivo limitato e complementato.
+\quad **Definizione assiomatica** B è un insieme, un'algebra di Boole è una sestupla \langle B, \sqcup, \sqcap,',\underline{0},\underline{1} \rangle
+\quad **Assiomi algebra di Boole** Commutativa, Distributiva, x \sqcup \underline{0} = x, x \sqcap \underline{1} = x, x \sqcup x' = \underline{1}, x \sqcap x' = \underline{0}, \underline{1} \not \equals \underline{0}
+\quad **Duale** scambia \sqcup con \sqcap e \underline{0} con \underline{1}
+\quad **Proprietù algebra di Booble** x \sqcap 0 = 0, x \sqcup 1 = 1, Assorbimento, Associativa, De Morgan, 0' = 1, 1' = 0, x \sqcap y = (x' \sqcup y')', x \sqcup y = (x' \sqcap y')'
+\quad **De Morgan** (x \sqcap y)' = x' \sqcup y' | (x \sqcup y)' = x' \sqcap y'
+
+**Induzione**
+\quad **Completa** A(n) = asserzione su N, supponiamo A(0) vera e supponiamo vera \forall m \in N, m \gt 0, se A(k) è vera \forall k, 0 \lteq k \lt m, ne segue che A(m) è vera allora A(n) è vera \forall n \in N, n \gteq 0
+
+**Stringhe**
+\quad \epsilon =Stringa vuota, A=Alfabeto 
+\quad A0 = {\epsilon}
+\quad A1 = A
+\quad A2 = {O | O=a \circ O' con a \in A e O' \in A1}
+
+**Logica**
+\quad **FBF di L** Induttivo: se A \in Atom allora A \in FBF; se A \in F e \* è op. unario allora \*A \in FBF; se A \in F e B \in F e \circ è un op. binario allora A \circ B \in FBF
+\quad **Unicità scomposizione** \forall A \in FBF vale una: A \in Atom; \exists op. unario \* e una formula B tale che A = \*B; \exists op. binario \circ e due formule B e C tale che A = B \circ C
+\quad **Logica** Una logica Log è definita da: Alf, un insieme di simboli; FBF, FBF \sub Log; Ax, Ax \sub FBF, insieme degli assiomi di Log; R, insieme di Relazioni tra le formule, regole di inferenza.
+\quad **Interpretazione**, associare una semantica, determinare il contesto di interpretazione, attraverso la funz. di interpretazione, assegnare dei valori di verità alle variabili proposizionali
+\quad **Insieme B** insieme dei valori di verità
+\quad **Insieme T** insieme designato a rappresentare il vero
+\quad **Funzione di interpretazione** che mappa in B
+\quad **Modello** M è una struttura/interpretazione e si dice che M \models A se M rende vera A. 
+
+**Logica Proposizionale**
+\quad **Alfabeto**: connettivi (unari e binari), costanti (\top e \bot), simboli proposizionali, simb. separatori ( e )
+\quad **Formule Ben Formate**, aka Prop, adatta la def in *Logica*
+\quad **Atomi** costanti e simboli proposizionali (detti letterali)
+\quad **Sottoformule** Se A è atomo A è sottoformula di se stessa; Se A è una formula del tipo \not B le sue sottoformule sono A e le sottoformule di B; Se A è del tipo B \circ C le sue sottoformule sono A, le sottoformule di B e di C
+\quad **Assegnazione boolena**, Funz Totale V: P \rightarrow {0,1}
+\quad **Valutazione boolena**, Iv: Prop \rightarrow {0,1} cioè estensione a Prop di un assegnazione booleana
+
+**Logica Predicativa**
+\quad **Linguaggio Predicativo** Simboli logici: connettivi, costanti, =, separatori, variabili, quantiicatori; Parametri: predicati, costanti, funzioni.
+\quad **Termini** Ogni simbolo di costante e variabile è un termine; Se t1,..,tn sono termini e f è funz. allora f(t1,..,tn) è termine.
+\quad **Atomi** \top e \bot sono atomi; Se t1,t2 sono termini t1=t2 è atomo, Se t1,..,tn sono termini e P è predicato allora P(t1,..,tn) è atomo
+\quad **FBF Predicative** Induttivo: Ogni atomo è formula; se A \in F \notA \in FBF; se A \in F e B \in F e \circ è un op. binario allora A \circ B \in FBF; Se A è formula, x una variabile, allora \forall xA e \exists xA sono formule
+\quad **Precedenza** \forall \exists \not \land \lor \rightarrow, \leftrightarrow. Associano a destra
+\quad **Occorrenza libera** occorre libera se non è quantificata ne direttamente ne nelle sottoformule.  
+
+**Proprietà**
+\quad **Idempotenza** a \cup a = a | a \cap a = a
+\quad **Commutatività** a \cup b = b \cup a  | a \cap b = b \cap a
+\quad **Associatività** a \cup (b \cup c) = (a \cup b) \cup c  | a \cap (b \cap c) = (a \cap b) \cap c
+\quad **Assorbimento** a \cup (a \cap b) = a | a \cap (a \cup b) = a
+\quad **Distributiva** a \cap (b \cup c) = (a \cap b) \cup (a \cap c) | a \cup (b \cap c) = (a \cup b) \cap (a \cup c)
+ 
+**Altro**
+\quad **Ordine lessicografico** A=Alfabeto, A\*=UnivLinguistico (aka sequenze di lettere), Definiamo \lt su A\* \times A\*: w1,w2 \in A\* con w1 = \langle a1,a2,..,an\rangle e ww = \langle b1,b2,..,bn \rangle  e sia m = min(lun1,lun2), w1 \lt m2 in A\* se \langle a1,a2,..am \rangle \lt \langle b1,b2,..,bn \rangle in A^m oppure \langle a1,a2,..,an \rangle = \langle b1,b2,..,bn \rangle e lun1 \lt lun2
+\quad **Buon Ordinamento** Un ordine totale \langle S, \lteq \rangle è detto buon ordinamento se e solo se qualunque sottoinsieme non vuoto X \subseteq S ha un elemento minimo. aka Ogni sottoinsieme dei numeri naturali possiede un elemento minimo
