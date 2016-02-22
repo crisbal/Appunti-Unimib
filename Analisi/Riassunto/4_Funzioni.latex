@@ -1,0 +1,166 @@
+\chapter{Funzioni di una variabile reale}
+
+\section{Definizione}
+Definiamo una funzione di una variabile reale (che d'ora in poi chiamaremo funzione) come una legge che agisce su un numero reale e lo trasforma in un altro numero reale.
+
+Una funzione si indica con la scrittura $f:D \rightarrow \mathbb{R}$.
+
+$D$ è il dominio (sottoinsieme di $\mathbb{R}$) della funzione, spesso indicato con $D(f)$. 
+
+E' detta immagine l'insieme dei valori assunti dalla funzione.
+
+\section{Funzioni Crescenti e Decrescenti}
+Pre un qualunque $x$ e $y$ tali che $x<y$ diciamo che una funzione è:
+\begin{itemize}
+\item crescente se vale $f(x)<f(y)$
+\item decrescente se vale $f(x)>f(y)$
+\item non-decrescente se vale $f(x)\leq f(y)$
+\item non-crescente se vale $f(x)\geq f(y)$
+\end{itemize}
+
+\subsection{Funzioni monotone}
+Una funzione è monotona se soddisfa una qualsiasi delle proprietà sopra elencate.
+
+\section{Funzioni limitate}
+\subsection{Funzioni superiormente limitate}
+Una funzione si dice superiormente limitata se l'immagine è un insieme superiormente limitato.
+
+\begin{tip}
+Esiste un $M\in\mathbb{R}$ $\geq$ di tutti i valori assunti della funzione.
+
+Per ogni $y \in F(D)$ vale che $M \geq y$
+Per ogni $x \in D$ vale che $M \geq f(x)$
+\end{tip} 
+
+\subsection{Funzioni superiormente limitate}
+Una funzione si dice inferiormente limitata se l'immagine è un insieme inferiormente limitato.
+
+\subsetction{Funzioni limitate}
+Una funzione è limitata se è sia superiormente che inferiormente limitata.
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\begin{axis}[xlabel=$x$, ylabel=$f(x)$]
+\addplot{sin(x)};
+\end{axis}
+\end{tikzpicture} 
+\caption{M1} \label{Il seno è una funzione limitata}
+\end{figure}
+
+\section{Funzioni iniettive, suriettive, biettive}
+
+\subsection{Funzione iniettiva}
+Una funzione è detta iniettiva se elementi distinti del dominio hanno immagini distinte. Cioè se $$ a \neq b \text{allora} f(a) \neq f(b) \text{per ogni} a,b$$
+
+\subsection{Funzione suriettiva}
+Una funzione è detta suriettiva se l'immagine di $f$ coincide con il codominio.
+
+\subsection{Funzione biettiva}
+Una funzione si dice biettiva (o biunivoca) se è sia iniettiva che suriettiva.
+
+\section{Funzione inversa}
+Sia $f:A \rightarrow B$ una funzione biunivoca. La funzione inversa $f^{-1}:B \rightarrow A$ è la funzione che associa ad ogni $y \in B$ l'unico elemento $x \in A$ tale che $f(x) = y$.
+
+\begin{tip}
+$f^{-1}$ associa ad $y$ l'unico elemento della controimmagine di $y$.
+\end{tip}
+
+\section{Massimi e minimi relativi}
+
+\section{Limite di funzione}
+
+\subsection{Definizione}
+Sia data una funzione $f:X\rightarrow \mathbb{R}$ e un punto $x_0$ di $X$. Si dice che $f$ ha limite $L$ per $x\to x_0$ e scriviamo $$\lim_{x\to x_0}=L$$ se per ogni valore $\epsilon>0$ esiste un $\gamma(\epsilon)>0$, cioè un $\gamma$ dipendente dall'$\epsilon$ scelto prima tale che pgni volta che prendo un $x$ tale che $$0<|x-x_0|<\gamma$$ risulta che $$f(x)-L<\epsilon$$.
+
+\begin{tip}
+URGE SPIEGAZIONE MIGLIORE
+\end{tip}
+
+\subsection{Teorema di unicità del limite}
+Se il limite di una funzione esiste, esso è unico.
+
+\section{Limite destro e sinistro}
+
+\subsection{Limite destro}
+Sia $f:(x_0,b)\rightarrow\mathbb{R}$. Si dice che L è il limite destro di $f(x)$ in $x_0$ e si scrive $$L=\lim_{x\to\x^+_0}$$ se per ogni $\epsilon > 0$ esiste $\gamma > 0$ tale che $x_0<x<x_0+\gamma \rightarrow f(x) \in B_{\gamma}(L)$
+
+\subsection{Limite sinistro}
+Sia $f:(x_0,b)\rightarrow\mathbb{R}$. Si dice che L è il limite sinistro di $f(x)$ in $x_0$ e si scrive $$L=\lim_{x\to\x^-_0}$$ se per ogni $\epsilon > 0$ esiste $\gamma > 0$ tale che $x_0<x<x_0-\gamma \rightarrow f(x) \in B_{\gamma}(L)$
+
+\subsection{Osservazioni collegate}
+Se esiste il limite $L$ in $x_0$, allora $L$ è anche il limite destro e sinistro.
+
+Se il limite sinistro e destro esistono e coincidono, allora esiste anche in limite L.
+
+\section{Teorema del confronto}
+Molto simile a quello delle successioni.
+
+Siano $f,g,h$ funzioni definite da $A\rightarrow R$. Se $f(x) \leq g(x) \leq h(x)$ e $lim_{x\to x_0}f(x) = lim_{x\to x_0}h(x) = L$ allora $lim_{x\to x_0}g(x) = L$.
+
+\section{Esistenza del limite per funzioni monotone (TODO)}
+
+
+\section{Funzione continua}
+
+\subsection{Funzione continua in un punto}
+Una funzione $f: A \rightarrow \mathbb{R}$ è continua in $x_0 \in A$ se per ogni intorno $V$ di $f(x_0)$ esiste un $\gamma > 0$ tale che per ogni $x \in B_{\gamma}(x_0)$ vale $f(x)\inV$
+
+\begin{tip}
+La scrittura $B_{\gamma}(x_0)$ indica un intorno \"bucato\" di $x_0$.
+\end{tip}
+
+\subsection{Funzione continua}
+Una funzone è coninua se è continua in ogni $x\in D$, con $D$ dominio della funzione.
+
+\section{Punti di discontinuità}
+Prendiamo una funzione $f:A \rightarrow \mathbb{R}$ e un punto $x_0\in A$. In $x_0$ diciamo che:
+\begin{itemize}
+\item La funzione ha una discontinuità di prima specie (salto) se i limiti destro e sinitro, esistono, sono finiti e sono diversi.
+\item La funzione ha una disconitnuità di seconda specie (cuspide) se almeno uno tra il limite destro e sinitro o è infinito o non esiste.
+\item La funzione ha una disconitnuità di terza specie (eliminabile) se $\lim_{x\to x_0}f(x)$ esiste ed è finito ma è diversodal valore di $f(x_0)$. 
+\end{itemize}
+
+\textbf{Osservazione correlata} Data una funzione monotona allora tutti i suoi punti di discontinuità sono di prima specie.
+
+\section{Operazioni su funzioni continue}
+
+\textbf{Enunciato}
+
+Siano $f,g$ due funzioni $A\to R$ allora $f+g$ e $f\cdot g$ sono anch'esse funzioni continue. Inoltre, se $g \neq 0$ in ogni punto di $A$ allora anche $\frac{f}{g}$ è continua.
+
+\textbf{Dimostrazione}
+
+Dimostriamo per prima cosa la somma. Per fare questo utilizziamo l'algebra dei limiti. 
+
+Infatti dato un $x_0 \in A$, deve valre, affinchè ci sia continuità che $\lim_{x\to x_0}(f(x)+g(x))$ = $f(x_0)+g(x_0$. Questa cosa è ovvia perchè $$lim_{x\to x_0}(f(x)+g(x)) = \lim f(x) + \lim g(x) = f(x_0) + g(x_0)$$
+
+Allo stesso modo si agisce per la moltiplicazione e la divisione.
+
+\section{Teorema di Weierstrass}
+
+\subsection{Alcuni enunciati necessari}
+Data una funzione $f: A \to \mathbb{R}$ si dice che y è il massimo assoluto di $f$ se $y = max\{f(x) | x\in A\}$ 
+
+Se una funzione ha un massimo assoluto, questo è unico.
+
+\subsection{Teorema di Weierstrass}
+Sia $f: [a,b] to \mathbb{R}$ una funzione continua; allora $f$ ammette un minimo e un massimo. Ovvero f([a,b]) è un intervallo chiuso.
+
+\section{Teorema degli zeri}
+
+\textbf{Enunciato}
+
+Sia $f: [a,b] to \mathbb{R}$ una funzione continua; se $f(a)<0$ e $f(b)>0$, allora esiste un $x\in(a,b)$ tale che $f(x)=0$.
+
+\textbf{Dimostrazione 1}
+
+Consideriamo l'intervallo $I=[a,b]$. Poichè la funzione è continua e $f(I)$ è un intervallo che contiene sia $f(a)$ che $f(b)$, deve per forza contenere lo 0.
+
+\begin{tip}
+Abbastanza ovvio, se è continua vuol dire che (prima o poi) assume tutti i valori tra $f(a)<0$ e $f(b)>0$ e tra questi valori c'è \textit{per forza} lo 0, altrimenti non sarebbe continua.
+\end{tip}
+
+\textbf{Dimostrazione 2}
+
+E' necessaria??

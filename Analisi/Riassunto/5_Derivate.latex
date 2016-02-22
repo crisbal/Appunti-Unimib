@@ -1,0 +1,246 @@
+\chapter{Derivate}
+
+A partire dal problema dell'individuazione della tangente geometrica ad una curva sono state formulate le basi del calcolo differenziale.
+
+\section{Rapporto incrementale}
+
+Sia $f: (a,b) \to \mathbb{R}$ e sia $x_0 \in (a,b)$. Sia $x_0 + h$, con $h \neq 0$, un altro punto di $(a,b)$. Si chiama rapporto incrementale della funzione $f$, con punto iniziale $x_0$ e incremento $h$ della variabile dipendende, la quantità $$\frac{f(x_0+h)-f(0)}{h}$$.
+
+\subsection{Significato geometrico}
+Il rapporto incrementale costituisce il coefficiente angolare della retta (secante) passante per i punti $(x_0,f(x_0))$ e $(x_0+h,f(x_0+h))$. Infatti, per ogni $h$ scelto la secante ha equazione $$f(x_0) + \frac{f(x_0+h)-f(x_0)}{h}\cdot (x-x_0)$$
+
+Se la funzione è quindi derivabile, se $h \to 0$ il punto $(x_0+h,f(x_0+h))$ tende al punto $(x_0,f(x_0))$ e quindi la retta secante diventa retta tangente di $f$ nel punto $(x_0,f(x_0))$
+
+\section{Derivata}
+Sia $f: (a,b) \to \mathbb{R}$ e sia $x_0 \in (a,b)$. Si dice che la funzione è derivabile in $x_0$ se esiste, finito,  il limite del rapporto incrementale con $h \to 0$. Tale limite si indica con $f'(x_0)$ e si chiama derivata di $f$ in $x_0$.
+
+$$f'(x_0)=\lim_{h\to 0} \frac{f(x_0+h)-f(x_0)}{h}$$
+
+Se si pone $x=x_0+h$, il rapporto incrementale diventa 
+$$f'(x)=\lim_{x\to x_0} \frac{f(x)-f(x_0)}{x-x_0}$$
+
+
+\subsection{Retta tangente}
+
+Sia $f:(a,b)\to\mathbb{R}$ derivabile in $x_0 \in (a,b)$. Si chiama retta tangente al grafico della funzione in (x_0,f(x_0)) la retta $$y = f(x_0) + f'(x_0)(x-x_0)$$
+
+\section{Relazione tra derivabilità e continuità}
+
+\textbf{Enunciato}
+
+Se una funzione è derivabile in un punto $x_0$ allora è anche continua in quel punto.
+
+Cioè $lim_{x\to x_0}$
+\begin{tip}
+\textit{Derivabile in x_0}
+
+$\lim_{x\to x_0} \frac{f(x)-f(x_0)}{x-x_0} = f'(x_0)$
+
+\textit{Continua in x_0}
+
+$\lim_{x\to x_0} f(x) = f(x_0)$
+
+\end{tip} 
+
+\textbf{Dimostrazione}
+
+Sappiamo che $$f(x) = f(x_0) + \frac{f(x)-f(x_0)}{x-x_0} (x-x_0)$$.
+
+Calcoliamo il limite per $x \to x_0$ di entrambi i membri.
+
+$\lim_{x\to x_0} f(x) = \lim_{x\to x_0} f(x_0) + \lim_{x\to x_0} \frac{f(x)-f(x_0)}{x-x_0} \cdot \lim_{x\to x_0} (x-x_0)$
+
+Quindi
+
+$\lim_{x\to x_0} f(x_0) = f(x_0)$
+
+$\lim_{x\to x_0} \frac{f(x)-f(x_0)}{x-x_0} = f''(x_0)$ perchè la funzione è derivabile per ipotesi in $x_0$.
+
+$lim_{x\to x_0} (x-x_0) = x_0 - x_0 = 0$
+
+Quindi 
+
+$\lim_{x\to x_0} f(x) = f(x_0)$
+
+\section{Regole di derivazione}
+Se $f,g: (a,b) \to \mathbb{R}$ sono due funzioni derivabili in $(a,b)$, allora:
+
+\begin{itemize}
+\item $f+g$ è derivabile in $(a,b)$ e $(f+g)' = f' + g'$
+\item dato $a \in \mathbb{R}$. $a \cdot f$ è derivabile e $(a\cdot f)' = a \cdot f'$
+\item $f*g$ è derivabile in $(a,b)$ e $(f*g)' = f' * g'$
+\item $g(x) \neq 0$ per ogni $x \in (a,b)$ allora $\frac{f}{g}$ è derivabile e $(\frac{f}{g})' = \frac{f'g - fg'}{g^2}$ 
+\end{itemize}
+
+\section{Derivate funzioni elementari}
+
+\subsection{Derivata di $\sin(x)$}
+Sia $f(x) = \sin(x)$, allora $f'(x) = \cos(x)$.
+
+\textbf{Dimostrazione}
+
+$$\lim_{h\to 0} \frac{\sin(x+h)-\sin(x)}{h} \\
+=\lim_{h\to 0} \frac{\sin(x)\cos(h)+\cos(x)\sin(h)-\sin(x)}{h} \\
+=\lim_{h\to 0} (\sin(x)\frac{\cos(h)-1}{h} + \cos(x)*\frac{\sin(h)}{h}$$
+
+Sappiamo che $1 - \cos(h) \sim \frac{1}{2} h^2$, quindi $\lim \frac{1-\cos(h)}{h} = 0$.
+
+$$= \cos(x) \cdot \lim_{h \to 0} \frac{\sin(h)}{h} = \cos(x)$$
+
+\subsection{Derivata di $\cos(x)$}
+Sia $f(x) = \cos(x)$, allora $f'(x) = -\sin(x)$.
+
+\textbf{Dimostrazione}
+
+$$\lim_{h \to 0} \frac{\cos (x+h) - \cos x}{h} $$ $$
+= & \lim_{h \to 0} \frac{\cos x \cos h - \sin x \sin h - \cos x}{h} $$ $$
+= & \cos x \cdot \underbrace{\lim_{h \to 0} \frac{\cos h - 1}{h}}_{0} - \sin x \cdot \underbrace{\lim_{h \to 0} \frac{\sin h}{h}}_{1} $$ $$
+= & - \sin x$$
+
+\subsection{Derivata di $\tan(x)$}
+
+Sia $f(x) = \tan(x)$, allora $f'(x) = \frac{1}{\cos^2(x)}$.
+
+\textbf{Dimostrazione}
+
+Conoscendo le derivate di $\sin(x)$ e $\cos(x)$, scriviamo $f(x) = \tan(x) = \frac{\sin(x)}{\cos(x)}$. Applichiamo la regola di derivazione del rapporto:
+
+$$f'(x) = \frac{\cos x \cdot \cos x - \sin x \cdot (-\sin x)}{\cos^2 x} = \frac{1}{\cos^2x}$$
+
+\subsection{Derivata di $e^x$}
+Se $f(x) = e^x$, allora $f'(x) = e^x$.
+
+\textbf{Dimostrazione}
+$$
+\lim_{h \to 0} \frac{e^{x+h} - e^x}{h} $$ $$
+= & \lim_{h \to 0} \frac{e^x \cdot (e^h - 1)}{h} $$ $$
+= & e^x \cdot \underbrace{\lim_{h \to 0} \frac{e^h - 1}{h}}_{1} = e^x
+$$
+
+\subsection{Derivata di $\log(x)$}
+Se $f(x) = \log x$, allora $f'(x) = \frac{1}{x}$. Infatti:
+
+\textbf{Dimostrazione}
+$$\lim_{h \to 0} \frac{\log (x+h) - \log x}{h} $$ $$
+= & \lim_{h \to 0} \frac{\log \frac{x+h}{x}}{h} $$ $$
+= & \lim_{h \to 0} \frac{1}{h} \cdot \log \left(1 + \frac{h}{x} \right) $$
+
+Osservando che $\frac{h}{x}$ tende comunque a zero, possiamo applicare il limite notevole $\log (1 + \frac{h}{x} ) \sim \frac{h}{x}$.
+
+$$= \lim_{h \to 0} \frac{1}{h} \cdot \frac{h}{x} = \frac{1}{x}$$
+
+\section{Punti di non derivabilità}
+
+TODO
+
+\section{Teorema di Fermat}
+
+\textbf{Enunciato}
+Sia $f: (a,b)\to\textbf{R}$ una funzione e si supponga che $x_0 \in (a,b)$ sia un punto di estremo locale (massimo o minimo) di $f$. Se $f$ è derivabile nel punto $x_0$, allora $f'(x_0)=0$.
+
+\textbf{Dimostrazione}
+
+Supponiamo che $x_0$ sia un punto di minimo relativo. Esiste $\delta > 0$ tale che per ogni $x \in (x_0-\delta, x_0+\delta)$ si abbia $f(x)\geq f(x_0)$
+
+Per $x_0<x<x_0+\delta$ (rapporto incrementale destro)  si ha $$ \frac{f(x)-f(x_0)}{x-x_0} \geq 0$$
+
+Per $x_0-\delta<x<x_0$ (rapporto incrementale sinistro) si ha $$ \frac{f(x)-f(x_0)}{x-x_0} \leq 0$$
+
+Visto che la funzione $f(x)$ è derivabile in $x_0$ (per ipotesi), calcoliamo il limite destro del rapporto incrementale $$f'(x_0) = \lim_{x\to x^+_0}\frac{f(x)-f(x_0)}{x-x_0} \geq 0$$
+
+e anche il limite sinistro del rapporto incrementale $$f'(x_0) = \lim_{x\to x^-_0}\frac{f(x)-f(x_0)}{x-x_0} \leq 0$$
+
+Combinando le due soluzioni ($f'(x_0)\leq 0 \land f'(x_0)\geq 0$) per forza deve essere che $f'(x_0)=0$
+
+
+\section{Teorema di Rolle}
+
+\textbf{Enunciato}
+
+Presa $f: [a,b] \to \mathbb{R}$, se essa è continua in $[a,b]$, derivanbile in $(a,b)$ e $f(a)=f(b)$, allora esiste un punto $z \in (a,b)$ tale che $f'(z)=0$.
+
+\textbf{Dimostrazione}
+
+La funzione è continua in un intervallo, per il teorema di Weierstrass esiste per forza un punto di massimo assoluto e minimo assoluto in $[a,b]$.   
+
+Se il punto trovato è sia di massimo che di minimo allora la funzione è costante.
+
+Altrimenti:
+
+\begin{itemize}
+\item Se $a$ non è un punto di massimo allora neanche $b$ lo è, visto che $f(a)=f(b)$. Quindi un punto di massimo ci deve essere per forza in $(a,b)$ in cui, per il teorema di Fermat, la derivata vale 0.
+
+\item Se $a$ non è un punto di minimo allora neanche $b$ lo è, visto che $f(a)=f(b)$. Quindi un punto di minimo ci deve essere per forza in $(a,b)$ in cui, per il teorema di Fermat, la derivata vale 0.
+\end{itemize}
+
+
+\section{Teorema di Lagrange}
+
+\textbf{Enunciato}
+Presa $f: [a,b] \to \mathbb{R}$, se essa è continua in $[a,b]$, e derivabile in $(a,b)$. Allora esiste un $x \in (a,b)$ tale che $$f'(x)=\frac{f(b)-f(a)}{b-a}$$
+
+\textbf{Dimostrazione}
+
+Consideriamo la funzione
+\begin{equation*}
+g(x) = f(x) - (x-a) \cdot \frac{f(b)-f(a)}{b-a}
+\end{equation*}
+Questa funzione soddisfa le ipotesi del teorema di Rolle, infatti:
+\begin{equation*}
+g(b) = f(b) - \cancel{(b-a)} \cdot \frac{f(b)-f(a)}{\cancel{b-a}} = f(a)
+\end{equation*} 
+e $g(a) = f(a)$ per gli stessi calcoli. Inoltre $g$ è continua in $[a,b]$ e derivabile in $(a,b)$ perché $f$ lo è.
+
+Il teorema di Rolle ci garantisce l'esistenza di almeno un $x \in (a,b)$ tale che $g'(x)=0$. Calcoliamo la derivata della funzione:
+\begin{equation*}
+g'(x) = f'(x) - \frac{f(b)-f(a)}{b-a}
+\end{equation*}
+Quindi
+\begin{equation*}
+f'(x) = \underbrace{g'(x)}_{0} + \frac{f(b)-f(a)}{b-a}
+\end{equation*}
+\begin{equation*}
+f'(x) = \frac{f(b)-f(a)}{b-a}
+\end{equation*}
+
+\section{Teorema di Cauchy}
+Siano $f, g : [a,b] \to \mathbb{R}$ due funzioni continue in $[a,b]$ e derivabili in $(a,b)$. 
+
+Allora esiste un punto $c\in (a,b)$ tale che
+
+$$[g(b)-g(a)]f'(c) = [f(b) - f(a)]g'(c).$$
+
+\section{Teorema de L'Hopital}
+
+Siano $f, g : [a,b] \rightarrow \mathbb{R}$ due funzioni continue in $[a,b]$ e derivabili in $(a,b)$, con $-\infty \leq a < b \leq +\infty$; sia $g^{\prime}(x)$ diversa da 0 in ogni punto di tale intervallo, tranne al più in $c \in (a,b)$. Sia inoltre
+
+$$\lim_{x\to c}{f(x)} = \lim_{x\to c}g(x) = 0$$
+
+oppure 
+
+$$\lim_{x\to c}{|f(x)|} = \lim_{x\to c}{|g(x)|} = \infty,$$
+
+ed esista 
+
+$$ L = \lim_{x \to c}{\frac{f'(x)}{g'(x)}} \in \mathbb{\bar{R}} $$
+
+Allora
+
+$$\lim_{x \to c}{\frac{f(x)}{g(x)}} = L$$.
+
+\section{Polinomio di Taylor}
+
+Data una funzione $f: I\to \mathbb{R}$, derivabile $n-1$ volte, con $f^{(n-1)\prime}$ derivabile in $x_0$, si definisce polinomio di Taylor $$P_n(x)=\serie{k=0}{n}\frac{1}{k!}\cdot f^{k\prime}(x_0)(x-x_0)^k$$
+
+
+\subsection{Resto in forma di Peano}
+
+Data una funzione $f: I\to \mathbb{R}$, derivabile $n-1$ volte, con $f^{(n-1)\prime}$ derivabile in $x_0$, allora $$f(x)=P_n(x)+o((x-x_0)^n)$$
+
+La funzione si può quindi esprimere tramite un polinomio di Taylor e un resto $R_n(n)=f(x)-P_n(x)$, tale che $$\lim_{x\to x_0} \frac{R_n(x)}{(x-x_0)^n}=0$$
+
+\subsection{Resto in forma di Lagrange}
+
+Data una funzione $f: I\to \mathbb{R}$, derivabile $n-1$ volte, definita su I intervallo aperto. Per ogni $x,x_0 \in I$ esiste $c$ compreso tra $x$ e $x_0$ tale che $$f(x)-P_n(x)$=\frac{f^{(n+1)\prime}(c)}{(n+1)!}\cdot (x-x_0)^{n+1} = \text{Resto di Lagrange}$$ 
+
+\section{Convessità e concavità}
