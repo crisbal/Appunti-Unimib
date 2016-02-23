@@ -198,11 +198,111 @@ Siano $\serie{n=1}{\infty}a_n$ e $\serie{n=1}{\infty}b_n$ due serie a termini po
 
 Supponiamo che esista il limite $\lim_{n\to +\infty}\frac{a_n}{b_n}=L$. Se $L \neq 0$ le due serie hanno lo stesso comportamento.
 
-\subsection{Dimostrazione (TODO)}
+\subsection{Dimostrazione}
 
-\section{Criterio della radice (TODO)}
+Si sceglie un $\epsilon>0$ in modo che $L-\epsilon>0$. 
 
-\section{Criterio del rapporto (TODO)}
+Applichiamo quindi la definizione di limite: esiste un $N$ tale che per $n > N$, 
+
+$$\lvert \frac{a_n}{b_n} - L\rvert \leq \epsilon$$
+
+che scritto in forma estesa equivale a dire che definitivamente
+
+$$(L-\epislon)b_n\leq a_n \leq (l+\epsilon)b_n$$
+
+Applichiamo quindi il criterio del confronto su questa disuguaglianza trovata. Se $\serie{n=1}{\infty} a_n$ converge, allora converge anche $\serie{n=1}{\infty} b_n$, mentre se diverge $\serie{n=1}{\infty} b_n$ diverge anche $\serie{n=1}{\infty} a_n$.
+
+\section{Criterio della radice}
+\subsection{Enunciato}
+
+Sia data la serie $\serie{n=1}{\infty} a_n$ a termini positivi per ogni $n$. Si supponga che esista il limite $$\lim_{n \to \infty} \sqrt[n]{a_n} = L$$
+
+Allora se $L<1$ la serie converge, se $L>1$ la serie diverge.
+
+
+\subsection{Dimostrazione}
+
+\textbf{Caso $L<1$}
+
+Per definizione di limite, fissato arbitrariamente un $\epsilon>0$, esiste un $N$ tale che per $n>N$ si abbia $$\sqrt[n]{a_n} < L+\epsilon$$
+
+
+Poniamo $L+\epsilon = q$, e ricordando che siamo nel caso $L<1$ scegliamo un $\epsilon$ tale che $$q = L+\epsilon < 1$$
+
+Quindi dalla definizione di limite definita sopra $$\sqrt[n]{a_n} < L+\epsilon$$ avremo $$\sqrt[n]{a_n} < q$$
+
+eleviamo alla $n$
+
+$$a_n < q^n$$
+
+Quindi otteniamo che la nostra serie $a_n$ è definitivamente minorante della serie gemoetrica , che per convergere deve avere $|q|<1$, che è vero visto che abbiamo imposto $q < 1$ sopra. Per il confronto anche $a_n$ converge.
+
+\textbf{Caso $L>1$}
+
+Per definizione di limite, fissato arbitrariamente un $\epsilon>0$, esiste un $N$ tale che per $n>N$ si abbia $$\sqrt[n]{a_n} > L-\epsilon$$
+
+Poichè $L>1$, anchre prendendo $\epsilon$ abbastanza piccolo, sarà che $L-\epsilon>1$ e quindi
+$$\sqrt[n]{a_n} > 1$$
+
+elevando alla $n$
+
+$$a_n > 1$$
+
+Che pr il confronto diverge, visto che $\serie{n=0}{\infty}1$ diverge.
+
+\section{Criterio del rapporto}
+
+\subsection{Enunciato}
+
+Sia $\{x_n\}$ una successione a termini positivi e sia 
+\begin{equation*}
+L = \lim_{n \to +\infty} \frac{x_{n+1}}{x_n}
+\end{equation*}
+Allora:
+\begin{itemize}
+\item se $L > 1$ la successione è definitivamente crescente e $\lim x_n = +\infty$.
+\item se $0 \le L < 1$ la successione è definitivamente decrescente e $\lim x_n = 0$.
+\end{itemize}
+
+\subsection{Dimostrazione}
+
+\begin{itemize}
+\item se $L > 1$ allora possiamo imporre $L = 1 + 2\epsilon$. Per definizione di limite $\exists N$ tale che 
+\begin{equation*}
+\frac{x_{n+1}}{x_n} > L - \epsilon \qquad \forall n > N
+\end{equation*}
+\begin{equation*}
+\frac{x_{n+1}}{x_n} > 1 + \epsilon \qquad \forall n > N
+\end{equation*}
+
+Quindi $x_{n+1} > x_n \cdot (1+\epsilon) > x_n$ per $n > N$. Quindi la successione è definitivamente crescente.
+
+Proseguendo otteniamo:
+\begin{align*}
+x_{N+2} &> x_{N+1} \cdot (1+\epsilon) \\
+x_{N+3} &> x_{N+2} \cdot (1+\epsilon) > x_{N+1} \cdot (1+\epsilon)^2 \quad \text { e così via\dots}
+\end{align*}
+Generalizzando:
+\begin{equation*}
+x_n > (1+\epsilon)^{n-(N+1)} \cdot x_{N+1}
+\end{equation*}
+Poiché $(1+\epsilon)^{n-(N+1)}$ diverge a $+\infty$, per il teorema del confronto anche $\lim x_n = +\infty$.
+
+\item se $0 < L < 1$ procediamo in modo analogo al caso precedente. Imponiamo $L = 1 - 2\epsilon$. Per definizione di limite $\exists N$ tale che
+\begin{equation*}
+\frac{x_{n+1}}{x_n} < L + \epsilon \qquad \forall n > N
+\end{equation*}
+\begin{equation*}
+\frac{x_{n+1}}{x_n} < 1 - \epsilon \qquad \forall n > N
+\end{equation*}
+
+Come prima vale:
+\begin{equation*}
+0 < x_n < (1-\epsilon)^{n-(N+1)} \cdot x_{N+1} \qquad \forall n>N
+\end{equation*}
+
+Per il criterio del confronto, essendo $\lim (1-\epsilon)^{n-(N+1)} \cdot x_{N+1} = 0$, allora $\lim x_n = 0$. Inoltre, $x_{n+1} < x_n \cdot (1 - \epsilon) < x_n$; quindi la successione è definitivamente decrescente.
+\end{itemize}
 
 \section{Serie assolutamente convergente}
 Una serie $\serie{n=1}{\infty}a_n$ si dice assolutamente convergente se converge $\serie{n=1}{\infty}|a_n|$.
@@ -244,4 +344,15 @@ Sia $\serie{n=1}{\infty}(-1)^n a_n$ una serie a segno variabile. Se valgono le s
 
 Allora, secondo il criterio di Leibiniz, la serie $\serie{n=1}{\infty}(-1)^n a_n$ convege.
 
-\textbf{Dimostrazione (TODO)}
+\textbf{Dimostrazione}
+
+Chiamiamo con $A_m$ le somme parziali della serie, con $A_{2k-1}$ le somme di indice dispari e con $A_{2k}$ le somme di indice pari.
+
+Si ha che $A_{2k+1}$=$A_{2k-1}+a_{2k}-a_{2k+1}$
+
+Visto che la seire è non crscente per ipotesi $a_{2k} \leq a_{2k+1}$ e quindi anche A_{2k+1} \leq A_{2k-1}. La sccessione
+
+
+no
+
+
