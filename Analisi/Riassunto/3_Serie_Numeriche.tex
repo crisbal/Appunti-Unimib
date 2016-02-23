@@ -140,15 +140,50 @@ Il secondo termine all'infinito tende a 0, quindi $s_{n} = 1$
 \section{Serie armonica}
 
 \subsection{Definizione}
-La serie $\serie{n=1}{\infty}\frac{1}/{n}$ è detta serie armonica.
+La serie $\serie{n=1}{\infty}\frac{1}{n}$ è detta serie armonica.
+
+La serie $\serie{n=1}{\infty}\frac{1}{n^\alpha}$ è detta serie armonica generalizzata.
 
 \subsection{Convergenza}
-La serie armonica diverge a $+\infty$
+La serie armonica diverge; la serie armonica generalizzata converge per $\alpha > 1$ e diverge per $\alpha < 1$.
 
 \subsection{Dimostrazione}
-Inanzitutto è facile notare che $$s_{n+1}=s_n+\frac{1}{n+1} > s_n$$
+La serie armonica è una serie a termini positivi, quindi o converge o diverge. Confrontiamo i primi termini una successione che chiamiamo $\{z_j\}$ costruita in modo che ogni termine sia minore di quello della serie armonica. Scriviamo nella prima riga i termini della serie armonica e nella seconda quelli di $\{z_j\}$:
+\begin{equation*}
+x_1 = \frac{1}{1} \quad x_2 = \frac{1}{2} \quad x_3 = \frac{1}{3} \quad x_4 = \frac{1}{4} \quad x_5 = \frac{1}{5} \quad \ldots 
+\end{equation*}
+\begin{equation*}
+x_1 = \frac{1}{1} \quad x_2 = \frac{1}{2} \quad x_3 = \frac{1}{4} \quad x_4 = \frac{1}{4} \quad x_5 = \frac{1}{8} \quad \ldots 
+\end{equation*}
 
-????
+Formalmente $z_j = \frac{1}{2^k}$ dove $2^{k-1} < j \le 2^k$. Analizziamo ora $\{s_n\}$, che definiamo come la successione delle somme parziali di $\{z_j\}$.
+
+Per $\alpha < 1$ il teorema ci dice che $\sum_{j=1}^\infty \frac{1}{j^\alpha}$ diverge. Infatti se $\alpha < 1$ allora $j^\alpha < j$ e quindi $\frac{1}{j^\alpha} > \frac{1}{j}$. Quindi posso confrontare questa serie con $\frac{1}{j}$. Per il criterio del confronto diverge anch'essa.
+
+Non dimostreremo il caso $\alpha > 1$, ma ci limitiamo ad osservare che se $\alpha = 2$ allora la serie è $\sum_{j=1}^\infty \frac{1}{j^2}$; abbiamo già visto che converge per confronto con quella di Mengoli.
+
+
+\begin{align*}
+s_1 &= z_1 = 1 \\
+s_2 &= 1 + \frac{1}{2} \\
+s_4 &= 1 + \frac{1}{2} + 2 \cdot \left(\frac{1}{4}\right) \\
+s_8 &= 1 + \frac{1}{2} + 2 \cdot \left(\frac{1}{4}\right) + 4 \cdot \left(\frac{1}{8}\right)\\
+\end{align*}
+
+Si vede abbastanza facilmente che
+\begin{align*}
+s_{2^k} &= s_{2^{k-1}} + 2^{k-1} \cdot \frac{1}{2^k} \\
+s_{2^k} &= s_{2^{k-1}} + \frac{1}{2} \\
+s_{2^k} &= 1 + \frac{k}{2}
+\end{align*}
+
+A questo punto possiamo calcolare 
+\begin{equation*}
+\lim_{k \to +\infty} s_{2^k} = +\infty
+\end{equation*}
+Quindi $\{s_n\}$ non è limitata e quindi non può convergere. Allora $\sum z_j$ non converge, quindi diverge (essendo a termini positivi).
+
+Osservando che $z_j \le \frac{1}{j}$ per ogni $j$ e che $\sum_{j=1}^\infty z_j$ diverge; allora $\sum_{j=1}^\infty \frac{1}{j}$ diverge.
 
 \section{Serie numerica a segno costante}
 
@@ -156,10 +191,13 @@ Una serie $\serie{n=1}{\infty}a_n$ si dice a segno costante se per ogni $n \in \
 
 In particolare si parla di:
 
-* serie a termini positivi, se tutti i termini sono $>0$ 
-* serie a termini negativi, se tutti i termini sono $<0$
-* sere a termini non negativi, se tutti i termini sono $\geq 0$
-* sere a termini non positivi, se tuttti i termini sono $\leq 0$
+\begin{itemize}
+\item serie a termini positivi, se tutti i termini sono $>0$ 
+\item serie a termini negativi, se tutti i termini sono $<0$
+\item sere a termini non negativi, se tutti i termini sono $\geq 0$
+\item sere a termini non positivi, se tuttti i termini sono $\leq 0$
+\end{itemize}
+
 
 \subsection{Convergenza }
 
