@@ -1,0 +1,314 @@
+\newcommand*\dif{\mathop{}\!\mathrm{d}}
+
+\chapter{Primitive}
+
+\section{Definizioni}
+
+\subsection{Primitiva}
+
+Data una funzione $f: (a,b) \to \mathbb{R}$, si dice che $F$ è una primitiva di $f$ se $F'=f$
+
+\subsection{Integrale indefinito}
+
+Si dice integrale indefinito di $f(x)$ l'insieme di tutte le primitive di $f(x)$ e si scrive come $\int f(x) \dif x$.
+
+\begin{tip}
+$F(x)$ è una primitiva di $f(x)$ se e solo e $F(x) \in \int f(x) \dif x$
+\end{tip}
+
+\section{Linearità dell'integrale}
+
+Se $f,g$ ammettono una primitiva, allora anche la somma ammette una primitiva.
+
+$$\int (f(x)+g(x)) \dif x = \int f(x)\dif x + \int g(x)\dif x$$
+
+Se $\lambda \in \mathbb{R}$ e $f(x)$ ha una primitiva $F(x)$, allora
+
+$$\int \lambda f(x) \dif x = \lambda \int f(x)\dif x$$
+
+\section{Integrazione per parti}
+Siano $f, g: I \to \mathbb{R}$ due funzioni. Sia $f$ derivabile; supponiamo che $g$ abbia una primitiva $G$ e $f \cdot g$ abbia una primitiva. Allora
+
+$$\int f(x)g(x) \dif x = f(x)G(x) - \int f'(x) G(x) \dif x$$
+
+\section{Sostituzione di variabile}
+
+Sia $f: I \to \mathbb{R}$ e $g: J \to \mathbb{R}$ derivabile; con $I$ e $J$ intervalli tali che abbia senso la scrittura $f(g(x))$. Se $f(x)$ ha una primitiva $F(x)$ allora
+
+$$F(g(t)) = \int f(g(t)) \cdot g'(t) \dif x$$
+
+\begin{tip}
+In altri termini, posto $x = g(t)$:
+$\int f(x) \dif x = \int f(g(t)) \cdot g'(t) \dif t \\
+= \int f(x) \cdot g'(t) \dif t$
+\end{tip}
+
+
+\section{Integrali di funzioni fratte}
+
+(TODO?)
+
+\chapter{Integrali definiti}
+
+\section{Partizioni}
+
+Sia $[a,b]$ un intervallo chiuso e limitato. Una partizione $P$ di $[a,b]$ è un insieme di $n+1$ punti $$a=x_0<x_1<\ldots <x_n=b$$
+
+\begin{tip}
+Una partizione P suddivide l'intervallo $[a,b]$ in $n$ intervalli.
+\end{tip}
+    
+\subsection{Somma inferiore}
+
+Se $f$ è una funzione $[a,b] \to \mathbb{R}$ limitata e $P$ è una partizione di $[a,b]$, la somma inferiore di $f$ relativa a $P = \{x_0, \ldots, x_n\}$ è $$ s(f,P) = \sum_{i=1}^n \underbrace{(x_i-x_{i-1})}_{base} \cdot \underbrace{m_i}_{altezza} $$ dove $$ m_i = \inf_{x_{i-1} \le x \le x_i} f(x) $$
+
+\begin{tip}
+Prendo ogni singola base del rettangolo che nasce dal partizionamento e lo moltiplico per il punto minimo di $f(x)$ compreso tra gli estremi di ogni singola base.
+
+\textbf{Aggiungi foto}
+\end{tip}
+
+\subsection{Somma superiore}
+Se $f$ è una funzione $[a,b] \to \mathbb{R}$ limitata e $P$ è una partizione di $[a,b]$, la somma superiore di $f$ relativa a $P = \{x_0, \ldots, x_n\}$ è $$ S(f,P) = \sum_{i=1}^n (x_i-x_{i-1}) \cdot M_i $$ dove $$M_i = \sup_{x_{i-1} \le x \le x_i} f(x)$$
+
+\begin{tip}
+Prendo ogni singola base del rettangolo che nasce dal partizionamento e lo moltiplico per il punto massimo di $f(x)$ tra gli estremi di ogni singola base.
+\textbf{Aggiungi foto}
+\end{tip}
+
+\subsection{Raffinamento di una partizione}
+Data una partizione $P$, si dice che una partizione $P^*$ è un raffinamento di $P$ se $P \subset P^*$, ossia se ogni punto di $P$ è anche punto di $P^*$. Date due partizioni $P_1$ e $P_2$ si dice comune raffinamento di $P_1$ e $P_2$ la partizione $P^* = P_1 \cup P_2$.
+
+\begin{tip}
+Un raffinamento è quindi ottenuto introducendo nuovi punti nella partizione.
+\end{tip}
+
+Sia $f:[a,b] \to \mathbb{R}$ limitata. Se $P$ è una partizione di $[a,b]$ e $P^*$ un suo raffinamento, allora $$
+s(f,P) \le s(f, P^*) \qquad \text{ e } \qquad S(f,P) \ge S(f,P^*) $$
+
+$$(b-a) \inf f \le \sup_P s(f,P) \le \inf_P S(f,P) \le (b-a) \sup f$$
+\section{Integrali definiti}
+
+\subsection{Funzione integrabile}
+
+Una funzione $f(x)$ limitata definita su $[a,b]$ si dice integrabile se $$ \sup_P s(f,P) = \inf_P S(f,P) $$ In questo caso si dice che $$\sup_P s(f,P) = \int_a^b f(x) \dif x$$
+
+
+\subsection{Integrale definito}
+
+Si dice integrale definito tra $a,b$ di una funzione integrabile $f(x)$ $$\int_a^b f(x) \dif x$$ Tale integrale viene indicato per indicare l'area sottesa al grafico di una funzione nell'intervallo $[a,b]$. 
+
+\subsubsection{Proprietà dell'integrale}
+
+Sia $f:[a,b] \to \mathbb{R}$ e $c \in [a,b]$. La funzione $f$ è integrabile su $[a,b]$ se e solo se è integrabile su $[a,c]$ e  $[c,b]$; vale $$\int_a^b f(x) \, dx = \int_a^c f(x) \, dx + \int_c^b f(x) \, dx$$
+
+Se $b \le a$ allora $$\int_a^b f(x) \, dx = - \int_b^a f(x) \, dx$$
+
+Se $b = a$ allora $$\int_a^a f(x) \, dx = 0$$
+
+Se $f, g:[a,b] \to \mathbb{R}$ sono funzioni integrabili, allora $f+g$ è una funzione integrabile e $$\int_a^b (f(x)+g(x)) \, dx = \int_a^b f(x) \, dx + \int_a^b g(x) \, dx$$
+
+Se $\lambda \in \mathbb{R}$, allora $\lambda f(x)$ è una funzione integrabile e $$\int_a^b \lambda f(x) \, dx = \lambda \int_a^b f(x) \, dx$$
+
+Se $f: [a,b] \to \mathbb{R}$ è una funzione integrabile, allora $|f(x)|$ è integrabile e $$\left\lvert \int_a^b f(x) \, dx \right \vert \le \int_a^b |f(x)| \, dx$$
+
+\subsection{Integrabilità delle funzioni monotone}
+\textbf{Enunciato}
+
+Supponiamo che $f: [a,b] \to \mathbb{R}$ sia monotona. Allora $f$ è integrabile.
+
+\textbf{Dimostrazione}
+
+Supponiamo senza perdita di generalità $f$ non decrescente, allora $\forall x$ vale $f(a) \le f(x) \le f(b)$; quindi la funzione è limitata.
+
+Sia $P_n$ la partizione $\{x_0, \ldots, x_n\}$ e chiamiamo 
+\begin{equation*}
+x_i - x_{i-1} = \delta = \frac{b-a}{n}
+\end{equation*}
+Esprimiamo la somma inferiore:
+\begin{equation*}
+s(f,P_n) = \sum_{i=1}^n (x_i - x_{i-1}) \cdot m_i
+\end{equation*}
+Ricordiamo che
+\begin{equation*}
+m_i = \inf_{x_{x-1}\le x \le x_i} f(x)
+\end{equation*}
+ma essendo $f$ non decrescente, $m_i = f(x_{i-1})$. Quindi
+\begin{align*}
+s(f,P_n) &= \sum_{i=1}^n (x_i - x_{i-1}) \cdot f(x_{i-1}) \\
+&= \sum_{i=1}^n \delta \cdot f(x_{i-1})
+\end{align*}
+
+Analogamente si ragiona per la somma superiore e si osserva che il $\sup$ in questo caso coincide con $f(x_i)$, sempre perché $f$ è non decrescente. Quindi
+\begin{equation*}
+S(f,P_n) = \sum_{i=1}^n \delta \cdot f(x_i)
+\end{equation*}
+
+Calcoliamo quindi la differenza tra le due somme in questo caso particolare:
+\begin{align*}
+S(f,P_n) - s(f,P_n) &= \sum_{i=1}^n \delta \cdot f(x_i) - \sum_{i=1}^n \delta \cdot f(x_{i-1}) \\
+&= \delta [f(x_1) + \ldots + f(x_n)] - \delta[f(x_0) + \ldots + f(x_{n-1})] \\
+&= \delta [f(x_n) - f(x_0)] \\
+&= \frac{b-a}{n} \cdot [f(b)-f(a)]
+\end{align*}
+
+Quindi
+\begin{equation*}
+\lim_{n \to +\infty} S(f,P_n) - s(f,P_n) = 0
+\end{equation*}
+
+Per definizione di limite, $\forall \epsilon > 0$ esiste $P_n$ tale che $S(f,P_n) - s(f,P_n) < \epsilon$. Quindi la funzione è integrabile.
+
+\section{Teorema della media integrale}
+
+\textbf{Enunciato}
+Sia $f: [a,b] \to \mathbb{R}$ una funzione continua, allora esiste $c \in [a,b]$ tale che $$f(c)(b-a) = \int_a^b f(x)\dif x$$
+
+\begin{tip}
+Esiste un altezza $f(c)$ che moltiplicata per la base $(b-a)$ da il valore dell'area sottesa al grafico della funzione.
+\end{tip}
+
+\textbf{Dimostrazione}
+
+La funzione è continua, quindi anche integrabile.
+
+Per il teoream di Weirstrass la funzione ha quindi almeno un punto di massimo $M$ e un punto di minimo $m$.
+
+Di conseguenza possiamo scrivere $$m\cdot (b-a) \leq \int_a^b f(x) \dif x \leq M\cdot (b-a)$$
+
+Dividiamo i membri della disequazione per $b-a$ e otteniamo
+
+$$m \leq \frac{\int_a^b f(x)}{b-a} \dif x \leq M$$
+
+Visto che la funzione è continua essa assume quindi tutti i valori intermedi tra $m$ e $M$, quindi esiste per forza un punto $c$ tale che $f(c)=\frac{\int_a^b f(x)}{b-a}$ cioè $$f(c)\cdot (b-a) = \int_a^b f(x)$$
+
+\section{Funzione integrale}
+
+Data una funzione $f: [a,b] \to \mathbb{R}$, definiamo funzione integrale $F: [a,b] \to \mathbb{R}$ $$F(x) = \int_a^x f(t) \dif t$$
+
+\section{Teorema fondamentale del calcolo integrale}
+
+\subsection{Parte 1}
+
+\textbf{Definizione}
+
+Sia $f$ una funzione integrabile su $[a,b]$ e sia $x_0 \in [a,b]$. Allora la funzione F(x), definita mediante la seguente formula, $$F(x) = \int_{x_0}^x = f(t) \dif t$$ è continua su $[a,b]$
+
+\begin{tip}
+Se $f:[a,b] \to \mathbb{R}$ è una funzione integrabile, la funzione integrale $F(x)$ è continua.
+\end{tip}
+
+\textbf{Dimostrazione}
+
+\begin{proof}
+Essendo integrabile, la funzione $f$ è limitata. Quindi esiste $H \ge 0$ tale che, per ogni $x$,
+\begin{equation*}
+|f(x)| \le H
+\end{equation*}
+Consideriamo $F(y)-F(x)$:
+\begin{align*}
+F(y)-F(x) &= \int_a^y f(t) \, dt - \int_a^x f(t) \, dt \\
+&= \int_a^y f(t) \, dt + \int_x^a f(t) \, dt = \int_x^y f(t) \, dt
+\end{align*}
+
+Ora:
+\begin{equation*}
+|F(y)-F(x)| = \left\lvert \int_x^y f(t) \, dt \right\rvert \le \int_x^y |f(t)| \, dt \le \int_x^y H \, dt = (y-x) \cdot H
+\end{equation*}
+Quanto abbiamo scritto vale ovviamente se $x \le y$. In questo caso
+\begin{equation*}
+\lim_{y \to x^+} (y-x) \cdot H = 0
+\end{equation*}
+Sappiamo quindi che
+\begin{equation*}
+0 \le |F(y) - F(x)| \le (y-x) \cdot H 
+\end{equation*}
+Quindi, per il teorema del confronto abbiamo che
+\begin{equation*}
+\lim_{y \to x^+} |F(y)-F(x)| = 0
+\end{equation*}
+
+Se fosse invece $x \ge y$, possiamo scambiarli nella penultima equazione e resta
+\begin{equation*}
+0 \le |F(x) - F(y)| \le (x-y) \cdot H 
+\end{equation*}
+da cui segue che
+\begin{equation*}
+\lim_{y \to x^-} (x-y) \cdot H = 0
+\end{equation*}
+e quindi che
+\begin{equation*}
+\lim_{y \to x^-} |F(y)-F(x)| = 0
+\end{equation*}
+
+In conclusione, unendo i due limiti, trovo che
+\begin{equation*}
+\lim_{y \to x} |F(y)-F(x)| = 0
+\end{equation*}
+che è esattamente la definizione di continuità.
+\end{proof}
+
+\subsection{Parte 2}
+
+\textbf{Enunciato}
+
+Se $f$ è continua su $[a,b]$ allora $F$ è derivabile su $[a,b]$ e $F'(x) = f(x)$ per ogni $x \in [a,b]$.
+
+\textbf{Dimostrazione}
+
+La funzione integrale esiste, perché $f(x)$ è continua e quindi integrabile.
+
+Sia $x \in [a,b]$ e sia $h$ tale che $x+h \in [a,b]$. Scriviamo il rapporto incrementale in $x$:
+\begin{equation*}
+\frac{F(x+h)-F(x)}{h}
+\end{equation*}
+\begin{equation*}
+= \frac{1}{h} \left( \int_a^{x+h} f(t) \, dt - \int_a^x f(t) \, dt \right) = \frac{1}{h} \int_x^{x+h} f(t) \, dt
+\end{equation*}
+Per il teorema della media integrale esiste $y$ compreso tra $x$ e $x+h$ tale che
+\begin{equation*}
+f(y) \cdot (x+h-x) = \int_x^{x+h} f(t) \, dt
+\end{equation*}
+Quindi il rapporto incrementale è $f(y) \cdot \frac{h}{h} = f(y)$. Inoltre
+\begin{equation*}
+\lim_{h \to 0} y = x
+\end{equation*}
+Quindi
+\begin{equation*}
+\lim_{h \to 0} \frac{F(x+h)-F(x)}{h} = f(x)
+\end{equation*}
+Ciò significa che $F(x)$ è derivabile e la sua derivata è $f(x)$.
+
+\subsection{Parte 3}
+
+\textbf{Enunciato}
+
+Sia $f:[a,b] \to \mathbb{R}$ una funzione continua. Sia $G$ una primitiva di $f$. Allora presi due valori $x,y \in [a,b]$
+\begin{equation*}
+\int_x^y f(t) \, dt = G(y) - G(x)
+\end{equation*}
+
+\textbf{Dimostrazione}
+
+Consideriamo una funzione ausiliaria
+\begin{equation*}
+H(y) = G(y) - \int_x^y f(t) \, dt
+\end{equation*}
+Sappiamo che $G(y)$, essendo una primitiva, è derivabile e $G'(y) = f(y)$. Inoltre sappiamo che $\int_x^y f(t) \, dt$ è una funzione derivabile di $y$ e la sua derivata è $f(y)$ (per il teorema fondamentale del calcolo II).
+
+Consideriamo la derivata di $H(y)$:
+\begin{equation*}
+H'(y) = f(y) - f(y) = 0
+\end{equation*}
+Poiché $H$ ha derivata zero in $[a,b]$, allora è costante in $[a,b]$. In particolare si ha che $H(y) = H(x)$. Si ha che
+\begin{equation*}
+H(x) = G(x) - \int_x^x f(t) \, dt = G(x)
+\end{equation*}
+e anche che
+\begin{equation*}
+G(x) = H(y) = G(y) - \int_x^y f(t) \, dt
+\end{equation*}
+Quindi
+\begin{equation*}
+\int_x^y f(t) \, dt = G(y) - G(x)
+\end{equation*}

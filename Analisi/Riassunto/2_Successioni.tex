@@ -1,0 +1,330 @@
+\chapter{Successioni}
+
+\section{Successione numerica}
+
+\subsection{Definizione}
+
+Una successione è una funzione $x : N \rightarrow R$ indicabile anche con $\{X_{n}\}_{n \in N}$.
+
+\begin{tip}
+La successione associa ad ogni numero naturale $n$ un numero reale $a_{n}$.
+
+Una successione numerica è una lista ordinata e infinita di numeri reali.
+\end{tip}
+
+\subsection{Successione limitata}
+
+Una successione è detta superiormente limitata se esiste un $M$ tale che $a_{n} < M$ $\forall n \in N$
+
+\begin{tip}
+Una successione è detta limitata se esiste un numero $M$ che sovrasta tutti i termini della successione. 
+\end{tip}
+
+Una successione è detta inferiormente limitata se esiste un $m$ tale che $a_{n} > m$ $\forall n \in N$
+
+\subsection{Successione Crescente}
+
+Una successione $x_{n}$ è crescente se $x_{n+1} > x_{n}$ per ogni n.
+
+\begin{tip}
+Una successione è crescente se, preso un termine, il suo termine successivo è sempre più grande del termine corrente.
+
+$\{ 0, 1, 2, 3, 4, 5,\ldots \}$
+\end{tip}
+
+\subsection{Successione Decrescente}
+
+Una successione $x_{n}$ è decrescente se $x_{n+1} < x_{n}$ per ogni n.
+
+\begin{tip}
+Una successione è decrescente se, preso un termine, il suo termine successivo è sempre più piccolo del termine corrente. 
+
+$\{ 0, -1, -2, -3, -4, -5, \ldots \}$
+\end{tip}
+
+\subsection{Successione Non Decrescente}
+
+Una successione $x_{n}$ è non decrescente se $x_{n+1} >= x_{n}$ per ogni n.
+
+\begin{tip}
+Una successione è non decrescente se, preso un termine, il suo termine successivo è sempre o uguale o più grande del termine corrente.
+
+$\{ 0, 1, 2, 2, 3, 5, 5, 5, \ldots \}$
+\end{tip}
+
+\subsection{Successione Non Crescente}
+
+Una successione $x_{n}$ è non crescente se $x_{n+1} <= x_{n}$ per ogni n.
+
+\begin{tip}
+Una successione è non crescente se, preso un termine, il suo termine successivo è sempre o uguale o più piccolo del termine corrente.
+
+$\{ 0, -1, -1, -3, -4, -4, \ldots \}$
+\end{tip}
+
+\subsection{Successione monotona}
+
+Una successione è monotona se è crescente o decrescente o non crescente o non decrescente.
+
+\section{Limite di una successione}
+
+\subsection{Definizione}
+
+$L \in R$ è il limite di $\{x_{n}\}$ se per ogni intorno  $\epsilon > 0$ esiste $N \in \mathbb{N}$ tale che, per ogni $n > N$, $$L - \epsilon < \{x_{n}\} < L + \epsilon$$
+
+Tale limite si scrive anche come $$\lim_{n\to\infty} x_{n} = L$$ 
+
+\begin{tip}
+Un numero reale L è limite di una successione $\{x_{n}\}$ se la distanza fra i numeri $x_{n}$ e L è aribrariamente piccola quando n è sufficientemente grande.
+
+Il limite di una successione è il valore a cui tendono i termini di una successione.
+\end{tip}
+
+\subsection{Successione convergente e divergente}
+
+Se il limite esiste la successione è detta convergente, se il limite non esiste la successione è detta divergente.
+
+\subsection{Successioni infinitesime }
+
+Se una successione è convergente e il suo limite $L$ è 0, questa è detta infinitesima.
+
+\section{Teorema di unicità del limite}
+
+\textbf{Enunciato}
+
+Sia $\{x_{n}\}$ una successione. Se $\{x_{n}\}$ ha limite $L$ e $\{x_{n}\}$ ha limite $L'$ allora $L=L'$
+
+\begin{tip}
+Se $\{x_{n}\}$ ha limite, questo è unico.
+
+La successione $\{x_{n}\}$ non ammette due limiti diversi.
+\end{tip}
+
+\textbf{Dimostrazione}
+
+Supponiamo che per assurdo $L \neq L'$ (cioè che la successione abbia due limiti diversi).
+
+Prendiamo $\frac{\epsilon}{2}$ tale che $\epsilon < |L-L'|$
+
+Per la definizione di limite esiste un $N$ tale che $|x_{n}-L| < \frac{\epsilon}{2}$ per ogni $n > N$, che si traduce in $x_{n} < L + \frac{\epsilon}{2}$ e $x_{n} > L - \frac{\epsilon}{2}$
+
+Per l'assurdo imposto (l'esistenza dei due limiti) esiste nache un $N'$ tale che se $n > N'$ allora $|x_{n}-L'| < \frac{\epsilon}{2}$
+
+Queste due condizioni si verificano entrambe nel seguente caso $|x_{n}-L| + |x_{n}-L'| < 2\frac{\epsilon}{2}$
+
+$$|L-L'| = |x_{n}-L'| - |x_{n}-L| \leq |x_{n}-L| + |x_{n}-L'| < \epsilon$$
+
+Quindi $\epsilon < |L-L'| < \epsilon$ che è ovviamente un assurdo, così da non verificare la nostra ipotesi iniziale.
+
+
+\section{Teorema della permanenza del segno}
+
+
+\textbf{Enunciato}
+
+Una successione $\{x_{n}\}$ che converge ad un limite $L > 0$ (e quindi anche a $+\infty$) ha definitivamente soltanto termini positivi.
+
+\begin{tip}
+In altre parole, esiste un $N$ tale che $x_{n}>0$ per ogni $n > N$. 
+
+Dopo un certo $N$ tutti i termini della successione sono positivi.
+\end{tip}
+
+\textbf{Dimostrazione}
+
+Se il limite di $x_{n}$ è $L$ ed è finito, prendiamo $\epsilon = L$ e usiamolo nella definizione di limite.
+
+Esiste quindi un $N$ tale che per ogni $n > N$ si ha che $|x_{n}-L| < \epsilon$ cioè
+$$|x_{n}-L| < L$$
+$$L - L < x_{n} < L + L$$
+in particolare a noi interessa che 
+$$L - L < x_{n}$$
+cioè che $x_{n}>0$ per ogni $n > N$-
+
+Se il limite di $x_{n}$ è infinito per la definizione di convergenza, dato un $M > 0$ qualsiasi, esiste $N$ tale che $x_{n}>M$ per ogni $n>N$.
+
+\section{Teorema di esistenza del limite per successioni monotone}
+
+\textbf{Enunciato}
+
+Una successione monotona di numeri reali converge sempre ad un limite L.
+
+Più precisamente, il limite di una successione crescente è il suo estremo superiore, mentre il limite di una successione decrescente è il suo estremo inferiore.
+
+Il limite è finito solo se la successioni è limitata.
+
+\textbf{Dimostazione}
+
+Supponiamo $\{x_{n}\}$ monotona crescente.
+
+Se la successione è illimitata, allora per ogni $M$ esiste un $N \in \mathbb{N}$ tale che $x_{N} > M$ (cioè esisterà un termine che prima o poi sarà più grande di M); di conseguenza, per la monotonia, $x_{n} > M$ per ogni $n > N$, quindi il limite di $\{x_{n}\}$ è infinito.
+
+Se la successione è limitata, allora ha un estremo superiore $S$. Per la definizione di estremo superiore, per ogni $\epsilon > 0$ esiste un $N \in \mathbb{N}$ tale che $x_{N} > S - \epsilon$. Di conseguenza $x_{n} > S$ per ogni $n > N$, quindi S è il limite di $\{x_{n}\}$.
+
+\section{Teorema del confronto per le successioni}
+
+\textbf{Enunciato}
+
+Prese $\{a_{n}\}$, $\{b_{n}\}$, $\{c_{n}\}$ tre successioni, tali che, definitivamente $a_{n} \leq b_{n} \leq c_{n}$ e 
+
+$$lim_{n \to +\infty} a_{n} = lim_{n \to +\infty} c_{n} = L$$ 
+
+allora 
+
+$$lim_{n \to +\infty} b_{n} = L$$
+
+\begin{tip}
+È informalmente chiamato teorema dei due carabinieri, per un'allegoria: il teorema sarebbe rappresentato da due carabinieri (due funzioni o successioni a,c che si stringono sempre di più) che conducono in arresto un prigioniero (una funzione o successione b): questo tende sicuramente allo stesso punto dove tendono i carabinieri (il limite comune di a e c).
+\end{tip}
+
+\textbf{Dimostrazione}
+
+Partiamo dalla definizione di limite, per ogni $\epsilon > 0$ esiste un $N$ (ed in questo caso anche un $N'$) tali che:
+
+$$L-\epsilon < a_{n} < l+\epsilon \forall n>N$$
+
+$$L-\epsilon < b_{n} < l+\epsilon \forall n>N'$$
+
+Quindi per ogni $n$ maggiore di $M=max\{N,N'\}$ si ottiene la seguente:
+
+$$L-\epsilon < a_{n} \leq b_{n} \leq c_{n} < L+\epsilon$$
+
+Quindi per ogni $\epsilon>0$ eiste un $M$ tale che $L-\epsilon < b_{n} < L+\epsilon \forall n>M$
+
+Cioè la successione $b_{n}$ ha limite $L$.
+
+\section{Criterio del rapporto per successioni}
+
+\textbf{Enunciato}
+
+Sia $\{x_n\}$ una successione a termini positivi e sia 
+\begin{equation*}
+L = \lim_{n \to +\infty} \frac{x_{n+1}}{x_n}
+\end{equation*}
+Allora:
+\begin{itemize}
+\item se $L > 1$ la successione è definitivamente crescente e $\lim x_n = +\infty$.
+\item se $0 \le L < 1$ la successione è definitivamente decrescente e $\lim x_n = 0$.
+\end{itemize}
+
+
+\textbf{Dimostrazione}
+\begin{itemize}
+\item se $L > 1$ allora possiamo imporre $L = 1 + 2\epsilon$. Per definizione di limite $\exists N$ tale che 
+\begin{equation*}
+\frac{x_{n+1}}{x_n} > L - \epsilon \qquad \forall n > N
+\end{equation*}
+\begin{equation*}
+\frac{x_{n+1}}{x_n} > 1 + \epsilon \qquad \forall n > N
+\end{equation*}
+
+Quindi $x_{n+1} > x_n \cdot (1+\epsilon) > x_n$ per $n > N$. Quindi la successione è definitivamente crescente.
+
+Proseguendo otteniamo:
+\begin{align*}
+x_{N+2} &> x_{N+1} \cdot (1+\epsilon) \\
+x_{N+3} &> x_{N+2} \cdot (1+\epsilon) > x_{N+1} \cdot (1+\epsilon)^2 \quad \text { e così via\dots}
+\end{align*}
+Generalizzando:
+\begin{equation*}
+x_n > (1+\epsilon)^{n-(N+1)} \cdot x_{N+1}
+\end{equation*}
+Poiché $(1+\epsilon)^{n-(N+1)}$ diverge a $+\infty$, per il teorema del confronto anche $\lim x_n = +\infty$.
+
+\item se $0 < L < 1$ procediamo in modo analogo al caso precedente. Imponiamo $L = 1 - 2\epsilon$. Per definizione di limite $\exists N$ tale che
+\begin{equation*}
+\frac{x_{n+1}}{x_n} < L + \epsilon \qquad \forall n > N
+\end{equation*}
+\begin{equation*}
+\frac{x_{n+1}}{x_n} < 1 - \epsilon \qquad \forall n > N
+\end{equation*}
+
+Come prima vale:
+\begin{equation*}
+0 < x_n < (1-\epsilon)^{n-(N+1)} \cdot x_{N+1} \qquad \forall n>N
+\end{equation*}
+
+Per il criterio del confronto, essendo $\lim (1-\epsilon)^{n-(N+1)} \cdot x_{N+1} = 0$, allora $\lim x_n = 0$. Inoltre, $x_{n+1} < x_n \cdot (1 - \epsilon) < x_n$; quindi la successione è definitivamente decrescente.
+\end{itemize}
+
+
+\section{Algebra dei limiti }
+
+Date due successioni $a_{n}$ e $b_{n}$ tali che 
+\begin{itemize}
+\item $\lim_{n \to inf} a_{n} = a$
+\item $\lim_{n \to inf} b_{n} = b$
+\end{itemize}
+
+\begin{center}
+$\lim_{n \to inf} a_{n} + b_{n} = a + b$ \qquad
+$\lim_{n \to inf} a_{n} * b_{n} = a * b$ \qquad
+$\lim_{n \to inf} \frac{a_{n}}{b_{n}} = \frac{a}{b}$
+\end{center}
+
+\section{Forme di indeterminazione}
+
+In alcuni casi è impossibile stabilire il comportamento di un limite di una serie, questo avviene nelle forme di indeterminazione.
+
+Ad esempio:
+
+\begin{center}
+$\frac{\infty}{\infty}$
+\qquad $\frac{0}{0}$
+\qquad $1^{\infty}$
+\qquad $0^{\infty}$
+\qquad $\infty^{\infty}$
+\qquad $\infty - \infty$
+\qquad $0 * \infty$
+\qquad $0^{0}$
+\end{center}
+
+\section{Successioni definite per ricorrenza }
+
+Una successione è definita per ricorrenza se è data nella forma:
+
+$$ \begin{cases}
+x_1 = a \\
+x_{n+1} = F(n, x_n) & \mbox{con }n > 0
+\end{cases} $$
+
+\section{Limiti delle successioni elementari}
+
+\section{Successioni asintotiche}
+
+Due successioni ${a_{n}}$ e ${b_{n}}$ sono asintotiche se ${b_{n}} \neq 0$ definitivamente e $$\lim \frac{{a_{n}}}{{b_{n}}} = 1$$ L'asintoticità si indica con $\{a_{n}\} \sim \{b_{n}\}$
+
+\subsection{Proprietà derivate}
+
+${a_{n}} \sim {b_{n}} \leftrightarrow {b_{n}} \sim {b_{n}}$
+
+Se $\{a_{n}\} \sim \{a'_{n}\}$ e $\{b_{n}\} \sim \{b'_{n}\}$ allora $$\lim \frac{\{a_{n}\}}{\{b_{n}\}} = \lim \frac{\{a'_{n}\}}{\{b'_{n}\}}$$
+
+
+\section{Numero di Nepero}
+
+$e$ (circa 2,71828) è un numero irrazionale: non può essere espresso come frazione o come numero decimale periodico.
+
+In particolare abbiamo visto come $e$ sia il limite della successione 
+$$\{(1+\frac{1}{n})^{n}\}$$
+ 
+Per ogni $k \in \mathbb{N}$ vale infatti che $ (1+\frac{1}{k})^{k} < e < \sum\limits_{h=0}^{k} \frac{1}{h} + \frac{1}{2^{k-1}}$
+
+\subsection{Limiti che si deducono da e}
+
+Sia $\{a_{n}\}$ divergente (e quindi con il limite a $+\infty$) allora $$\lim (1+\frac{1}{a_{n}})^{a_{n}} = e$$
+
+\section{Successioni infinitesime}
+
+Una successione $\{x_{n}\}$ si dice infinitesima se $\lim x_n = 0$.
+
+Sia $\epsilon_n$ una successione infinitesima a termini positivi. Allora:
+
+\begin{itemize}
+\item $\sin \epsilon_n \sim \epsilon_n$
+\item $1 - \cos \epsilon_n \sim \frac{1}{2} (\epsilon_n)^2$
+\item $\lim (1+\epsilon_n)^\frac{1}{\epsilon_n} = e$
+\item $\log (1 + \epsilon_n) \sim \epsilon_n$
+\item $e^{\epsilon_n} - 1 \sim \epsilon_n$
+\item $(1+\epsilon_n)^\alpha - 1 \sim \alpha \cdot \epsilon_n$
+\end{itemize}

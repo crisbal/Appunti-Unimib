@@ -4,7 +4,7 @@ A partire dal problema dell'individuazione della tangente geometrica ad una curv
 
 \section{Rapporto incrementale}
 
-Sia $f: (a,b) \to \mathbb{R}$ e sia $x_0 \in (a,b)$. Sia $x_0 + h$, con $h \neq 0$, un altro punto di $(a,b)$. Si chiama rapporto incrementale della funzione $f$, con punto iniziale $x_0$ e incremento $h$ della variabile dipendende, la quantità $$\frac{f(x_0+h)-f(0)}{h}$$.
+Sia $f: (a,b) \to \mathbb{R}$ e sia $x_0 \in (a,b)$. Sia $x_0 + h$, con $h \neq 0$, un altro punto di $(a,b)$. Si chiama rapporto incrementale della funzione $f$, con punto iniziale $x_0$ e incremento $h$ della variabile dipendende, la quantità $$\frac{f(x_0+h)-f(0)}{h}$$
 
 \subsection{Significato geometrico}
 Il rapporto incrementale costituisce il coefficiente angolare della retta (secante) passante per i punti $(x_0,f(x_0))$ e $(x_0+h,f(x_0+h))$. Infatti, per ogni $h$ scelto la secante ha equazione $$f(x_0) + \frac{f(x_0+h)-f(x_0)}{h}\cdot (x-x_0)$$
@@ -22,7 +22,7 @@ $$f'(x)=\lim_{x\to x_0} \frac{f(x)-f(x_0)}{x-x_0}$$
 
 \subsection{Retta tangente}
 
-Sia $f:(a,b)\to\mathbb{R}$ derivabile in $x_0 \in (a,b)$. Si chiama retta tangente al grafico della funzione in (x_0,f(x_0)) la retta $$y = f(x_0) + f'(x_0)(x-x_0)$$
+Sia $f:(a,b)\to\mathbb{R}$ derivabile in $x_0 \in (a,b)$. Si chiama retta tangente al grafico della funzione in $(x_0,f(x_0))$ la retta $$y = f(x_0) + f'(x_0)(x-x_0)$$
 
 \section{Relazione tra derivabilità e continuità}
 
@@ -32,11 +32,11 @@ Se una funzione è derivabile in un punto $x_0$ allora è anche continua in quel
 
 Cioè $lim_{x\to x_0}$
 \begin{tip}
-\textit{Derivabile in x_0}
+\textit{Derivabile in $x_0$}
 
 $\lim_{x\to x_0} \frac{f(x)-f(x_0)}{x-x_0} = f'(x_0)$
 
-\textit{Continua in x_0}
+\textit{Continua in $x_0$}
 
 $\lim_{x\to x_0} f(x) = f(x_0)$
 
@@ -44,7 +44,7 @@ $\lim_{x\to x_0} f(x) = f(x_0)$
 
 \textbf{Dimostrazione}
 
-Sappiamo che $$f(x) = f(x_0) + \frac{f(x)-f(x_0)}{x-x_0} (x-x_0)$$.
+Sappiamo che $$f(x) = f(x_0) + \frac{f(x)-f(x_0)}{x-x_0} (x-x_0)$$
 
 Calcoliamo il limite per $x \to x_0$ di entrambi i membri.
 
@@ -93,9 +93,9 @@ Sia $f(x) = \cos(x)$, allora $f'(x) = -\sin(x)$.
 \textbf{Dimostrazione}
 
 $$\lim_{h \to 0} \frac{\cos (x+h) - \cos x}{h} $$ $$
-= & \lim_{h \to 0} \frac{\cos x \cos h - \sin x \sin h - \cos x}{h} $$ $$
-= & \cos x \cdot \underbrace{\lim_{h \to 0} \frac{\cos h - 1}{h}}_{0} - \sin x \cdot \underbrace{\lim_{h \to 0} \frac{\sin h}{h}}_{1} $$ $$
-= & - \sin x$$
+=  \lim_{h \to 0} \frac{\cos x \cos h - \sin x \sin h - \cos x}{h} $$ $$
+=  \cos x \cdot \underbrace{\lim_{h \to 0} \frac{\cos h - 1}{h}}_{0} - \sin x \cdot \underbrace{\lim_{h \to 0} \frac{\sin h}{h}}_{1} $$ $$
+=  - \sin x$$
 
 \subsection{Derivata di $\tan(x)$}
 
@@ -113,8 +113,8 @@ Se $f(x) = e^x$, allora $f'(x) = e^x$.
 \textbf{Dimostrazione}
 $$
 \lim_{h \to 0} \frac{e^{x+h} - e^x}{h} $$ $$
-= & \lim_{h \to 0} \frac{e^x \cdot (e^h - 1)}{h} $$ $$
-= & e^x \cdot \underbrace{\lim_{h \to 0} \frac{e^h - 1}{h}}_{1} = e^x
+= \lim_{h \to 0} \frac{e^x \cdot (e^h - 1)}{h} $$ $$
+= e^x \cdot \underbrace{\lim_{h \to 0} \frac{e^h - 1}{h}}_{1} = e^x
 $$
 
 \subsection{Derivata di $\log(x)$}
@@ -122,8 +122,8 @@ Se $f(x) = \log x$, allora $f'(x) = \frac{1}{x}$. Infatti:
 
 \textbf{Dimostrazione}
 $$\lim_{h \to 0} \frac{\log (x+h) - \log x}{h} $$ $$
-= & \lim_{h \to 0} \frac{\log \frac{x+h}{x}}{h} $$ $$
-= & \lim_{h \to 0} \frac{1}{h} \cdot \log \left(1 + \frac{h}{x} \right) $$
+= \lim_{h \to 0} \frac{\log \frac{x+h}{x}}{h} $$ $$
+= \lim_{h \to 0} \frac{1}{h} \cdot \log \left(1 + \frac{h}{x} \right) $$
 
 Osservando che $\frac{h}{x}$ tende comunque a zero, possiamo applicare il limite notevole $\log (1 + \frac{h}{x} ) \sim \frac{h}{x}$.
 
@@ -226,7 +226,7 @@ $$ L = \lim_{x \to c}{\frac{f'(x)}{g'(x)}} \in \mathbb{\bar{R}} $$
 
 Allora
 
-$$\lim_{x \to c}{\frac{f(x)}{g(x)}} = L$$.
+$$\lim_{x \to c}{\frac{f(x)}{g(x)}} = L$$
 
 \section{Polinomio di Taylor}
 
@@ -241,6 +241,8 @@ La funzione si può quindi esprimere tramite un polinomio di Taylor e un resto $
 
 \subsection{Resto in forma di Lagrange}
 
-Data una funzione $f: I\to \mathbb{R}$, derivabile $n-1$ volte, definita su I intervallo aperto. Per ogni $x,x_0 \in I$ esiste $c$ compreso tra $x$ e $x_0$ tale che $$f(x)-P_n(x)$=\frac{f^{(n+1)\prime}(c)}{(n+1)!}\cdot (x-x_0)^{n+1} = \text{Resto di Lagrange}$$ 
+Data una funzione $f: I\to \mathbb{R}$, derivabile $n-1$ volte, definita su I intervallo aperto. Per ogni $x,x_0 \in I$ esiste $c$ compreso tra $x$ e $x_0$ tale che $$f(x)-P_n(x)=\frac{f^{(n+1)\prime}(c)}{(n+1)!}\cdot (x-x_0)^{n+1} = \text{Resto di Lagrange}$$ 
 
 \section{Convessità e concavità}
+
+(TODO)

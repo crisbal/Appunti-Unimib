@@ -1,6 +1,4 @@
-%https://github.com/lucach/appunti-unimib/blob/master/Analisi/main.tex
-
-\documentclass[a4paper,12pt]{book}
+\documentclass[a4paper,12pt,oneside]{book}
 
 \usepackage{fullpage}
 \usepackage[italian]{babel}
@@ -29,8 +27,8 @@
 \usetikzlibrary{snakes}
 \usetikzlibrary{arrows}
 
-
-\frenchspacing
+\setlength{\parindent}{0pt}
+\renewcommand{\baselinestretch}{1.25}
 \pagestyle{plain}
 
 % This is to suppress the 'Chapter N' title at the beginning of every
@@ -41,8 +39,17 @@
 \title{Riassunto Analisi Matematica}
 \author{Cristian Baldi}
 
+\usepackage{fontspec}
+\newfontfamily\DejaSans{DejaVu Sans}
+\usepackage[linewidth=1pt,linecolor=black]{mdframed}
+\newenvironment{tip}
+{ \begin{mdframed} {\DejaSans ☺} }
+{ \end{mdframed} }
 
-\newtheorem{tip}[theorem]{Spiegazione}
+\newcommand{\serie}[2]{
+  \sum\limits_{#1}^{#2}
+}
+\newcommand{\comment}[1]{}
 
 \begin{document}
 
@@ -64,10 +71,10 @@ Fonte dei contenuti:
 \end{itemize}
 
 
-\input 2_Successioni.latex
-\input 3_Serie_Numeriche.latex
-\input 4_Funzioni.latex
-\input 5_Derivate.latex
-\input 6_Primitive.latex
+\input 2_Successioni.tex
+\input 3_Serie_Numeriche.tex
+\input 4_Funzioni.tex
+\input 5_Derivate.tex
+\input 6_Primitive.tex
 
 \end{document}
