@@ -8,17 +8,13 @@ Le **relazioni n-arie** (cioè di *arietà pari a n*) possono essere *sempre* ra
 
 **Operazioni su Matrici Booleane**
 
-## grafo bipartito
-
+## Grafo bipartito
 
 ## Grafo orientato
 
-Con **grafo orientato** (o grafo *diretto* o *disgrafo*) intendiamo un metodo di rappresentare una relazione binaria $G$ definitia su un solo insieme $V$ tale che $G \subseteq V \times V$.
+Con **grafo orientato** (o grafo *diretto* o *digrafo*) intendiamo un metodo di rappresentare una relazione binaria $G$ definitia su un solo insieme $V$ tale che $G \subseteq V \times V$.
 
-Un grafo viene generalmente raffigurato sul piano da punti, che	
-rappresentano i nodi; archi o spigoli sono rappresentati da segmenti o curve che	
-collegano due nodi. In questo caso, il posizionamento dei nodi e la forma degli archi o 
-spigoli è irrilevante, dal momento che a contare sono solo i nodi e le relazioni tra essi. 
+Un grafo viene generalmente raffigurato sul piano da punti, che rappresentano i nodi; archi o spigoli sono rappresentati da segmenti o curve che collegano due nodi. In questo caso, il posizionamento dei nodi e la forma degli archi o spigoli è irrilevante, dal momento che a contare sono solo i nodi e le relazioni tra essi. 
 In altri termini, lo stesso grafo può essere disegnato in molti modi diversi senza 
 modificarne le proprietà.	
 
@@ -58,7 +54,7 @@ Il minimo numero di archi che compongono un cammino tra due nodi $vin$ e $vfin$ 
 
 ### Grafo etichettato
 
-Un **grafo etichettato** è una funzione che **associa ad ogni arco** del grafo **un'etichetta**, cioè una sorta di nome.v 
+Un **grafo etichettato** è una funzione che **associa ad ogni arco** del grafo **un'etichetta**, cioè una sorta di nome.
 
 
 ### Grafo completo

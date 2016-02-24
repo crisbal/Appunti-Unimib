@@ -18,7 +18,7 @@ I nodi di un albero possono avere **da 0 a N archi uscenti**. I nodi con 0 archi
 
 Un particolare tipo di albero è l'**albero binario**, particolare relazione per cui **ogni nodo ha al massimo 2 nodi figli** che per comodità denominiamo **figlio destro** e **figlio sinistro**
 
-Graficamente, quando disegnamo un albero, è possibile evitare di disegnare le frecce che connettono i nodi: infatti riconoscere la radice è semplice, basta trovare il nodo che non ha archi entranti. Una volta trovata la radice si sa che, essendo l'albero un DAG, tutti gli archi che "coinvolgono" un nodo vanno nella stessa direzione e mai nel senso opposto degli altri. Non ci sono quindi ambiguità. E' generalmente consigliabile mettere le frecce nel disegnare gli alberi.
+Graficamente, quando disegnamo un albero, è possibile evitare di disegnare le frecce che connettono i nodi: infatti riconoscere la radice è semplice, basta trovare il nodo che non ha archi entranti. Una volta trovata la radice si sa che, essendo l'albero un DAG, tutti gli archi che "coinvolgono" un nodo vanno nella stessa direzione e mai nel senso opposto degli altri. Non ci sono quindi ambiguità. È generalmente consigliabile mettere le frecce nel disegnare gli alberi.
 
 Preso un nodo dell'albero possiamo determinare la sua **profondità** all'interno dell'albero: il numero di archi necessari per andare dalla radice dell'albero al nodo stesso.
 
@@ -47,7 +47,7 @@ Data una relazione di equivalenza $R$ su un insieme $S$, la **classse di equival
 
 $[x] = {y|\langle x,y \rangle \in R}$
 
-Cioè la **classe di equivalenza** di un elemento $x \in R$ è **l'insieme degli elementi di $R$ con cui $x$ si relaziona**.
+Cioè la **classe di equivalenza** di un elemento $x \in R$ è **l'insieme degli elementi di $R$ con cui $x$ è in relazione**.
 
 Se $R$ è una relazione di equivalenza su $S$ allora le classi di equivalenza generate da $R$ partizionano S. (Vedere i capitoli precedenti per la definizione di *classe di equivalenza*).
 

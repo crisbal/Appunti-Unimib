@@ -8,8 +8,8 @@ La sintassi ci permette di capire come scrivere le formule proposizionali e come
 
 Un alfabeto $\sum$ (chiamato anche $L$ se chiaro nel contesto) è costituito da:
 
-* Connettivi proposizionali unari (\neg) e binari ($\land,\lor,\implies,\iff$)
-* Costanti proposizionali \top e \bot (per detonatare Vero e Falso)
+* Connettivi proposizionali unari ($\neg$) e binari ($\land,\lor,\implies,\iff$)
+* Costanti proposizionali $\top$ e $\bot$ (per detonatare Vero e Falso)
 * Un insieme non vuoto di simboli proposizionali $P = {A,B,C,...}$
 * I simboli separatori '(' e ')'
 
@@ -39,21 +39,21 @@ Sia $A$ una formula, l'insieme delle sottoformule è definito in questo modo:
 
 * $\neg A$
 * $A \lor B$
-* $(\neg A) \land (A \lor (\not (B \implies C)))$
+* $(\neg A) \land (A \lor (\neg (B \implies C)))$
 
 ## Parentesi e precedenza tra gli operatori
 
-Se seguissimo alla lettera la definizio di formula proposizionale ci ritroveremmo con formule che hanno tantissime parentesi, perchè non è stata ancora specificata una precedenza tra gli operatori. 
+Se seguissimo alla lettera la definizione di formula proposizionale ci ritroveremmo con formule che hanno tantissime parentesi, perché non è stata ancora specificata una precedenza tra gli operatori. 
 
 In particolare nella logica proposizionale gli operatori seguono il seguente ordine di precedenza:
 
-$\neg,\lor,\not,\implies,\iff$
+$\neg,\lor,\land,\implies,\iff$
 
 Ciò significa che se mancano le parentesi una formula ben formata va parentesizzata prioritizzando le sottoformule i cui connettivi principali hanno la precedenza più alta. A parità di precedenza si associa a destra.
 
 ### Esempi di priorità
 
-* $\neg A \lor B \land C = (\neg(A)\lor B)\land C$
+* $\neg A \lor B \land C = ((\neg A)\lor B)\land C$
 * $A \lor B \lor C$ = $A \lor (B \lor C)$
 
 # Semantica Logica Proposizionale
@@ -79,27 +79,25 @@ Una formula logica proposizionale è una contraddizione se non è mai soddisfatt
 
 ## Operatore negazione
 
-L'operatore $\neg$ è il più semplice tra tutti. $\neg$, come sappiamo dalla sintassi è un operatore unario. Preso un valore ne restituisce l'opposto logico.
+L'operatore $\neg$ è il più semplice tra tutti. $\neg$, come sappiamo dalla sintassi, è un operatore unario. Preso un valore ne restituisce l'opposto logico.
 
 Eccone la tabella di verità:
 
-|   |$\neg$|
-|---|---|
-|0|1|
-|1|0|
+ A   $\neg A$
+--- ----------
+ 0      1
+ 1      0
 
 ## Operatore AND
 
 L'operatore $\land$ è un operatore binario. Detto anche di congiunzione, fa un operazione che, in pratica, equivale al prodotto tra i valori di verità di due proposizioni.
 
----------------------------------------------------------------------------
-A 				B 				$A \land B$
+A 				B 				 $A \land B$
 --------------  --------------  -------------- 
-0 				0 				0 
-0 				1 				0
-1 				0 				0 
-1 				1 				1 
----------------------------------------------------------------------------
+0 				0 				     0
+0 				1 				     0
+1 				0 				     0
+1 				1 				     1
 
 
 Letteralmente $\land$ ritorna 1 quando entrambi i "parametri" sono 1.
@@ -108,57 +106,51 @@ Letteralmente $\land$ ritorna 1 quando entrambi i "parametri" sono 1.
 
 L'operatore $\lor$ è un operatore binario. Detto anche di disgiunzione, fa un operazione che, in pratica, è molto simile alla somma tra i valori di verità di due proposizioni.
 
----------------------------------------------------------------------------
-A 				B 				$A \lor B$
+A 				B 				 $A \lor B$
 --------------  --------------  -------------- 
-0 				0 				0 
-0 				1 				1 
-1 				0 				1 
-1 				1 				1 
----------------------------------------------------------------------------
+0 				0 				     0
+0 				1 				     1
+1 				0 				     1
+1 				1 				     1
 
 Letteralmente $\lor$ ritorna 1 quando almeno uno dei due parametri è a 1.
 
 
 ## Operatore Implica
 
-L'operatore $Implica$ è un operatore binario è detto anche di implicazione. $A$ è chiamata premessa e $B$ è chiamata conseguenza.
+L'operatore $\implies$ è un operatore binario è detto anche di implicazione. $A$ è chiamata premessa e $B$ è chiamata conseguenza.
 
----------------------------------------------------------------------------
-A 				B 				$A \implies B$
---------------  --------------  -------------- 
-0 				0 				1 
-0 				1 				1 
-1 				0 				0 
-1 				1 				1 
----------------------------------------------------------------------------
-
+A 				B 				 $A \implies B$
+--------------  --------------  ----------------
+0 				0 				     1
+0 				1 				     1
+1 				0 				     0
+1 				1 				     1
 
 $A \implies B$ è vero se $B$ è vero, o se sia $A$ che $B$ sono false.
 
 ## Operatore co-implica
 
-L'operatore $co-implica$ è un operatore binario è detto anche di co-implicazione. Esso puo' essere scritto come $(A \implies B) \land (B \implies A)$. 
+L'operatore $\iff$ è un operatore binario è detto anche di co-implicazione. Esso può essere scritto come $(A \implies B) \land (B \implies A)$. 
 
----------------------------------------------------------------------------
-A 				B 				$A \iff B$
---------------  --------------  -------------- 
-0 				0 				1 
-0 				1 				0
-1 				0 				0 
-1 				1 				1 
----------------------------------------------------------------------------
+A 				B 				 $A \iff B$
+--------------  --------------  ------------
+0 				0 				     1
+0 				1 				     0
+1 				0 				     0
+1 				1 				     1
 
 $A \iff B$ è vero se sia $A$ che $B$ sono entrambe vere o entrambe false, cioè se i loro valori coincidono.
 
 
 ## Equivalenza logica
 
-Diciamo che due proposizioni A e B sono logicamente equivalenti se sono uguali per ogni valutazione booleana (a parità di input, danno lo stesso output)
+Diciamo che due proposizioni A e B sono logicamente equivalenti se sono uguali per ogni valutazione booleana (a parità di input, danno lo stesso output).
 
 ### Idempotenza
 
 $A \land A = A$
+
 $A \lor A = A$
 
 ### Associatività
@@ -183,29 +175,29 @@ $A \lor A = A$
 
 ### Definzione 
 
-Un modello è un interpretazione di una formuala proposizionale
+Un modello è un interpretazione di una formuala proposizionale.
 
 ### Definizione ricorsiva
 
-Sia $M$ un insieme di simboli proposizionali, definiamo $\models \subseteq (M \times L)$ in modo ricorsivo in questo modo:
+Sia $M$ un insieme di simboli proposizionali, definiamo $\models$ $\subseteq (M \times L)$ in modo ricorsivo in questo modo:
 
 * $M \models A$ se e solo se $A \in M$
 * $M \models Vero$ e $M \not \models Falso$
 * $M \models \not A$ se e solo se non $(M \models A)$ se e solo se $M \not \models A$
 * $M \models A \land B$ se e solo se $M \models A$ e $M \models B$
 * $M \models A \lor B$ se e solo se $M \models A$ o $M \models B$
-* $M \models A imp B$ se e solo se $M \not \models A$ o $M \models B$
-* $M \models A coimp B$ se e solo se $M \models A$ e $M \models B$ oppure $M \not \models A$ e $M \not \models B$
+* $M \models A \implies B$ se e solo se $M \not \models A$ o $M \models B$
+* $M \models A \iff B$ se e solo se $M \models A$ e $M \models B$ oppure $M \not \models A$ e $M \not \models B$
 
 ### Valutazione booleana e Modelli
 
-Per dare un significato più concreto a questa definizione possiamo dire che tutti i simboli che appartengono al sottoinsieme M sono quelli che hanno valutazione booleana 1, mentre quelli che non appartengono hanno valutazione booleana 0.
+Per dare un significato più concreto a questa definizione possiamo dire che tutti i simboli che appartengono al sottoinsieme $M$ sono quelli che hanno valutazione booleana 1, mentre quelli che non appartengono hanno valutazione booleana 0.
 
-In simboli $p \in M se e solo se V(p)=1$
+In simboli $p \in M$ se e solo se $V(p)=1$
 
 **In particolare**
 
-Il passo base della definizione ricorsiva di $\models$ coincide con la definizione di assegnazione/valutazione booleana $V$.
+Il passo base della definizione ricorsiva di $\models$ coincide con la definizione di assegnazione (valutazione) booleana $V$.
 
 ### Definizioni relative ai modelli
 
@@ -215,12 +207,12 @@ Se $M$ rende vere tutte le formule di un insieme $T$ ($M \models A$ per ogni for
 
 Se $M \models A$ per qualche $M$ allora diciamo che $A$ è soddisfacibile.
 
-Se per nessun insieme di simboli proposizionali $M$, è verificato che $M$ \models A$ allora diciamo che $A$ è insoddisfacibile.
+Se per nessun insieme di simboli proposizionali $M$, è verificato che $M \models A$ allora diciamo che $A$ è insoddisfacibile.
 
 
 ## Decidibilità logica proposizionale
 
-La logica proposizionale è decidibile (posso sempre verificare il significato di una formula). Esiste infatti una procedure effettiva che stabilisce la validità o no di una formula, o se questa ad esempio è una tautologia.
+La logica proposizionale è decidibile (posso sempre verificare il significato di una formula). Esiste infatti una procedura effettiva che stabilisce la validità o no di una formula, o se questa ad esempio è una tautologia.
 
 In particolare il verificare se una proposizione è tautologica o meno è l'operazione di decibilità principale che si svolge nel calcolo proposizonale.
 

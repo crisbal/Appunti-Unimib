@@ -1,11 +1,11 @@
 # Logica
 
-Chiamata anche *sistema formale* una logica $Lo$ è definita da:
+Chiamata anche *sistema formale*, una logica $Lo$ è definita da:
 
-* $Alf$, **alfabeto** di $Lo$: un insieme non vuoto , finito o numerabile, di simboli. Combinando più simboli si ottiene un'espressione di $Lo$.
+* $Alf$, **alfabeto** di $Lo$: un insieme non vuoto, finito o numerabile, di simboli. Combinando più simboli si ottiene un'espressione di $Lo$.
 * $F$, insieme delle formule ben formate: sottoinsieme di espressioni di $Lo$ che come suggerisce il nome contiene le $FBF$ di $Lo$.
 * $Alfx$, insieme degli assiomi di $Lo$.
-* $R$, insieme finitio di relazioni ${R1,R2,...,Rn}$: queste relazioni sono definite tra le formule di $Lo$ e sono dette **regole di inferenza**.
+* $R$, insieme finito di relazioni ${R1,R2,...,Rn}$: queste relazioni sono definite tra le formule di $Lo$ e sono dette **regole di inferenza**.
 
 ## Linguaggio
 
@@ -24,7 +24,7 @@ Allora $F$ è definito induttivamente:
 
 * Se $A$ è un elemento di $Atom$ allora $A \in F$
 * Se $A \in F$ e $?$ è un operatore unario allora $(?A) \in F$
-* Se $A \in F.B \in F$ e $o$ è un operatore binario allora $(AoB) \in F$
+* Se $A \in F$, $B \in F$ e $o$ è un operatore binario allora $(AoB) \in F$
 
 ### Unicità della scomposizione
 
@@ -36,7 +36,7 @@ Per ogni FBF vale una (ed una sola) delle seguenti proprietà:
 
 ## Interpretazione del linguaggio
 
-Preso un qualsiasi linguaggio logico (ma anche un linguaggio come l'italiano o un linguaggio di programmazione) e costruita una proposizione combinando elementi del linguaggio, è necessario interpretarla cioè andare a stabilirne il significato. Non è abbastanza studiare la frase o la proposizione guardando soltanto i simboli che la compongono (analisi sintattica) ma anche comprenderne a pieno il senso di questa (analisi semantica). 
+Preso un qualsiasi linguaggio logico (ma anche un linguaggio come l'italiano o un linguaggio di programmazione) e costruita una proposizione combinando elementi del linguaggio, è necessario interpretarla cioè andare a stabilirne il significato. Non è abbastanza studiare la frase o la proposizione guardando soltanto i simboli che la compongono (analisi sintattica) ma è necessario anche comprenderne a pieno il senso (analisi semantica). 
 
 Attraverso l'inferenza -> ragionamento per arrivare ad un risultato, una sorta di dimostrazione.
 
@@ -59,7 +59,7 @@ Generalmente $B$ ha due elementi (${t,f}$) ma è anche possibile che $B$ abbia u
 
 **Soddisfacibilità**
 
-Nel caso sia necessario è possibile studiare il significato di una formula nel contesto di una struttura o realtà matematica, attraverso l'utilizzo della relazione di *soddisfacibilità* che si indica con il simbolo $\models$. $\models$ è sottoinsieme di $M \times F$ dove M è una struttura e $M \models A$ ($M$ modella $A$).
+Nel caso sia necessario è possibile studiare il significato di una formula nel contesto di una struttura o realtà matematica, attraverso l'utilizzo della relazione di *soddisfacibilità* che si indica con il simbolo $\models$. $\models$ è sottoinsieme di $M \times F$ dove $M$ è una struttura e $M \models A$ ($M$ modella $A$).
 
 ## Modelli
 
@@ -78,7 +78,7 @@ La Luna è un satellite della Terra = Vero, è un modello
 
 Sulla terra c'è acqua = Vero, è un modello
 
-Sulla terra non esistono animali, Falso, non è un modello
+Sulla terra non esistono animali = Falso, non è un modello
 
 Descrizione della terra attraverso i modelli: La Terra ha come satellite la Luna e sulla Terra c'è acqua. 
 
