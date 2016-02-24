@@ -1,7 +1,7 @@
 # Reticoli
 
 ## Definizione
-I reticoli sono poset in cui per ogni coppia di $\pangle{x,y} \in S$ esistomo un mimino maggiorante (che chiamiamo $join$ e che indichiamo con il simbolo $\sqcup$) e un massimo minorante (che chiamiamo meet e che indichiamo con il simbolo $\sqcap$).
+I reticoli sono poset in cui per ogni coppia di $\pangle{x,y} \in S$ esistono un mimino maggiorante (che chiamiamo *join* e che indichiamo con il simbolo $\sqcup$) e un massimo minorante (che chiamiamo *meet* e che indichiamo con il simbolo $\sqcap$).
 
 ## Proprietà e proposizioni dei reticoli
 
@@ -13,7 +13,7 @@ Preso un reticolo $L$, un elemento $a'\in L$ è detto complemento di $a\in L$ se
 
 ### Reticolo Completo
 
-Si chiama reticolo completo un reticolo $L$ in cui ogni sottoinsieme A di L ha un minimo maggiorante (non vuoto) e un massimo minorante (non vuoto).
+Si chiama reticolo completo un reticolo $L$ in cui ogni sottoinsieme $A$ di $L$ ha un minimo maggiorante (non vuoto) e un massimo minorante (non vuoto).
 
 ### Reticolo Limitato
 

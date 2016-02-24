@@ -13,7 +13,7 @@ L'induzione è un metodo di ragionamento che è utile per:
 Sia $A(n)$ una asserzione (proprietà da verificare) per ogni elemento dell'insieme dei numeri naturali $N$. Supponendo che:
 
 * $A(n)$ è vera
-* per ogni $k \in N$, se A(k) é vera, allora è vera anche $A(k+1)$
+* per ogni $k \in N$, se A(k) è vera, allora è vera anche $A(k+1)$
 
 Allora per ogni $n \in N$, $A(n)$ è vera.
 
@@ -22,9 +22,9 @@ Allora per ogni $n \in N$, $A(n)$ è vera.
 Sia $A(n)$ una asserzione (proprietà da verificare) per ogni elemento dell'insieme dei numeri naturali $N$. Supponendo che:
 
 * $A(n)$ è vera
-* per ogni $m \in N$, se A(k) é vera per ogni $k$, con $0<k<m$, ne segue che è vera A(m)
+* per ogni $m \in N$, se $A(k)$ è vera per ogni $k$, con $0<k<m$, ne segue che è vera $A(m)$
 
-Allora per ogni $n \in N e n>0$, $A(n)$ è vera.
+Allora per ogni $n \in N$ e $n>0$, $A(n)$ è vera.
 
 
 ## Esempi di Dimostrazione per Induzione
