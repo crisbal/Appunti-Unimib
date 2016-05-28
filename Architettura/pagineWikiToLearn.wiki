@@ -1,0 +1,244 @@
+!!! Circuiti combinatori !!!
+
+# Introduzione
+
+Nell'elettronica digitale si chiama circuito (o rete) combinatoria quel circuito il cui stato delle uscite dipende solo dalla funzione logica applicata allo stato istantaneo (cioè in un determinato istante di tempo) delle sue entrate.
+
+Trattandosi di elettronica digitale sia gli ingressi che le uscite possono assumere solo i valori di segnale alto (1 per convenzione) o basso (0 per convenzione).
+
+{{Osservazione|Il circuito combinatorio non ricorda quello che è successo in precedenza. Le uscite dipendono solo dal valore attuale ed istantaneo delle entrate.
+
+I circuiti combinatori non hanno memoria: non esistono componenti come le RAM o i registri.}}
+
+In questa parte del corso vedremo alcuni tra i più semplici, ma allo stesso tempo più utili, circuiti combinatori che ci permetteranno di progettare circuiti più complessi.
+
+# Porte logiche
+
+Le porte logiche sono i componenti elettronici che permettono di svolgere le operazioni logiche primitive (AND, OR, NOT) oltre che a quelle direttamente derivate (NAND, NOR, XOR).
+
+Le porte logiche hanno <math>n</math> ingressi e generalmente 1 uscita.
+
+
+== Porte logiche fondamentali ==
+
+=== Porta Logica AND ===
+[[File: AND_ANSI.png|250px|frameless]]
+La porta logica AND svolge l'operazione logica di AND tra due bit (anche detta prodotto logico).
+
+Al variare delle entrate <math>A</math> e <math>B</math> l'uscita <math>A\cdot B</math> varia in questo modo:  
+{| class="wikitable"
+|-
+! A !! B !! <math>A\cdot B</math>
+|-
+| 0 || 0 || 0
+|-
+| 0 || 1 || 0
+|-
+| 1 || 0 || 0
+|-
+| 1 || 1 || 1
+|}
+
+=== Porta Logica OR ===
+[[File: OR_ANSI.png|250px|frameless]]
+La porta logica OR svolge l'operazione logica di OR tra due bit (anche detta somma logica).
+
+Al variare delle entrate <math>A</math> e <math>B</math> l'uscita <math>A + B</math> varia in questo modo:
+{| class="wikitable"
+|-
+! A !! B !! <math>A+B</math>
+|-
+| 0 || 0 || 0
+|-
+| 0 || 1 || 1
+|-
+| 1 || 0 || 1
+|-
+| 1 || 1 || 1
+|}
+
+=== Porta Logica NOT ===
+[[File: NOT_ANSI.png|250px|frameless]]
+La porta logica NOT svolge l'operazione logica di NOT su un bit (anche detta negazione logica).
+
+Al variare dell'unica entrata <math>A</math> l'uscita <math>\overline A</math> varia in questo modo:
+{| class="wikitable"
+|-
+! A !! <math>\overline A</math>
+|-
+| 0 || 1
+|-
+| 1 || 0
+|}
+
+== Porte con a più di due ingressi ==
+Tranne la porta NOT, che per nostra comodità rimane sempre ad un solo ingresso, le altre porte logiche possono esistere anche ad N ingressi (<math>2,3,4, \ldots, N</math>).
+
+Queste porte svolgono l'operazione logica associata su N bit invece che su 2.
+
+Queste porte logiche non standard sono particolarmente comode nella rappresentazione grafica dei circiti logici; 
+
+Nella pratica, cioè nella realizzazione di circuiti, se si hanno a disposizione solo porte a 2 ingressi, è possibile realizzare porte a N ingressi collegando ''a cascata'' tra loro porte a 2 ingressi.
+
+{{Esempio|titolo=AND a 3 ingressi|
+Ad esempio una AND a 3 ingressi si può creare usando 2 AND a 2 ingressi come segue:
+[[File: AND3.png|400px|frameless]]
+}}
+
+!!! Porte logiche non fondamentali !!!
+
+Oltre alle porte logiche fondamentali (AND, OR, NOT) esistono altre porte che sono realizzate combinando le fondamentali, il cui principale scopo è la semplificazione dei circuiti (realizzando operazioni composte in un unico componente).
+
+Le porte in questione sono la NAND (AND il cui risultato è negato), NOR (OR il cui risultato è negato), XOR (vero solo quando gli input sono diversi tra loro).
+
+=== NAND ===
+
+[[File: Nand.png|250px|frameless]]
+Notare il pallino dopo la porta logica, indica la negazione.
+{| class="wikitable"
+|-
+! A !! B !! <math>A\cdot B</math> !! A NAND B 
+|-
+| 0 || 0 || 0 || 1
+|-
+| 0 || 1 || 0 || 1
+|-
+| 1 || 0 || 0 || 1
+|-
+| 1 || 1 || 1 || 0
+|}
+
+=== NOR ===
+[[File: NorANSI.png|250px|frameless]]
+Notare il pallino dopo la porta logica, indica la negazione.
+{| class="wikitable"
+|-
+! A !! B !! <math>A+B</math> !! A NOR B
+|-
+| 0 || 0 || 0 || 1
+|-
+| 0 || 1 || 1 || 0
+|-
+| 1 || 0 || 1 || 0
+|-
+| 1 || 1 || 1 || 0
+|}
+
+=== XOR ===
+[[File: Xor.png|250px|frameless]]
+{| class="wikitable"
+|-
+! A !! B !! A XOR B
+|-
+| 0 || 0 || 0
+|-
+| 0 || 1 || 1
+|-
+| 1 || 0 || 1
+|-
+| 1 || 1 || 0
+|}
+
+# PLA
+
+
+# Decoder
+
+Un decoder è un componente elettronico caratterizzato dall'avere <math>n</math> ingressi e <math>2^n</math> uscite. Le uscite vanno da <math>R_0</math> a <math>R_{n-1}</math> 
+
+Lo scopo del decoder è di impostare allo stato alto l'uscita corrispondente alla conversione in base 10 della codifica binaria a <math>n</math> bit ricevuta in input (e di impostare allo stato basso tutte le altre).
+
+'''Tabella di verità di un decoder a <math>2</math> ingressi'''
+{| class="wikitable"
+|-
+! <math>I_1</math> !! <math>I_2</math> !! <math>R_0</math> !! <math>R_1</math> !! <math>R_2</math> !! <math>R_3</math>
+|-
+| 0 || 0 || 1 || 0 || 0 || 0
+|-
+| 0 || 1 || 0 || 1 || 0 || 0
+|-
+| 1 || 0 || 0 || 0 || 1 || 0
+|-
+| 1 || 1 || 0 || 0 || 0 || 1
+|}
+
+{{Esempio|
+Supponiamo di avere un decoder a 2 entrate, avrà sicuramente <math>2^2=4</math> uscite. Se in input viene presentato <math>11_2</math> verrà accesa l'uscita <math>R_{3_{10}}</math>.
+}}
+
+# Encoder
+
+Un decoder è un componente elettronico caratterizzato dall'avere <math>2^n</math> ingressi e <math>n</math> uscite. 
+
+Lo scopo del decoder è di produrre sulle uscite la codifica in binario del numero dell'entrata che è stata impostata a 1.
+
+'''Tabella di verità di un decoder a <math>2</math> ingressi'''
+{| class="wikitable"
+|-
+! <math>I_0</math> !! <math>I_1</math> !! <math>I_2</math> !! <math>I_3</math> !! <math>R_0</math> !! <math>R_1</math>
+|-
+| 1 || 0 || 0 || 0 || 0 || 0
+|-
+| 0 || 1 || 0 || 0 || 0 || 1
+|-
+| 0 || 0 || 1 || 0 || 1 || 0
+|-
+| 0 || 0 || 0 || 0 || 1 || 1
+|}
+
+{{Esempio|
+Supponiamo di avere un decoder a 4 entrate, avrà quindi <math>2</math> uscite. Se l'entrata numero 3 viene impostata al livello alto, sulle uscite verrà presentato <math>11_2</math>, cioè entrambe le uscite saranno impostate ad alto.
+}}
+
+# Multiplexer
+
+Un multiplexer è un componente elettronico a <math>2^n</math> entrate principali, <math>1</math> uscita e <math>n</math> entrate di controllo.
+
+Le entrate di controllo sono entrate aggiuntive necessarie al funzionamento del multilexer ma vengono nominate separatamente perchè hanno scopo diverso dalle entrate principali.
+
+Il multiplexer ha lo scopo di presentare sull'uscita il valore dell'entranta identificata dalla codifica binaria presente sulle entrate di controllo. 
+
+ {{Osservazione|
+Il multiplexer funziona da selettore, permette di scegliere quale tra i <math>2^n</math> segnali di ingresso si vuole vedere sull'uscita}}
+
+{{Esempio|
+Aggiungere esempio
+}}
+
+# ROM e derivati
+
+L'acronimo ROM sta per Read Only Memory (memoria di sola lettura): così vengono chiamati dei particolari componenti il cui scopo è la conservazione e la fornitura ad altri componenti di dati in formato binario, salvati a priori nella ROM stessa.
+
+Una ROM ha <math>n</math> entrate di indirizzamento, <math>2^n</math> blocchi di <math>m</math> bit salvati e <math>m</math> uscite.
+
+Pur trattandosi di una memoria, siamo sempre e comunque in un cicuito sequenziale.
+
+Quello che è scritto in una ROM non dipende dalla "storia" del circuito in cui la ROM stessa è inserita: essa conserva informazioni scritte in un momento "fuori dal tempo" del circuito, questo ci è garantito anche dal fatto che, trattandosi di una memoria di sola lettura, diventa impossibile andare a cambiare i valori salvati all'interno mentre il circuito si esegue.
+
+# Adder
+
+!!! Circuiti sequenziali !!!
+
+# Introduzione
+
+# Latch 
+
+# Registri
+
+!!! Design di una semplice ALU !!!
+
+# Introduzione
+
+# Operazioni Logiche
+
+# Somma
+
+# Sottrazione
+
+# Confronto
+
+# Da 1 a 32 bit
+
+!!! MIPS32 !!!
+
+# .....

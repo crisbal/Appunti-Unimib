@@ -1,0 +1,194 @@
+# Matrici
+
+Una matrice con *p* righe e *q* colonne è una tabella di numeri reali così disposti:
+
+$$
+A =
+\begin{bmatrix}
+    a_{11} & a_{12} & a_{13} & \dots  & a_{1q} \\
+    a_{21} & a_{22} & a_{23} & \dots  & a_{2q} \\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    a_{p1} & a_{p2} & a_{p3} & \dots  & a_{pq}
+\end{bmatrix}
+$$
+
+$p$ e $q$ sono detti dimensioni della matrice.
+
+L'elemento A_{i,j} della matrice è l'elemento che si trova alla $i$-esima riga e alla $j$-esima colonna.
+
+## Matrici quadrate
+
+Una matrice che ha dimensione $(n,n)$ è detta matrice quadrata. Questa matrice avrà un numero uguale di righe e di colonne.
+$$
+A_{\text{quadrata}} =
+\begin{bmatrix}
+    a_{11} & a_{12} \\
+    a_{21} & a_{22}
+\end{bmatrix}
+$$
+
+### Diagonale principale
+
+Per ogni matrice quadrata $A_{n\times n}$ è possibile individuare gli elementi della diagonale principale, cioè tutti gli $a_{i,i}$ con $i$ che varia da 1 a $n$. 
+
+### Matrice triangolare superiore
+Una matrice quadrata $A_{n\times n}$ si dice triangolare superiore se tutti gli elementi che si trovano sotto la diagonale principale sono nulli.
+
+$$
+A_{\text{diag. sup.}} =
+\begin{bmatrix}
+    1 & 2 & 3 \\
+    0 & 4 & 5 \\
+    0 & 0 & 6 \\
+\end{bmatrix}
+$$
+
+### Matrice diagonale
+Una matrice quadrata $A_{n \times n}$ è detta diagonale se tutti gli elementi non appartenenti alla diagonale principale sono nulli.
+
+### Matrice simmetrica 
+Una matrice quadrata si dice simmetrica se i suoi elementi in posizioni simmetriche rispetto alla diagonale principale sono uguali.
+
+
+### Matrice identità
+Chiamiamo matrice unità o matrice identica di ordine $n$ la matrice quadrata $I_{n \times n}$ avente tutti gli elementi della diagonale principale uguali a 1 e tutti gli altri elementi uguali a 0. 
+
+La matrice identica è una matrice diagonale.
+
+
+## Operazioni con matrici
+
+### Matrice trasposta
+Presa una matrice $A$ chiamiamo $A^t$ la trasposta di $A$ la matrice avente come elemento di posto $(i, j)$ l’elemento $(j, j)$ della matrice A.
+
+$$A =
+\begin{bmatrix}
+    1 & 2 & 3\\
+    4 & 5 & 6
+\end{bmatrix}
+
+\\
+
+A^t = \begin{bmatrix}
+    1 & 4 \\
+    2 & 5 \\
+    3 & 6
+\end{bmatrix}
+$$
+
+### Somma tra matrici
+
+Consideriamo due matrici $A$ e $B$. Le due matrici sono sommabili se e solo se sono dello stesso tipo, cioè se e solo se hanno lo stesso numero di righe e di colonne. 
+
+$C=A+B$ è una matrice avente lo stesso numero di righe e di colonne delle due matrici di partenza, in cui ogni termine $C_{i,j}=A_{i,j}+B_{i,j}$.
+
+
+
+ 
+$$
+A = \begin{bmatrix} 
+    2 & 5 & -3 \\
+    1 & -2 & 4  
+\end{bmatrix}
+
+B = \begin{bmatrix} 
+    7 & -5 & 2 \\
+    -9 & 4 & -1  
+    \end{bmatrix}
+$$
+
+$$
+C = A+B = \begin{bmatrix} 
+    2+7 & 5+(-5) & (-3)+2 \\
+    (-9)+1 & (-2)+4 & 4+(-1)  
+    \end{bmatrix}
+    =
+    \begin{bmatrix} 
+    9 & 0 & -1 \\
+    -8 & 2 & 3  
+    \end{bmatrix}
+$$
+
+### Moltiplicazione per uno scalare
+La moltiplicazione di una matrice $A=(a_{i,j})$ per uno scalare $r$ è ottenuta moltiplicando ogni elemento di $A$ per lo scalare:
+$$ rA = (ra_{i,j}) $$
+
+### Prodotto tra matrici
+Siano $A, B$ due matrici. E' possibile calcolare il prodotto $C=AB$ solo se righe($A$) = colonne($B$) e colonne($A$) = righe($B$)
+
+$C_{ij} := A_{i1}B_{1j} + A_{i2}B_{2j} + \ldots + A_{iq}B_{qj}$
+
+
+### Inversa di una matrice
+
+### Rango di una matrice
+
+Il rango di una matrice è il massimo ordine di sottomatrice quadrata con determinante diverso da 0 che posso estrarre dalla magrice stessa.
+
+Il rango di una matrice ridotta a scala è il numeri di righe diverse da 0.
+
+
+## Il determinante delle matrici
+* Sarrus (solo 3x3)
+* Calcolo per matrici ridotte
+    * Su riga o colonna
+
+### Proprietà
+Una matrice quadrata con due righe o due colonne uguali ha determinante nullo.
+
+Siano A e B due matrici quadrate di ordine n che si ottengono una dall’altra scambiando fra loro due righe. Allora det A = − det B. Un’analoga proprietà vale per lo scambio di colonne.
+
+Se una matrice quadrata A ha una riga che è multipla di un’altra, allora det A = 0. Un’analoga proprietà vale per le colonne.
+
+Sia A una matrice quadrata di ordine n e k un numero reale. Si ha allora: $\det (kA) = k^n \det A$.
+
+**Teorema di Binet** Date due matrici quadrate dello stesso ordine A e B si ha: $\det(AB) = \det A \det B$.
+
+
+# Sistemi lineari
+
+## Teoria
+
+### Teorema di Cramer
+
+Se $\det(A) \ne 0$, allora c'è una ed una sola soluzione, altrimenti nessuna o infinite.
+
+## Metodi risolutivi
+
+### Cramer
+
+Solo se la matrice delle incognite è quadrata
+
+A_x = \frac{det A(x)}{det A}
+A_y = \frac{det A(y)}{det A}
+A_z = \frac{det A(z)}{det A}
+
+### Gauss
+
+Si riduce a scala la matrice e si sostituisce
+
+Operazioni permesse: 
+* Scambio di righe e colonne (se scambio le colonne devo fare attenzione)
+* Moltiplico per uno scalare una riga/colonna
+* Scrivo una riga come $k * \text{riga} + q * \text{altraRiga}$
+
+### Gauss Jordan
+
+Solo se la matrice delle incognite è quadrata, mi serve calcolare l'inversa.
+
+$Ax=b \rightarrow A\cdot x \cdot A^{-1} = b \cdot A^{-1} \rightarrow I\cdot x = b \cdot A^{-1}$
+
+# Vettori
+
+## Dipendenza lineare
+
+$n$ vettori sono linearmente dipendenti se e solo se il determinante della matrice associata è 0.
+
+Il rango rappresenta il numero massimo di righe/colonne linearmente indipendenti. Posso eliminare dal sistema le righe che non sono nel rango.
+
+Se numero incognite > numero equazioni ci sono infinito^(n-Rango) soluzioni.
+
+Se $rk(A|\underline{b})=rk(A)=n$, allora abbiamo una ed una sola soluzione;
+
+Se $rk(A|\underline{b})=rk(A)<n$, allora abbiamo $\infty^{n-rk(A)}$ soluzioni.
+
