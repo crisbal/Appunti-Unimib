@@ -129,3 +129,59 @@ Sia $\mathbf{f}: U \rightarrow \mathbb R^m$ una funzione definita su un insieme 
 
 $$J \, \mathbf f = \begin{bmatrix} \dfrac{\partial f_1}{\partial x_1} & \cdots & \dfrac{\partial f_1}{\partial x_n} \\ \vdots & \ddots & \vdots \\ \dfrac{\partial f_m}{\partial x_1} & \cdots & \dfrac{\partial f_m}{\partial x_n}  \end{bmatrix}\qquad \operatorname (J \, \mathbf f)_{ij} = \frac{\partial f_i (\mathbf {x})}{\partial x_j} $$
 
+
+\section{Integrali doppi}
+
+\subsection{Generalità}
+
+$$\iint_A f(x,y) \dif x \dif y$$
+
+$A$ è l'insieme (zona) di integrazione, \textbf{sottoinsieme limitato} del piano.
+
+$f(x,y) A\to R$ è una funzione limitata. Esiste cioè un $M$ tale che $|f(x,y) \leq M \forall (x,y) \in A$.
+
+\subsection{Significato geometrico}
+
+\subsubsection{In $R$}
+
+$$\int_a^b f(x) \dif x$$
+
+L'integrale + l'area con segno della parte di piano sottesa alla funzione $f(x)$.
+
+\subsubsection{In $R^2$}
+
+$$\iint_A f(x,y) \dif x \dif y$$
+
+se $f(x,y) \ge 0$ allora è il volume della parte di spazio compresa tra il piano $xy$ ed il grafico di $f(x,y)$, limitata dalle \textit{pareti verticali} che si proiettano sul bordo di $A$.
+
+se $f(x,y)$ ha segno qualunque le parti sotto il piano $xy$ contano con il segno $-$.
+
+\subsection{Come si definiscono}
+
+\subsubsection{Caso banale}
+
+$A= [a,b] \bigtimes [c,d]$
+
+Cioè $A$ è un rettangolo delimitato dai lati $ab$ e$cd$.
+
+$f(x,y) = \lambda$, cioè una costante.
+
+Quindi l'integrale è semplicemente $$\lamda \cdot (b-a) \cdot (d-c)$$ volume con segno del parallelepipedo.
+ 
+\subsectiob{Caso semibanale}
+
+$A$ è un' unione disgiunta di rettangoli.
+
+(Come tanti grattacieli uno vicino all'altro).
+
+$f(x,y)$ è costante all'interno di un rettangolo, ma puo' variare da rettangolo a rettangolo.
+
+$f(x,y) = \lamba_i \forall (x,y) \in R_i$.
+
+Quindi l'integrale é $$\sum_{i=1}^{n} \lambda_i * \text{Area}(R_i)$$.
+
+\subsubsection{Caso generale}
+
+
+
+
