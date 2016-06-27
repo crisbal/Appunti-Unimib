@@ -1,0 +1,195 @@
+# Domande Orale Complementi
+
+* Problema di Cauchy
+    * Possibili forme
+    * Metodi di risoluzione
+    * Significato geometrico della soluzione
+* $<18 \to 18$
+* Cucinotta
+
+<hr>
+
+* Prodotto Scalare
+* Prodotto Vettoriale
+* Differenziale
+* $24 \to 30$
+* Esercitatrice
+
+<hr>
+
+
+* Rango
+* Parallelismo tra piani
+* Rouche - Capelli
+* $15 \to 22$
+* Cucinotta
+
+<hr>
+
+* Kramer
+* Rouche - Capelli
+* Equazioni differenziali
+* Derivate Parziali
+* $20 \to 25$
+
+<hr>
+
+* Punto Singolare
+    * Può essere un massimo/minimo?
+    * Sviluppo di Taylor (esercizio)
+    * **Resto di Peano (Analisi 1 ???)**
+* $22 \to 26$
+* Khun
+
+<hr>
+
+* Matrice Inversa
+* Rango
+* Determinante
+* **Multilineare**
+* $10 \to 18$
+* William
+
+<hr>
+
+* Prodotto Vettoriale
+    * **Espresso con il coseno**
+    * Ragionamenti vari
+* Hessiana 
+* $17 \to 21$
+* Esercitatrice
+
+<hr>
+
+* Derivata Parziale
+* Derivata Direzionale
+* Gradiente
+* $11 \to 18$
+* Manara
+
+<hr>
+
+* Studio di funzione
+    * I passaggi teorici / pratici
+    * Le cose a cui stare attenti
+* Punto singolare
+* $12 \to 21$
+* Cucinotta
+
+<hr>
+
+* Gradiente
+* Derivata Parziale
+    * Con esercizi
+* Derivata Direzionale
+    * Con esercizi
+* Borghesi
+
+<hr>
+
+* Dati due vettori trovare il piano che formano
+* Quando una retta e un piano sono paralleli?
+* Studenti
+
+<hr>
+
+* Sistemi lineari
+    * Con infinite soluzioni
+    * Senza soluzioni
+* Rouche - Capelli
+* Integrale doppio su un dominio unidimensionale
+* $17 \to 22$
+* Manara
+
+<hr>
+
+* Rouche - Capelli
+* Rango
+* Prodotto scalare
+* Prodotto Vettoriale
+* Angolo tra vettori
+* Combinazione lineare
+    * Cosa succede se dei vettori sono complanari?
+* $21 \to 26$
+
+<hr>
+
+* Integrale Doppio
+    * Come limite di somme
+* Kramer
+* Sistemi lineari
+    * Con infinite soluzioni
+    * Senza soluzioni
+* Massimi / Minimi
+    * Comportamenti degli intorni
+* $ 21 \to 25$
+
+<hr>
+
+* Rouche - Capelli
+* **Sottospazio vettoriale**
+* $17 \to 20$
+
+<hr>
+
+* Sistemi lineari
+    * Con infinite soluzioni
+    * Senza soluzioni
+* Kramer 
+* Rouche - Capelli
+* Distanza Punto - Retta
+* Binet
+    * e Corollario
+* Prodotto Scalare
+* Prodotto Vettoriale
+* $12 \to 20$
+* Cucinotta
+
+<hr>
+
+* Problema di Cauchy
+* Kramer
+* Rouche - Capelli
+* $15 \to 20$
+* Manara
+
+<hr>
+
+* Problema di Cauchy
+* Teorema di unicità della soluzione
+* $11 \to 21$
+* Cucinotta
+
+<hr>
+
+* Differenziale
+* Funzione differenziabile
+* Derivata parziale
+* Problema di Cauchy
+* $15 \to 18$
+
+<hr>
+
+* Derivata direzionale
+* Funzione differenziabile
+* Integrale doppio
+* Khun
+
+<hr>
+
+* Determinante
+* Rango
+* Prodotto vettoriale
+* Prodotto scalare
+* Problema di Cauchy
+* Derivata parziale
+* Gradiente
+* Hessiana
+* $<15 \to 18$
+* Esercitatrice
+
+<hr>
+
+* Insiemi Aperti / Chiusi
+* Hessiana
+* Cucinotta
