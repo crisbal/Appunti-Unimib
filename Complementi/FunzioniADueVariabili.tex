@@ -132,7 +132,7 @@ $$J \, \mathbf f = \begin{bmatrix} \dfrac{\partial f_1}{\partial x_1} & \cdots &
 
 \section{Integrali doppi}
 
-\subsection{Generalità}
+\section{Generalità}
 
 $$\iint_A f(x,y) \dif x \dif y$$
 
@@ -140,15 +140,15 @@ $A$ è l'insieme (zona) di integrazione, \textbf{sottoinsieme limitato} del pian
 
 $f(x,y) A\to R$ è una funzione limitata. Esiste cioè un $M$ tale che $|f(x,y) \leq M \forall (x,y) \in A$.
 
-\subsection{Significato geometrico}
+\section{Significato geometrico}
 
-\subsubsection{In $R$}
+\subsection{In $R$}
 
 $$\int_a^b f(x) \dif x$$
 
 L'integrale + l'area con segno della parte di piano sottesa alla funzione $f(x)$.
 
-\subsubsection{In $R^2$}
+\subsection{In $R^2$}
 
 $$\iint_A f(x,y) \dif x \dif y$$
 
@@ -156,9 +156,9 @@ se $f(x,y) \ge 0$ allora è il volume della parte di spazio compresa tra il pian
 
 se $f(x,y)$ ha segno qualunque le parti sotto il piano $xy$ contano con il segno $-$.
 
-\subsection{Come si definiscono}
+\section{Come si definiscono}
 
-\subsubsection{Caso banale}
+\subsection{Funzione costante su un rettangolo}
 
 $A= [a,b] \bigtimes [c,d]$
 
@@ -168,7 +168,7 @@ $f(x,y) = \lambda$, cioè una costante.
 
 Quindi l'integrale è semplicemente $$\lamda \cdot (b-a) \cdot (d-c)$$ volume con segno del parallelepipedo.
  
-\subsectiob{Caso semibanale}
+\subsection{Funzioni costanti su più rettangoli}
 
 $A$ è un' unione disgiunta di rettangoli.
 
@@ -180,8 +180,49 @@ $f(x,y) = \lamba_i \forall (x,y) \in R_i$.
 
 Quindi l'integrale é $$\sum_{i=1}^{n} \lambda_i * \text{Area}(R_i)$$.
 
-\subsubsection{Caso generale}
+\subsection{Funzione non costante su un rettangolo}
+
+$D$ è un rettangolo chiuso, con lati paralleli agli assi. 
+
+$f(x,y)$ è una funzione (costante o no) definita sul dominio $D$.
+
+Supponiamo che D varia tra $a$ e $b$ sull'asse $x$ e tra $c$ e $d$ sull'asse $y$.
+
+Possiamo quindi partizionare il dominio in dei rettangoli più piccoli, individuando dei punti in questo modo:
+
+$$a = x_0 < x_1 < \ldots < x_{m-1} < x_m = b$$
 
 
+$$c = y_0 < y_1 < \ldots < y_{n-1} < y_n = d$$
 
+In sostanza si individuano $m \cdot n$ rettangoli $R_{ij}$..
+
+L'area di ogni rettangolo è $$\delta A_{ij} = \delta x_i \delta y_1$$
+
+La lunghezza della iagonale è 
+$$\sqrt{(\delta x_i)^2+(\delta y_i)^2}$$
+
+Scelto un punto arbitrario $(x_{ij},y_{ij})$ in ciascuno dei rettangoli individuiamo la somma di Riemann:
+$$R(f,P_{artizione}) = \sum^m_{i=1} \sum^n_{j=1} f(x_{ij},y_{ij}) \delta A_{ij}$$
+
+In sostanza base per altezza di un parallelepipedo.
+
+Facendo il limite 
+$$\lim_{n,m \to infty} R(f,P_{artizione})$$ otteniamo l'integrale doppio di $f$ su $D$, cioè il volume sopra $D$ e sotto il grafico di $f$.
+
+
+\section{Funzione integrabile}
+
+\begin{definition}
+Si dice che $f$ è integrabile sul rettangolo $D$ e che ha integrale doppio $$I = \iint_D f(x,y) \diff A$$
+se, per ogni numero positivo $\epsilon$, esiste un numero $\gamma(\epsilon)$ tale  che $$R(f,P)-I<\epsilon$$ vale per ogni $P$ di $D$ tale che $|P|<\gamma$ e per tutte le scelte di punti $(x_{ij},y_{ij})$. 
+\end{definition}
+
+\begin{property}
+Se una funzione è continua su $D$ allora è integrabile su $D$. Ma non è detto che se è integrabile allora è continua.
+\end{property}
+
+\section{Integrali doppi su domini generali}
+
+Potrebbe anche essere necessario calcolare un integrale su un dominio $D$ che non è un rettangolo ma un area qualunque del piano. 
 
