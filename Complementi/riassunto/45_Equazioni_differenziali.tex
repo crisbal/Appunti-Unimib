@@ -2,9 +2,9 @@
 
 Le equazioni differenziali sono equazioni in cui l'incognita è una funzione e in cui sono presenti una o più derivate della funzione incognita.
 
-Ad esempio $f'(x) + f(x) = x$. Cioè tutte le funzioni che sommate alla propria derivata primma danno come risultato $x$
+Un esempio di equazione differenziale è $f'(x) + f(x) = x$. Soluzione di questa equazione sono tutte le funzioni che sommate alla propria derivata primma danno come risultato $x$.
 
-\begin{definition}[Ordine]
+\begin{definition}[Ordine di un'equazione differenziale]
 Il massimo ordine di derivazione che compare in un' equazione differenziale.
 \end{definition}
 
@@ -31,31 +31,29 @@ $$
 \end{example}
 
 \begin{example}
-$$
-y'' = 2-\cos(x) \to
-y' = \int 2-\cos(x) \dif x \to
-y' = 2x-\sin(x) + c \to
-y = \int 2x-\sin(x) + c_1 \dif x \to
-y = x^2-\cos(x) + c_1x + c
-$$
+\begin{align*}
+y'' = 2-\cos(x) \implies & y' = \int 2-\cos(x) \dif x \\
+y' = 2x-\sin(x) + c \implies & y = \int 2x-\sin(x) + c_1 \dif x \\
+& y = x^2-\cos(x) + c_1x + c
+\end{align*}
 \end{example}
 
 \subsection{Equazioni differenziali a variabili separabili}
 
 $$y' = f(x) \cdot g(y)$$
 
-Per risolverle:
+Esse si risolvono seguendo i seguenti passaggi:
 
 \begin{enumerate}
 \item Separare le variabili
 \item Integrare ciascun membro
-\item Ricavare y(x)
+\item Ricavare $y(x)$
 \end{enumerate}
 
 \begin{example}
 $$
 y' = y^2 \ln(x) \\
-\frac{\dif y}{\dif x} = y^2 \ln(x)  to
+\frac{\dif y}{\dif x} = y^2 \ln(x)  \implies
 \frac{\dif y}{y^2} = \ln(x) \dif x
 $$
 Posso spezzare $\dif x$ e $\dif y$.
@@ -63,7 +61,7 @@ Posso spezzare $\dif x$ e $\dif y$.
 Ora integro.
 
 $$
-\int \frac{\dif y}{y^2} = \int \ln(x) \dif x \to
+\int \frac{\dif y}{y^2} = \int \ln(x) \dif x \implies
 \frac{-1}{y} = x \ln(x) + c
 $$
 
@@ -80,10 +78,10 @@ Vediamo per ora quelle del primo ordine, cioè nella forma:
 
 $$y'(x) + a(x)y(x) = f(x)$$
 
-Come procedere:
+Procediamo nel seguente modo:
 
 \begin{enumerate}
-\item Calcolare la primitiva di $a(x) = A(x)$
+\item Calcolo la primitiva di $a(x) = A(x)$
 \item Moltiplico entrambi i membri per $e^A(x)$. Quindi a sinistra ho $[y(x)e^{A(x)}]'$
 \item Integro entrambi i membri. $y(x)e^{A(x)} = \int f(x)e^{A(x)} \dif x +c$
 \item Moltiplico sia a destra che a sinistra per $e^{-A(x)}$. Ottengo $y(x) = e^{-A(x)} \int f(x)e^{A(x)} \dif x +c$
@@ -93,7 +91,7 @@ Come procedere:
 $$y'(x)-xy(x)=2x$$
 $a(x) = -x$, $f(x) = 2x$
 
-Calcolo $\int a(x) = \frac{-x^2}{2}$ 1
+Calcolo $\int a(x) = \frac{-x^2}{2}$
 
 Moltiplico tutto per $e^{\frac{-x^2}{2}}$
 
@@ -106,7 +104,7 @@ Moltiplico per $e^{-A(x)}$.
 Ottengo $$y(x) = -2+c\cdot e^{\frac{x^2}{2}}$$
 \end{example}
 
-\begin{definition}[Soluzione generale]
+\begin{theorem}[Soluzione generale]
 $$
 y(x) = e^{-A(x)} \int f(x) e^{A(x)} \dif x + c \cdot e^{-A(x)}
 $$
@@ -114,7 +112,7 @@ $$
 
 \section{Problema di Cauchy}
 
-Un sistema del tipo
+Definiamo problema di Cauchy un sistema del tipo
 $$
 \begin{cases}
 \text{Equazione differenziale} \\

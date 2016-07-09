@@ -65,7 +65,7 @@ La matrice identica è una matrice diagonale.
 
 \subsection{Matrice trasposta}
 
-Presa una matrice $A$ chiamiamo $A^t$ la trasposta di $A$ la
+Presa una matrice $A$ chiamiamo $A^T$ la trasposta di $A$ la
 matrice avente come elemento di posto $(i, j)$ l'elemento $(j, i)$
 della matrice A.
 
@@ -78,7 +78,7 @@ A =
 $$
 
 $$
-A^t =
+A^T =
 \begin{bmatrix}
     1 & 4 \\
     2 & 5 \\
@@ -126,14 +126,14 @@ $$
 
 \subsection{Moltiplicazione per uno scalare}
 
-La moltiplicazione di una matrice $A=(a_{i,j})$ per uno scalare $r$ è ottenuta moltiplicando ogni elemento di $A$ per lo scalare stesso.
-$$ rA = (ra_{i,j}) $$
+La moltiplicazione di una matrice $A=(a_{i,j})$ per uno scalare $\lambda$ è ottenuta moltiplicando ogni elemento di $A$ per lo scalare stesso.
+$$ \lambda \cdot A = (\lambda \cdot a_{i,j}) $$
 
 \subsection{Prodotto tra matrici}
 
 \begin{definition}
-Siano $A, B$ due matrici. E' possibile calcolare il prodotto $C=A \cdot B$
-solo se $righe(A) = colonne(B)$ e $colonne(A) = righe(B)$.
+Siano $A, B$ due matrici. È possibile calcolare il prodotto $C=A \cdot B$
+solo se $colonne(A) = righe(B)$.
 \end{definition}
 
 $$C_{ij} := A_{i1} \cdot B_{1j} + A_{i2} \cdot B_{2j} + \ldots + A_{iq} \cdot B_{qj}$$
@@ -144,10 +144,10 @@ $$C_{ij} := A_{i1} \cdot B_{1j} + A_{i2} \cdot B_{2j} + \ldots + A_{iq} \cdot B_
 Una matrice è invertibile se e solo se ha rango massimo.
 \end{theorem}
 
-Quindi una matrice ammette inversa se il $det(A) \neq 0$
+Quindi una matrice ammette inversa se $det(A) \neq 0$
 
 \begin{theorem}
-Sia $A$ una matrice quadrata di ordine $n$. Se è invertibile è possibile calcolare $A^{-1}=(x_{ij})$ in questo modo:
+Sia $A$ una matrice quadrata invertibile di ordine $n$. L'inversa $A^{-1}=(x_{ij})$ si può calcolare in questo modo:
 $$ x_{ij} = \frac{(-1)^{i+j}\cdot det(A_{ji})}{det(A)}$$
 
 dove $A_{ij}$ è la matrice ottenuta eliminando da $A$ la riga $i$-esima e la colonna $j$-esima.
@@ -164,9 +164,9 @@ Il rango di una matrice ridotta a scala è il numero di righe diverse da 0.
 \end{definition}
 
 Una matrice rettangolare $A_{m \times n}$ può avere rango al massimo uguale al minimo tra il numero di righe e il numero di colonne della matrice. Cioè:
-$$rk(A)\leq min(m,n)$$
+$$rk(A)\leq \min(m,n)$$
 
-Nel caso in cui il rango coincida con il minimo tra $m$ ed $n$, cioè $rk(A)= min(m,n)$, diremo che la matrice ha rango massimo.
+Nel caso in cui il rango coincida con il minimo tra $m$ ed $n$, cioè $rk(A)= \min(m,n)$, diremo che la matrice ha rango massimo.
 
 \section{Riduzione a scala}
 
@@ -177,14 +177,14 @@ Una matrice $A$ si dice a scala se il numero degli zeri che precede il primo ele
 \section{Determinante}
 
 \begin{definition}
-Il determinante è un numero associato ad una matrice $A$ e si indica come $|A|$ oppure con $det(A)$.
+Il determinante è un numero associato ad una matrice $A$ e si indica come $|A|$ oppure con $\det(A)$.
 \end{definition}
 
 \subsection{Calcolare il determinante}
 
 \subsubsection{Matrice 2$\times$2}
 
-$$A=\left[\begin{matrix}a & b\\ c & d\end{matrix}\right] \rightarrow det(A) = a \cdot d - b \cdot c$$
+$$A=\left[\begin{matrix}a & b\\ c & d\end{matrix}\right] \rightarrow \det(A) = a \cdot d - b \cdot c$$
 
 \subsubsection{Matrice 3$\times$3}
 
@@ -192,7 +192,7 @@ Attraverso la regola di Sarrus
 
 $$A=\left[\begin{matrix}a_{11} & a_{12} & a_{13}\\ a_{21} & a_{22} & a_{23}\\ a_{31} & a_{32} & a_{33}\end{matrix}\right]$$
 
-$$det(A)=(a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{21}a_{32})-(a_{31}a_{22}a_{13}+a_{32}a_{23}a_{11}+a_{21}a_{12}a_{33})$$
+$$\det(A)=(a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{21}a_{32})-(a_{31}a_{22}a_{13}+a_{32}a_{23}a_{11}+a_{21}a_{12}a_{33})$$
 
 \subsubsection{Matrici n$\times$n}
 
@@ -203,16 +203,16 @@ $$A=\left[\begin{matrix} a_{11} & a_{12}& \dots& a_{1n} \\ a_{21} & a_{22}& \dot
 e denotiamo con $A_{ij}$ la matrice che si ottiene eliminando dalla matrice $A$ la riga $i$ e la colonna $j$.
 
 \begin{definition}{Sviluppo di Laplace per righe}
-    $$det(A)=\sum_{j=1}^n{(-1)^{i+j}a_{ij}det(A_{ij})}$$
+    $$\det(A)=\sum_{j=1}^n{(-1)^{i+j}a_{ij}det(A_{ij})}$$
     (ci si muove lungo la riga i-esima).
 \end{definition}
 
 \begin{definition}{Sviluppo di Laplace per colonne}
-    $$det(A)=\sum_{i=1}^n{(-1)^{i+j}a_{ij}det(A_{ij})}$$
+    $$\det(A)=\sum_{i=1}^n{(-1)^{i+j}a_{ij}det(A_{ij})}$$
     (ci si muove lungo la colonna j-esima).
 \end{definition}
 
-\subsection{Proprietà determinante}
+\subsection{Proprietà del determinante}
 
 \begin{property}
     Una matrice quadrata con due righe o due colonne uguali ha determinante nullo.
@@ -223,11 +223,11 @@ e denotiamo con $A_{ij}$ la matrice che si ottiene eliminando dalla matrice $A$ 
 \end{property}
 
 \begin{property}
-    Se una matrice quadrata $A$ ha una riga che è multipla di un'altra, allora $det(A)=0$. Un'analoga proprietà vale per le colonne.
+    Se una matrice quadrata $A$ ha una riga multipla di un'altra, allora $det(A)=0$. Un'analoga proprietà vale per le colonne.
 \end{property}
 
 \begin{property}
-    Sia $A$ una matrice quadrata di ordine $n$ e $k$ un numero reale. Si ha allora: $$det (kA) = k^n \det A$$
+    Sia $A$ una matrice quadrata di ordine $n$ e $k$ un numero reale. Si ha allora: $$\det (kA) = k^n \cdot \det A$$
 \end{property}
 
 \begin{property}
@@ -235,11 +235,11 @@ e denotiamo con $A_{ij}$ la matrice che si ottiene eliminando dalla matrice $A$ 
 \end{property}
 
 \begin{theorem}[di Binet]
-    Date due matrici quadrate dello stesso $A$ e $B$ si ha: $$ det(AB) = \det A \det B$$
+    Date due matrici quadrate dello stesso ordine $A$ e $B$ si ha: $$ \det(AB) = \det A \cdot \det B$$
 \end{theorem}
 
 \begin{theorem}
-    Se $A$ è una matrice invertibile allora $det(A^{-1}) = \frac{1}{det(A)}$.
+    Se $A$ è una matrice invertibile allora $\det(A^{-1}) = \frac{1}{\det(A)}$.
 \end{theorem}
 
 \section{Dipendenza Lineare}
@@ -248,7 +248,7 @@ Le righe $A_1, A_2, \ldots, A_m$ di una matrice si dicono linearmente dipendenti
 
 
 \begin{property}
-    Una matrice quadrata $A$ ha $det(A) = 0$ se e solo se le righe (o le colonne) di $A$ sono linearmente dipendenti.
+Una matrice quadrata $A$ ha $\det(A) = 0$ se e solo se le righe (o le colonne) di $A$ sono linearmente dipendenti.
 \end{property}
 
 \begin{definition}[Combinazione Lineare]
