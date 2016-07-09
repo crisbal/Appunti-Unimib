@@ -3,7 +3,7 @@
 \section{Equazione lineare}
 
 \begin{definition}
-Si chiama equazione lineare su $\mathbb{R}$ ogni equazione del tipo
+Si chiama equazione lineare su $\R$ ogni equazione del tipo
 $$ a_1x_1 + a_2x_2 + \ldots + a_nx_n = b$$
 \end{definition}
 
@@ -14,7 +14,7 @@ $a_1, a_2, \ldots, a_n$ sono detti i coefficienti dell'equazione lineare.
 $b$ è il termine noto.
 
 \begin{definition}
-La $n$-upla ordinata $(k_1, k_2, \ldots, k_n)$ è detta soluzuzione del sistema lineare se $$ a_1k_1 + a_2k_2 + \ldots + a_nk_n = b$$
+La $n$-upla ordinata $(k_1, k_2, \ldots, k_n)$ è detta soluzione del sistema lineare se $$ a_1k_1 + a_2k_2 + \ldots + a_nk_n = b$$
 \end{definition}
 
 \section{Sistema lineare}
@@ -24,12 +24,12 @@ Un sistema di $m$ equazioni lineari in $n$ incognite è detto sistema lineare.
 \end{definition}
 
 \begin{definition}
-Un sistema lineare è detto omogeneo se tutte le $m$equazioni lineari che lo compongono hanno termine noto $b=0$.
+Un sistema lineare è detto omogeneo se tutte le $m$ equazioni lineari che lo compongono hanno termine noto $b=0$.
 \end{definition}
 
-E' possibile rappresentare i sistemi sotto forma di matrici. In questo modo sarà possibile scrivere il sistema come $A \cdot X=B$.
+È possibile rappresentare i sistemi sotto forma di matrici. In questo modo sarà possibile scrivere il sistema come $A \cdot X=B$.
 
-\section{Soluzioni dei sistemi}
+\section{Soluzioni di un sistema lineare}
 
 \begin{definition}
 La $n$-upla ordinata $(k_1, k_2, \ldots, k_n)$ è detta soluzione del sistema se essa soddisfa tutte le $m$ equazioni del sistema.
@@ -43,7 +43,7 @@ Ogni soluzione è detta soluzione particolare del sistema.
 Tutte le soluzioni del sistema sono dette soluzioni generali.
 \end{definition}
 
-\section{Teorema di Rouche - Capelli}
+\section{Teorema di Rouché - Capelli}
 
 \begin{theorem}
 Un sistema lineare ha soluzioni se e sole se il rango della matrice incompleta $A$ è uguale al rango della matrice completa $AB$.
@@ -56,11 +56,11 @@ Sia dato un sistema lineare di $n$ equazioni ed $n$ incognite.
 
 
 \begin{theorem}[Teorema di Cramer]
-Un sistema linear ha una e una sola soluzione se il determinante della matrice icompleta $A$ è diverso da 0.
+Un sistema lineare ha una e una sola soluzione se il determinante della matrice incompleta $A$ è diverso da 0.
 \end{theorem}
 
 \begin{theorem}[Regola di Cramer]
-Preso un sistema lineare con $det(A) \neq 0$ , la componente $i$-esima dell'unica soluzione $(k_1, k_2, \ldots, k_n)$ di tale sistema è data da:
+Preso un sistema lineare con $\det(A) \neq 0$ , la componente $i$-esima dell'unica soluzione $(k_1, k_2, \ldots, k_n)$ di tale sistema è data da:
 
 $$k_i = \frac{det(A^1,A^2,\ldots,A^{i-1},B,A^{i+1},\ldots,A^n)}{det(A^1,A^2,\ldots,A^{i-1},A^i,A^{i+1},\ldots,A^n)}$$
 \end{theorem}
@@ -74,7 +74,7 @@ Non possiamo applicare la regola di Cramer.
 
 Calcoliamo quindi il rango della matrice completa e della matrice incompleta.
 
-Supponiamo siano entrambi uguali, quindi per Rouche-Capelli il sistema ha soluzioni.
+Supponiamo siano entrambi uguali, quindi per Rouché-Capelli il sistema ha soluzioni.
 
 Selezioniamo le equazioni linearmente indipendenti del sistema (il rango ci dice quante sono, basta trovare una sottomatrice $r \times r$ con determinante diverso da zero).
 
@@ -86,7 +86,7 @@ Dal nuovo sistema parametrizziamo (spostiamo le incognite aggiuntive in $B$) e r
 
 Si riduce la matrice completa a scala tramite operazioni elementari.
 
-Verifico se il sistema ha soluzioni: cioè applico Rouche-Capelli, guardando se il rango di $A$ è uguale al rango di $AB$
+Verifico se il sistema ha soluzioni: cioè applico Rouché-Capelli, guardando se il rango di $A$ è uguale al rango di $AB$
 
 Se esistono, trovo le solzioni: diventerà particolarmente semplice trovarle vista la matrice ridotta a scala.
 

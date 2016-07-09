@@ -4,7 +4,7 @@
 
 \subsection{Equazione della retta}
 
-Supponiamo di avere un vettore $v = (l,m)$ non nullo e un punto $P_0 = (x_0,y_0)$ del piano. Vogliamo determinare tutti i punti $P$ appartentendi alla retta $r$, passante per il punto $P_0$ e parallela al vettore $v$.
+Supponiamo di avere un vettore $v = (l,m)$ non nullo e un punto $P_0 = (x_0,y_0)$ del piano. Vogliamo determinare tutti i punti $P$ appartententi alla retta $r$, passante per il punto $P_0$ e parallela al vettore $v$.
 
 \begin{figure}[H]
 \includegraphics{equazione-retta}
@@ -20,14 +20,13 @@ x = x_0 + lt \\
 y = y_0 + mt
 \end{cases}
 $$
-Che è l'equazione parametrica della retta $r$ passante per il punto $P_0$ e parallela al vettore $\vec{v}$.
+che è l'equazione parametrica della retta $r$ passante per il punto $P_0$ e parallela al vettore $\vec{v}$.
 
 \subsection{Retta tra due punti}
 
 Supponiamo di voler determinare l'equazione della retta $r$ passante per due punti distinti $P_1=(x_1,y_1)$, $P_2=(x_2,y_2)$.
 
-Un punto $P=(x,y)$ appartiene a $r$ se e soloe se il vettore $P-P_1$ è parallelo al vettore $P_2-P_1$. Cioè solo se esiste $t  \in \mathbb{R}$ tale che $P-P_1=t(P_2-P_1)$. Da questo otteniamo $$P = P_1+t(P_2-P_1)$$.
-
+Un punto $P=(x,y)$ appartiene a $r$ se e solo se il vettore $P-P_1$ è parallelo al vettore $P_2-P_1$. Cioè solo se esiste $t \in \R$ tale che $P-P_1=t(P_2-P_1)$. Da questo otteniamo $$P = P_1+t(P_2-P_1)$$
 Sostituendo le coordinate di $P_1$, $P_2$ e $P$ nell'espressione precedente della retta $r$ si ottiene la seguente
 
 $$
@@ -42,7 +41,7 @@ Al variare di $t$ si ottengono tutti i punti della retta $r$ passante per $P_1,P
 
 Al variare di $t \in [0,1]$ si ottengono tutti i punti della retta $r$ passante appartenenti al segmento $P_1P_2$.
 
-E' possibile ricavare $t$ in questo modo:
+È possibile ricavare $t$ in questo modo:
 $$ t = \frac{x-x_1}{x_2-x_1} = \frac{y-y_1}{y_2-y_1}$$
 
 
@@ -51,8 +50,8 @@ L'equzione normale della retta passante per $P_1,P_2$ è: $$\frac{x-x_1}{x_2-x_1
 \end{definition}
 
 Se $x_2 - x_1=0$ o $y_2 - y_1=0$ allora l'equazione diventa
-$$x-x_1 = 0 \text{se} x_2 = x_1$$
-$$y-y_1 = 0 \text{se} y_2 = y_1$$
+$$x-x_1 = 0 \text{ se } x_2 = x_1$$
+$$y-y_1 = 0 \text{ se } y_2 = y_1$$
 
 \subsection{Equazione Cartesiana}
 
@@ -68,7 +67,7 @@ $$x(y_2-y_1)-y(x_2-x_1)+y_1x_2-y_2x_1=0$$
 
 Vogliamo trovare l'equazione della retta $r$ passante per $P_0$ e perpendicolare al vettore $n=(a,b)$.
 
-Cioè se $(P-P_0)\cdot n = 0$.
+Cioè se $(P-P_0) \circ n = 0$.
 
 cioè $$a(x-x_0)+b(y-y_0) = 0$$
 
@@ -103,15 +102,15 @@ $$
 
 l'angolo tra le rette $r,r_1$ è uguale all'angolo tra i vettori $v_r$ e $v_{r_1}$, cioè
 
-$$\arccos(\pm (v_r \cdot v_{r_1}))$$
+$$\arccos(\pm (v_r \circ v_{r_1}))$$
 
 \subsection{Equazione in forma esplicita}
 
-Sia data la retta $r$ di equazione $ax+by+c=0$. Supponiamo che sia $b \neq 0$, allora
+Sia data la retta $r$ di equazione $ax+by+c=0$. Supponiamo $b \neq 0$, allora
 $$y = -\frac{a}{b} x - \frac{c}{b}$$
 Ponendo $m= -\frac{a}{b}$ e $q = -\frac{c}{b}$ si ottiene $y=mx+q$.
 
-Questa formula fornisce l'equazione di tutte le rette del piano, eccetto le rette x=k, parallele all'asse y.
+Questa formula fornisce l'equazione di tutte le rette del piano, eccetto le rette $x=k$, parallele all'asse $y$.
 
 $m$ è detto il coefficiente angolare della reta.
 
@@ -138,11 +137,11 @@ La misura del segmento $P_0H$ ovvero il numero $\gamma = ||P_0-H||$ è la distan
 
 Poichè $H \in r$ allora $ax_H+by_h+c=0$.
 
-$P_0-H$ è un vettore parallelo a $v=(a,b)$ (perpendicolare alla retta $r$), quindi $$|(P_0-H) \cdot v| = ||(P_0-H)||||v||$$
+$P_0-H$ è un vettore parallelo a $v=(a,b)$ (perpendicolare alla retta $r$), quindi $$|(P_0-H) \circ v| = ||(P_0-H)|| \cdot ||v||$$
 
 cioè
 
-$$\gamma = ||P_0-H|| = \frac{|(P_0-H)\cdot \vec{v}|}{||\vec{v}||}$$
+$$\gamma = ||P_0-H|| = \frac{|(P_0-H)\circ \vec{v}|}{||\vec{v}||}$$
 
 che alla fine è
 
@@ -150,25 +149,25 @@ $$\gamma = \frac{|ax+by_0+c|}{\sqrt{a^2+b^2}}$$
 
 \subsubsection{Distanza rette parallele}
 
-$$\gamma = \frac{|-c_1 + c|}{\sqrt{a2+b^2}}$$
+$$\gamma = \frac{|-c_1 + c|}{\sqrt{a^2+b^2}}$$
 
 \section{Retta nello spazio}
 
 \subsection{Equazione parametrica}
 
-Preso un punto $P_0$ nello spazio  e un vettore non nullo $v$. Un punto $P$ appartienee alla retta $r$ passante per $P_0$ e parallela a $v$ se e solo se il vettore $P-P_0$ è parallelo al vettore $v$, ossia se e solo se esiste $t \in R$ tale che $$P-P_0=tv$$
+Siano dati un punto $P_0$ nello spazio e un vettore non nullo $v$. Un punto $P$ appartiene alla retta $r$ passante per $P_0$ e parallela a $v$ se e solo se il vettore $P-P_0$ è parallelo al vettore $v$, ossia se e solo se esiste $t \in \R$ tale che $$P-P_0=tv$$
 
 $$
 \begin{cases}
 x = x_0 + lt \\
-y = y_0 + mt
+y = y_0 + mt \\
 z = z_0 + nt
 \end{cases}
 $$
 
 \subsection{Retta tra due punti}
 
-Come nel piano ma con un punto in più$\ldots$
+Si ragiona in modo analogo a quanto fatto nel piano, considerando chiaramente un punto in più.
 
 \section{Piano}
 
@@ -179,7 +178,7 @@ Come nel piano ma con un punto in più$\ldots$
 
 Dato un punto $P_0$ e due vettori non paralleli dello spazio $v_1=l_1i+m_1j+n_1k$ e $v_2=l_2i+m_2j+n_2k$
 
-Un punto $P$ appartiene al piano  $\pi$ passante per $P_0$ e parallelo ai vettori $v_1$ e $v_2$ se e sole se il vettore $P-P_0$ è complanare con i vettori $v_1$ e $v_2$ ovvero se e solo se esistono $\alpha, \beta \in \mathbb{R}$ tai che $$P-P_0 = \alpha v_1 + \beta v_2$$
+Un punto $P$ appartiene al piano  $\pi$ passante per $P_0$ e parallelo ai vettori $v_1$ e $v_2$ se e sole se il vettore $P-P_0$ è complanare con i vettori $v_1$ e $v_2$ ovvero se e solo se esistono $\alpha, \beta \in \R$ tali che $$P-P_0 = \alpha v_1 + \beta v_2$$
 
 Da qui otteniamo l'equazione parametrica del piano
 
@@ -257,9 +256,9 @@ $$
 
 Siano dati un punto $P_0$ dello spazio e un vettore $u$.
 
-Un punto $P$ appartiene al piano passante per $P_0$ e perpendicolare a $u$ se e solo se il vettore $P-P_0$ è perpendicolare a $u$, cioè $$(P-P_0) \cdot u =0$$
+Un punto $P$ appartiene al piano passante per $P_0$ e perpendicolare a $u$ se e solo se il vettore $P-P_0$ è perpendicolare a $u$, cioè $$(P-P_0) \circ u =0$$
 
-Poichè $P-P_0 = (x-x_0)i + (y-y_0)j +(z-z_0)k$ allora $$ a(x-x_0) + b(y-y_0) +c(z-z_0) = 0$$
+Poiché $P-P_0 = (x-x_0)i + (y-y_0)j +(z-z_0)k$ allora $$ a(x-x_0) + b(y-y_0) +c(z-z_0) = 0$$
 
 \subsection{Piano per tre punti}
 
@@ -274,8 +273,7 @@ $$
 
 \subsection{Parallelismo e perpendicolarità tra piani}
 
-Due piani sono paralleli se e solo se i vettori $u$ $u_1$, perpendicolari al piano, sono paralleli, cioè se e solo se esiste $k \in R$ tale che $$u = k u_1$$.
-
+Due piani sono paralleli se e solo se i vettori $u$ $u_1$, perpendicolari al piano, sono paralleli, cioè se e solo se esiste $k \in \R$ tale che $$u = k u_1$$
 
 \subsection{Perpendicolarità tra piani}
 
@@ -337,10 +335,9 @@ I due vettori direttori devono essere proporzionali.
 
 \subsection{Angolo tra due piani}
 
-E' l'angolo tra i due vettori direttori normali ai due piani.
+È l'angolo tra i due vettori direttori normali ai due piani.
 
-$$\cos(\alpha) = \frac{|a \cdot b|}{||a|||b||}$$
-
+$$\cos(\alpha) = \frac{|a \circ b|}{||a|| \cdot ||b||}$$
 
 \subsection{Angolo tra una retta e un piano}
 
@@ -350,6 +347,6 @@ $$\cos(\alpha) = \frac{|a \cdot b|}{||a|||b||}$$
 \end{figure}
 
 \subsection{Rette sghembe}
-Due rette si dicono sghembe se non sono complanari, quindi nè incidenti nè parallele.
+Due rette si dicono sghembe se non sono complanari, quindi né incidenti né parallele.
 
 Quindi il sistema associato non ha soluzione e i vettori direttori non sono proporzionali.
