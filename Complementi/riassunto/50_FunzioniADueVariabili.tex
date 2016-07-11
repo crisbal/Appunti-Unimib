@@ -24,8 +24,8 @@ $x^2+y^2>=1$
 
 Diciamo che $\lim_{(x,y)\to(a,b)} f(x,y) = L$ se:
 \begin{itemize}
-\item ogni intorno di $(a,b)$ contenga altri punti del dominio di $f$, differenti da $(a,b)$
-\item per ogni numero positivo $\epsilon$ esiste un numero positivo $\gamma(\epsilon)$ tale che $|f(x,y)-L|<\epsilon$ vale ogni volta che $(x,y)$ è nel dominio di $f$ e soddisfa $0<\sqrt{(x-a)^2+(y-b)^2}<\gamma$
+\item ogni intorno di $(a,b)$ contiene altri punti del dominio di $f$, differenti da $(a,b)$
+\item per ogni numero positivo $\epsilon$ esiste un numero positivo $\delta(\epsilon)$ tale che $|f(x,y)-L|<\epsilon$ vale ogni volta che $(x,y)$ è nel dominio di $f$ e soddisfa $0<\sqrt{(x-a)^2+(y-b)^2}<\delta$
 \end{itemize}
 
 \subsection{Proprietà dei limiti}
@@ -34,7 +34,7 @@ Sia $\lim_{(x,y)\to(a,b)} f(x,y) = L$ e $\lim_{(x,y)\to(a,b)} g(x,y) = M$. Valgo
 \item Se il limite esiste, esso è unico.
 \item $\lim_{(x,y)\to(a,b)} f(x,y) \pm g(x,y) = L \pm M$
 \item $\lim_{(x,y)\to(a,b)} f(x,y) g(x,y) = LM$
-\item $\lim_{(x,y)\to(a,b)} \frac{f(x,y)}{g(x,y)} = \frac{L}{M}$ purché 
+\item $\lim_{(x,y)\to(a,b)} \frac{f(x,y)}{g(x,y)} = \frac{L}{M}$ purché $M \neq 0$
 \end{itemize}
 \section{Continuità}
 
@@ -97,7 +97,7 @@ f(x,y) = f(x_0,y_0)+f_x(x_0,y_0)(x-x_0)+f_y(x_0,y_0)(y-y_0)+ \\ \frac{1}{2} [f_{
 
 \subsection{Vettore normale in un punto}
 
-$$n = f_x(a,b)i+f_y(a,b)j-k$$
+$$\mathbf{n} = f_x(a,b)\mathbf{i}+f_y(a,b)\mathbf{j}-\mathbf{k}$$
 
 \subsection{Piano tangente}
 

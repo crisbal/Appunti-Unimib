@@ -129,13 +129,13 @@ $m = \tan(\theta)$
 
 \subsection{Distanza punto - retta}
 
-Siano dati nel piano una retta $r$ di equazione $ax+by+c=0$ e un punto $P = (x_0,y_0)$.
+Siano dati nel piano una retta $r$ di equazione $ax+by+c=0$ e un punto $P_0 = (x_0,y_0)$.
 
 Sia $H$ il piede della perpendicolare lla retta $r$ condotta da $P_0$.
 
 La misura del segmento $P_0H$ ovvero il numero $\gamma = ||P_0-H||$ è la distanza del punto $P_0$ dalla retta $r$.
 
-Poichè $H \in r$ allora $ax_H+by_h+c=0$.
+Poichè $H \in r$ allora $ax_H+by_H+c=0$.
 
 $P_0-H$ è un vettore parallelo a $v=(a,b)$ (perpendicolare alla retta $r$), quindi $$|(P_0-H) \circ v| = ||(P_0-H)|| \cdot ||v||$$
 
@@ -145,7 +145,7 @@ $$\gamma = ||P_0-H|| = \frac{|(P_0-H)\circ \vec{v}|}{||\vec{v}||}$$
 
 che alla fine è
 
-$$\gamma = \frac{|ax+by_0+c|}{\sqrt{a^2+b^2}}$$
+$$\gamma = \frac{|ax_0+by_0+c|}{\sqrt{a^2+b^2}}$$
 
 \subsubsection{Distanza rette parallele}
 
@@ -258,26 +258,26 @@ Siano dati un punto $P_0$ dello spazio e un vettore $u$.
 
 Un punto $P$ appartiene al piano passante per $P_0$ e perpendicolare a $u$ se e solo se il vettore $P-P_0$ è perpendicolare a $u$, cioè $$(P-P_0) \circ u =0$$
 
-Poiché $P-P_0 = (x-x_0)i + (y-y_0)j +(z-z_0)k$ allora $$ a(x-x_0) + b(y-y_0) +c(z-z_0) = 0$$
+Poiché $P-P_0 = (x-x_0)\mathbf i + (y-y_0)\mathbf j +(z-z_0) \mathbf k$, allora $$ a(x-x_0) + b(y-y_0) +c(z-z_0) = 0$$
 
 \subsection{Piano per tre punti}
 
 Se
 $$
 \begin{vmatrix}
-P_{generico} - P_1
-P_2 - P_1
-p_3 - P_1
+P_{generico} - P_1 \\
+P_2 - P_1 \\
+P_3 - P_1
 \end{vmatrix} = 0
 $$
 
-\subsection{Parallelismo e perpendicolarità tra piani}
+\subsection{Parallelismo tra piani}
 
-Due piani sono paralleli se e solo se i vettori $u$ $u_1$, perpendicolari al piano, sono paralleli, cioè se e solo se esiste $k \in \R$ tale che $$u = k u_1$$
+Due piani sono paralleli tra loro se e solo se i vettori $u$ e $u_1$, perpendicolari al piano, sono paralleli, cioè se e solo se esiste $k \in \R$ tale che $$u = k u_1$$
 
 \subsection{Perpendicolarità tra piani}
 
-Due piani sono paralleli se e solo se i vettori $u$ $u_1$, perpendicolari al piano, sono paralleli, cioè se e solo se il loro prodotto scalare è 0.
+Due piani sono perpendicolari tra loro se e solo se i vettori $u$ e $u_1$, perpendicolari al piano, sono perpendicolari, cioè se e solo se il loro prodotto scalare è 0.
 
 \subsection{Intersezione di due piani}
 
