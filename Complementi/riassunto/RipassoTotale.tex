@@ -1,0 +1,50 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+
+\usepackage{float}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage{microtype}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[default]{lato}
+\usepackage[T1]{fontenc}
+
+\setlength{\parindent}{0pt}
+
+\theoremstyle{theorem}
+\newtheorem*{definition}{Definizione}
+\theoremstyle{theorem}
+\newtheorem*{property}{Proprietà}
+\theoremstyle{theorem}
+\newtheorem*{theorem}{Teorema}
+\theoremstyle{theorem}
+\newtheorem*{example}{Esempio}
+
+\newcommand*\dif{\mathop{}\!\mathrm{d}}
+\newcommand{\R}{\mathbb{R}}
+
+\title{Complementi di Matematica}
+\author{Cristian Baldi, Luca Chiodini}
+\date{A.A. 2015/2016}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\input{10_Matrici.tex}
+\input{20_Sistemi_Lineari.tex}
+\input{30_Vettori.tex}
+\input{40_Geometria_Analitica.tex}
+\input{45_Equazioni_differenziali.tex}
+\input{50_FunzioniADueVariabili.tex}
+\input{60_Integrali_Doppi.tex}
+
+\end{document}

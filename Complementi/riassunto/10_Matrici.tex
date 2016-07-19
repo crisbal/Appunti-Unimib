@@ -1,0 +1,261 @@
+\chapter{Matrici}
+
+\section{Definizione}
+
+Una matrice con $p$ righe e $q$ colonne è una tabella di numeri reali così disposti:
+
+$$
+A =
+\begin{bmatrix}
+    a_{1,1} & a_{1,2} & a_{1,3} & \dots  & a_{1,q} \\
+    a_{2,1} & a_{2,2} & a_{2,3} & \dots  & a_{2,q} \\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    a_{p,1} & a_{p,2} & a_{p,3} & \dots  & a_{p,q}
+\end{bmatrix}
+$$
+
+I parametri $p$ e $q$ sono detti dimensioni della matrice.
+
+L'elemento $A_{i,j}$ della matrice è l'elemento che si trova alla $i$-esima riga e alla $j$-esima colonna.
+
+\section{Matrici quadrate}
+
+Una matrice che ha dimensione $(n,n)$ è detta matrice quadrata. Questa matrice avrà un numero uguale di righe e di colonne.
+
+$$
+A_{\text{quadrata 2x2}} =
+\begin{bmatrix}
+    a_{1,1} & a_{1,2} \\
+    a_{2,1} & a_{2,2}
+\end{bmatrix}
+$$
+
+\section{Diagonale principale}
+
+Per ogni matrice quadrata $A_{n \times n}$ è possibile individuare gli elementi della diagonale principale, cioè tutti gli $a_{i,i}$ con $i$ che varia da 1 a $n$.
+
+\section{Matrice triangolare superiore}
+
+Una matrice quadrata $A_{n\times n}$ si dice triangolare superiore se tutti gli elementi che si trovano sotto la diagonale principale sono nulli.
+
+\[
+A_{\text{Diag. Sup.}} =
+\begin{bmatrix}
+    1 & 2 & 3 \\
+    0 & 4 & 5 \\
+    0 & 0 & 6 \\
+\end{bmatrix}
+\]
+
+\section{Matrice diagonale}
+
+Una matrice quadrata $A_{n \times n}$ è detta diagonale se tutti gli elementi non appartenenti alla diagonale principale sono nulli.
+
+\section{Matrice simmetrica}
+
+Una matrice quadrata si dice simmetrica se i suoi elementi in posizioni simmetriche rispetto alla diagonale principale sono uguali.
+
+\section{Matrice identità}
+
+Chiamiamo matrice unità (o matrice identica o matrice identità) di ordine $n$ la matrice quadrata $I_{n \times n}$ avente tutti gli elementi della diagonale principale uguali a 1 e tutti gli altri elementi uguali a 0.
+
+La matrice identica è una matrice diagonale.
+
+\section{Operazioni con matrici}
+
+\subsection{Matrice trasposta}
+
+Presa una matrice $A$ chiamiamo $A^T$ la trasposta di $A$ la
+matrice avente come elemento di posto $(i, j)$ l'elemento $(j, i)$
+della matrice A.
+
+$$
+A =
+\begin{bmatrix}
+    1 & 2 & 3\\
+    4 & 5 & 6
+\end{bmatrix}
+$$
+
+$$
+A^T =
+\begin{bmatrix}
+    1 & 4 \\
+    2 & 5 \\
+    3 & 6
+\end{bmatrix}
+$$
+
+\subsection{Somma tra matrici}
+
+Consideriamo due matrici $A$ e $B$. Le due matrici sono sommabili se
+e solo se sono dello stesso tipo, cioè se e solo se hanno lo stesso
+numero di righe e di colonne.
+
+$C=A+B$ è una matrice avente lo stesso numero di righe e di colonne
+delle due matrici di partenza, in cui ogni termine
+$C_{i,j}=A_{i,j}+B_{i,j}$.
+
+$$
+A =
+    \begin{bmatrix}
+    2 & 5 & -3 \\
+    1 & -2 & 4
+    \end{bmatrix}
+$$
+
+$$
+B =
+    \begin{bmatrix}
+    7 & -5 & 2 \\
+    -9 & 4 & -1
+    \end{bmatrix}
+$$
+
+$$
+C = A+B = \begin{bmatrix}
+    2+7 & 5+(-5) & (-3)+2 \\
+    (-9)+1 & (-2)+4 & 4+(-1)
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    9 & 0 & -1 \\
+    -8 & 2 & 3
+    \end{bmatrix}
+$$
+
+\subsection{Moltiplicazione per uno scalare}
+
+La moltiplicazione di una matrice $A=(a_{i,j})$ per uno scalare $\lambda$ è ottenuta moltiplicando ogni elemento di $A$ per lo scalare stesso.
+$$ \lambda \cdot A = (\lambda \cdot a_{i,j}) $$
+
+\subsection{Prodotto tra matrici}
+
+\begin{definition}
+Siano $A, B$ due matrici. È possibile calcolare il prodotto $C=A \cdot B$
+solo se $colonne(A) = righe(B)$.
+\end{definition}
+
+$$C_{ij} := A_{i1} \cdot B_{1j} + A_{i2} \cdot B_{2j} + \ldots + A_{iq} \cdot B_{qj}$$
+
+\subsection{Inversa di una matrice}
+
+\begin{theorem}
+Una matrice è invertibile se e solo se ha rango massimo.
+\end{theorem}
+
+Quindi una matrice ammette inversa se $det(A) \neq 0$
+
+\begin{theorem}
+Sia $A$ una matrice quadrata invertibile di ordine $n$. L'inversa $A^{-1}=(x_{ij})$ si può calcolare in questo modo:
+$$ x_{ij} = \frac{(-1)^{i+j}\cdot det(A_{ji})}{det(A)}$$
+
+dove $A_{ij}$ è la matrice ottenuta eliminando da $A$ la riga $i$-esima e la colonna $j$-esima.
+\end{theorem}
+
+\section{Rango}
+
+\begin{definition}
+Il rango di una matrice è il massimo ordine di sottomatrice quadrata con determinante diverso da 0 che posso estrarre dalla matrice stessa.
+\end{definition}
+
+\begin{definition}
+Il rango di una matrice ridotta a scala è il numero di righe diverse da 0.
+\end{definition}
+
+Una matrice rettangolare $A_{m \times n}$ può avere rango al massimo uguale al minimo tra il numero di righe e il numero di colonne della matrice. Cioè:
+$$rk(A)\leq \min(m,n)$$
+
+Nel caso in cui il rango coincida con il minimo tra $m$ ed $n$, cioè $rk(A)= \min(m,n)$, diremo che la matrice ha rango massimo.
+
+\section{Riduzione a scala}
+
+\begin{definition}
+Una matrice $A$ si dice a scala se il numero degli zeri che precede il primo elemento diverso da zero di ogni riga aumenta precedendo dalla prima riga verso l'ultima, fino a che non restano, eventualmente, solo righe nulle.
+\end{definition}
+
+\section{Determinante}
+
+\begin{definition}
+Il determinante è un numero associato ad una matrice $A$ e si indica come $|A|$ oppure con $\det(A)$.
+\end{definition}
+
+\subsection{Calcolare il determinante}
+
+\subsubsection{Matrice 2$\times$2}
+
+$$A=\left[\begin{matrix}a & b\\ c & d\end{matrix}\right] \rightarrow \det(A) = a \cdot d - b \cdot c$$
+
+\subsubsection{Matrice 3$\times$3}
+
+Attraverso la regola di Sarrus
+
+$$A=\left[\begin{matrix}a_{11} & a_{12} & a_{13}\\ a_{21} & a_{22} & a_{23}\\ a_{31} & a_{32} & a_{33}\end{matrix}\right]$$
+
+$$\det(A)=(a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{21}a_{32})-(a_{31}a_{22}a_{13}+a_{32}a_{23}a_{11}+a_{21}a_{12}a_{33})$$
+
+\subsubsection{Matrici n$\times$n}
+
+Consideriamo una matrice quadrata di ordine $n$
+
+$$A=\left[\begin{matrix} a_{11} & a_{12}& \dots& a_{1n} \\ a_{21} & a_{22}& \dots &a_{2n}\\ \vdots & \ddots &\ddots & \vdots\\ a_{n1}& a_{n2} & \dots & a_{nn} \end{matrix}\right]$$
+
+e denotiamo con $A_{ij}$ la matrice che si ottiene eliminando dalla matrice $A$ la riga $i$ e la colonna $j$.
+
+\begin{definition}{Sviluppo di Laplace per righe}
+    $$\det(A)=\sum_{j=1}^n{(-1)^{i+j}a_{ij}det(A_{ij})}$$
+    (ci si muove lungo la riga i-esima).
+\end{definition}
+
+\begin{definition}{Sviluppo di Laplace per colonne}
+    $$\det(A)=\sum_{i=1}^n{(-1)^{i+j}a_{ij}det(A_{ij})}$$
+    (ci si muove lungo la colonna j-esima).
+\end{definition}
+
+\subsection{Proprietà del determinante}
+
+\begin{property}
+    Una matrice quadrata con due righe o due colonne uguali ha determinante nullo.
+\end{property}
+
+\begin{property}
+    Siano $A$ e $B$ due matrici quadrate di ordine $n$ che si ottengono una dall'altra scambiando fra loro due righe. Allora $det(A) = -det(B)$. Un'analoga proprietà vale per lo scambio di colonne.
+\end{property}
+
+\begin{property}
+    Se una matrice quadrata $A$ ha una riga multipla di un'altra, allora $det(A)=0$. Un'analoga proprietà vale per le colonne.
+\end{property}
+
+\begin{property}
+    Sia $A$ una matrice quadrata di ordine $n$ e $k$ un numero reale. Si ha allora: $$\det (kA) = k^n \cdot \det A$$
+\end{property}
+
+\begin{property}
+    Sia $A$ una matrice diagonale, allora il determinante è uguale al prodotto degli elementi della diagonale.
+\end{property}
+
+\begin{theorem}[di Binet]
+    Date due matrici quadrate dello stesso ordine $A$ e $B$ si ha: $$ \det(AB) = \det A \cdot \det B$$
+\end{theorem}
+
+\begin{theorem}
+    Se $A$ è una matrice invertibile allora $\det(A^{-1}) = \frac{1}{\det(A)}$.
+\end{theorem}
+
+\section{Dipendenza Lineare}
+
+Le righe $A_1, A_2, \ldots, A_m$ di una matrice si dicono linearmente dipendenti se esistono dei $k_n$ non tutti nulli per cui $$k_1 \cdot A_1 + k_2 \cdot A_2 + \cdots + k_m A_m = 0$$
+
+
+\begin{property}
+Una matrice quadrata $A$ ha $\det(A) = 0$ se e solo se le righe (o le colonne) di $A$ sono linearmente dipendenti.
+\end{property}
+
+\begin{definition}[Combinazione Lineare]
+    Si dice che una riga $A_i$ è combinazione lineare delle altre righe se esistono $a_1,a_2,\ldots,a_n$ tali che
+    $$ A_i = a_1A_1 + a_2A_2 + \cdots + a_{i-1}A_{i-1} + a_{i+1}A_{i+1} + \cdots + a_nA_n$$
+\end{definition}
+
+\begin{theorem}
+    Sia $A$ una matrice $m \times n$ allora le righe di $A$ sono linearmente dipendenti se e solo se una riga di $A$ è combinazione lineare delle altre righe.
+\end{theorem}

@@ -1,0 +1,156 @@
+\chapter{Equazioni differenziali}
+
+Le equazioni differenziali sono equazioni in cui l'incognita è una funzione e in cui sono presenti una o più derivate della funzione incognita.
+
+Un esempio di equazione differenziale è $f'(x) + f(x) = x$. Soluzione di questa equazione sono tutte le funzioni che sommate alla propria derivata primma danno come risultato $x$.
+
+\begin{definition}[Ordine di un'equazione differenziale]
+Il massimo ordine di derivazione che compare in un' equazione differenziale.
+\end{definition}
+
+\begin{example}
+$f'(x) = x$
+
+Quali sono le funzioni la cui derivata prima è $x$?
+
+Tutte le funzioni $\frac{x^2}{2} + c = \int x \dif x$
+\end{example}
+
+\section{Tipologie e metodi risolutivi}
+
+\subsection{Equazioni differenziali elementari}
+
+In questi casi basta integrare $n$ volte, dove $n$ è l'ordine dell'equazione differenziale.
+
+\begin{example}
+$$
+y' = 3e^{2x} \to
+y = \int 3e^{2x} \dif x \to
+y = \frac{3}{2} e^{2x} + c
+$$
+\end{example}
+
+\begin{example}
+\begin{align*}
+y'' = 2-\cos(x) \implies & y' = \int 2-\cos(x) \dif x \\
+y' = 2x-\sin(x) + c \implies & y = \int 2x-\sin(x) + c_1 \dif x \\
+& y = x^2-\cos(x) + c_1x + c
+\end{align*}
+\end{example}
+
+\subsection{Equazioni differenziali a variabili separabili}
+
+$$y' = f(x) \cdot g(y)$$
+
+Esse si risolvono seguendo i seguenti passaggi:
+
+\begin{enumerate}
+\item Separare le variabili
+\item Integrare ciascun membro
+\item Ricavare $y(x)$
+\end{enumerate}
+
+\begin{example}
+$$
+y' = y^2 \ln(x) \\
+\frac{\dif y}{\dif x} = y^2 \ln(x)  \implies
+\frac{\dif y}{y^2} = \ln(x) \dif x
+$$
+Posso spezzare $\dif x$ e $\dif y$.
+
+Ora integro.
+
+$$
+\int \frac{\dif y}{y^2} = \int \ln(x) \dif x \implies
+\frac{-1}{y} = x \ln(x) + c
+$$
+
+Esplicito la $y$
+
+$$y(x)  = \frac{1}{x\ln(x)-x+c}$$
+\end{example}
+
+Se trovo un $t$ tale che $g(t) = 0$ allora $y(x) = t$ è anche soluzione.
+
+\subsection{Equazioni differenziali lineari}
+
+Vediamo per ora quelle del primo ordine, cioè nella forma:
+
+$$y'(x) + a(x)y(x) = f(x)$$
+
+Procediamo nel seguente modo:
+
+\begin{enumerate}
+\item Calcolo la primitiva di $a(x) = A(x)$
+\item Moltiplico entrambi i membri per $e^A(x)$. Quindi a sinistra ho $[y(x)e^{A(x)}]'$
+\item Integro entrambi i membri. $y(x)e^{A(x)} = \int f(x)e^{A(x)} \dif x +c$
+\item Moltiplico sia a destra che a sinistra per $e^{-A(x)}$. Ottengo $y(x) = e^{-A(x)} \int f(x)e^{A(x)} \dif x +c$
+\end{enumerate}
+
+\begin{example}
+$$y'(x)-xy(x)=2x$$
+$a(x) = -x$, $f(x) = 2x$
+
+Calcolo $\int a(x) = \frac{-x^2}{2}$
+
+Moltiplico tutto per $e^{\frac{-x^2}{2}}$
+
+Ottengo quindi
+
+$$y(x)\cdot e^{\frac{-x^2}{2}} = \int 2x \cdot e^{\frac{-x^2}{2}} \dif x + c$$
+
+Moltiplico per $e^{-A(x)}$.
+
+Ottengo $$y(x) = -2+c\cdot e^{\frac{x^2}{2}}$$
+\end{example}
+
+\begin{theorem}[Soluzione generale]
+$$
+y(x) = e^{-A(x)} \int f(x) e^{A(x)} \dif x + c \cdot e^{-A(x)}
+$$
+\end{theorem}
+
+\section{Problema di Cauchy}
+
+Definiamo problema di Cauchy un sistema del tipo
+$$
+\begin{cases}
+\text{Equazione differenziale} \\
+\text{Condizioni iniziali}
+\end{cases}
+$$
+
+\begin{example}
+$$
+\begin{cases}
+y' = -e^{-x} \\
+y(0) = 3
+\end{cases}
+$$
+$$
+y = e^{-x} + c
+$$
+Quindi sostituisco $y=f(x)$ e $x=0$
+$$
+3 = e^{-0} + c \to
+c = 2
+$$
+
+Quindi $y(x)=e^{-x}+2$ è la soluzione al problema di Cauchy.
+\end{example}
+
+\subsection{Esistenza ed unicità della soluzione}
+
+Supponiamo di avere il seguente problema di Cauchy
+
+$$
+\begin{cases}
+y' = f(x,y) \\
+g(x_0) = y_0
+\end{cases}
+$$
+Allora:
+\begin{itemize}
+\item Se $f(x,y)$ è continua allora esiste almeno una soluzione.
+\item Se $f_y(x,y)$ è continua allora esiste una ed una sola soluzione.
+\end{itemize}
