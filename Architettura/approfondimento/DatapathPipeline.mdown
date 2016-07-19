@@ -1,0 +1,51 @@
+# Pipelined Datapath
+
+Visto che si deve riutilizzare uno stesso componente per il processing di più istruzioni è necessario introdurre nel datapath (in seguito ad ogni step) dei registri aggiuntivi, utile a tenere e condividere lo stato del pipelining tra le varie fasi. I registri prendono il nome delle due fasi tra cui si frappongono. Ad esempio il registro che sta tra la fase IF e quella ID si chiama IF/ID.
+
+## Cosa viene passato
+
+* Tra IF e ID
+** PC+4, necessario se l'istruzione è una Branch
+** Instruction Memory, necessaria per il decode
+* Tra ID e EX
+** PC+4, necessario se l'istruzione è una Branch
+** Registri A,B, necessari se l'istruzione è un R-Type
+** Bits `immediate`, già sign-extended, o per Branch o per SW/LW
+* Tra EX e MEM
+** Indirizzo di Branch calcolato, utile solo se l'istruzione è una branch
+** Bit di zero, utile solo se l'istruzione è una branch
+** Risultato ALU, per operazioni aritmetiche logiche e SW/LW o JR
+** Registro ReadData2, utile per SW
+* Tra MEM e WB
+** Dato letto, utile solo se l'operazione è una LW
+** Risultato ALU, utile se l'operazione è una R-Type
+
+
+## Istruzioni
+
+### R-Type
+
+* IF
+** Incremento il PC di 4
+** Fetch istruzione
+** Passo PC+4, Istr
+* ID
+** Uso Istr per leggere registro A e B
+** Passo PC+4, A, B, $rdest
+* EX
+** Faccio operazione aritmetico-logica
+** Passo AluResult, $rdest
+* MEM
+** Non devo fare nulla
+** Passo AluResult, $rdest
+* WB
+** Mando AluResult a WriteData
+** Mando $rdest a WriteReg
+
+## Controlllo della pipeline
+
+* IF: nulla di speciale, lo devono fare tutti
+* ID: nulla di speciale, lo devono fare tutti
+* EX: settare RegDst, ALUOp (a seconda di quello che si deve fare) e ALUSrc (B oppure immediato16To32 LW/SW)
+* MEM: settare Branch a 1 se è una branch (che poi permetterà di scegliere PC Source a seconda di Zero), settare MemRead o MemWrite se è LW o SW.
+* WB: settare MemToReg (mandi risultato ALU o LW?). 
