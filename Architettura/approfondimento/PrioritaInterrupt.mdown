@@ -1,0 +1,26 @@
+# Gestione delle Priorità nelle Interruzioni
+
+Ci potrebbe essere la necessità di stabilire un grado di importanza per gli interrupt che si manifestano, in modo da far gestire alla CPU quello più prioritario. 
+
+Ogni sistema che si rispetti ha gli interrupt prioritarizzati. Generalmente gli interrupt di I/O hanno meno priorità degli interrupt di eccezione. E anche tra gli interrupt I/O c'è una distinzione, le periferiche più veloci hanno priorità più alta (ovviamente è necessario gestirle per prima visto che più tempo passa più lavoro perdono).
+
+## Registro Status
+
+Inanzitutto nel MIPS abbiamo lo Status register, esso stabilisce chi può interrompere il processore. Il primo filtro che attua questo registro è attraverso il bit di enable, se è 0 il processore non verrà mai interrotto.
+
+Inoltre una sezione di questo registro è utilizzata per definire quali interrupt precisi possono verificarsi, 8 bit (dal 15 all' 8). Se voglio rendere triggerabile un interrupt mi basterà mettere i bit corrispondenti a 1.
+
+## Registro Cause
+
+Quando si verifica un'eccezione o un interrupt è nel registro Cause che troviamo tutte le informazioni necessarie per gestirla. Ad esempio nei bit da 6 a 2 troviamo l'exception code e dal 15 all'8 i pending interrupts.
+
+## Gestione dell'interrupt
+
++ Fare l'AND logico tra la interrupt mask del registro status e i pending interrupt del registro cause. In questo modo avremmo tutti gli interrupt che si sono manifestati e che sono abilitati ad essere gestiti. 
++ Selezionare l'interrupt con la priorità più alta, generalmente quello più a sinistra.
++ Salvare la maschera degli interrupt
++ Cambiare la maschera degli interrupt disabilitando gli interrupt con priorità minore o uguale a quella che si sta gestendo
++ Salvare lo stato del processore
++ Settare Interrupt Enable dello Status Register a 1
++ Chiamare la routine di gestione dell'interrupt
++ Prima di restorare lo stato, settare il bit di interrupt enable del registro Cause a 0. Per fare il restore della maschera di interrupt. 
