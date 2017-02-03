@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE films SYSTEM "films.dtd">
+<films>
+    <film id="ID-1" />
+    <film id="ID-1" voto="4">
+        <titolo>Shrek 1</titolo>
+        <attori>
+            <attore>
+                <nome>Sh</nome>
+                <cognome>Rek</cognome>
+            </attore>
+            <attore>
+                <nome>Ciu</nome>
+                <cognome>Chino</cognome>
+            </attore>
+        </attori>
+        <compagnie>
+            <compagnia>Pixar</compagnia>
+            <compagnia>Disney</compagnia>
+        </compagnie>
+        <descrizione>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus maxime officia laudantium cumque ea fugit vel consequatur ab repellat odit, aspernatur, recusandae labore doloribus hic iure enim, corporis ratione adipisci.
+        </descrizione>
+        <categorie>
+            <categoria>Animazione</categoria>
+            <categoria>Drammatico</categoria>
+            <categoria>Guerra</categoria>
+        </categorie>
+    </film>
+    <film id="ID-2" voto="5">
+        <titolo>Shrek 2</titolo>
+        <sottotitolo>A volte ritornano</sottotitolo>
+        <attori>
+            <attore>
+                <nome>Ciu</nome>
+                <cognome>Chino</cognome>
+            </attore>
+            <attore>
+                <nome>Senza</nome>
+                <cognome>Nome</cognome>
+            </attore>
+        </attori>
+        <compagnie>
+            <compagnia>Disney</compagnia>
+            <compagnia>Netflix</compagnia>
+        </compagnie>
+        <categorie>
+            <categoria>Drammatico</categoria>
+        </categorie>
+    </film>
+    <film id="ID-3" voto="1">
+        <titolo>Shrek 3</titolo>
+        <sottotitolo>Il terzo film</sottotitolo>
+        <attori>
+            <attore>
+                <nome>Ciu</nome>
+                <cognome>Chino</cognome>
+            </attore>
+            <attore>
+                <nome>Fio</nome>
+                <cognome>Na</cognome>
+            </attore>
+            <attore>
+                <nome>Brad</nome>
+                <cognome>Pitt</cognome>
+            </attore>
+        </attori>
+        <compagnie>
+            <compagnia>Disney Pixar</compagnia>
+        </compagnie>
+        <categorie>
+            <categoria>Fantascienza</categoria>
+            <categoria>Documentario</categoria>
+        </categorie>
+    </film>
+    <film id="ID-4" voto="1">
+        <titolo>Shrek 4</titolo>
+        <attori>
+            <attore>
+                <nome>Ciu</nome>
+                <cognome>Chino</cognome>
+            </attore>
+        </attori>
+        <compagnie>
+            <compagnia>Amazon</compagnia>
+        </compagnie>
+        <descrizione>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus libero, quibusdam aliquam! Rem explicabo natus assumenda fugit ducimus excepturi sint autem, culpa eaque ut, id rerum illum laboriosam dolor delectus.
+        </descrizione>
+        <categorie>
+            <categoria>Realismo</categoria>
+            <categoria>Documentario</categoria>
+        </categorie>
+    </film>
+    <film id="ID-5" voto="3">
+        <titolo>10 film sono troppi</titolo>
+        <sottotitolo>Ma proprio tanti</sottotitolo>
+        <attori>
+            <attore>
+                <nome>Cristian</nome>
+                <cognome>Baldi</cognome>
+            </attore>
+        </attori>
+        <compagnie>
+            <compagnia>Bicocca</compagnia>
+        </compagnie>
+        <categorie>
+            <categoria>Horror</categoria>
+        </categorie>
+    </film>
+    <film id="ID-6" voto="3">
+        <titolo>Prova 123</titolo>
+        <attori>
+            <attore>
+                <nome>Nome attore</nome>
+                <cognome>Cognome attore</cognome>
+            </attore>
+        </attori>
+        <compagnie>
+            <compagnia>Di esempio</compagnia>
+        </compagnie>
+        <categorie>
+            <categoria>Placeholder</categoria>
+        </categorie>
+    </film>
+    <film id="ID-7" voto="1">
+        <titolo>Altro film</titolo>
+        <attori>
+            <attore>
+                <nome>Nome nome</nome>
+                <cognome>Cognome cognome</cognome>
+            </attore>
+        </attori>
+        <compagnie>
+            <compagnia>Pixar</compagnia>
+            <compagnia>Disney</compagnia>
+        </compagnie>
+        <categorie>
+            <categoria>Animazione</categoria>
+        </categorie>
+    </film>
+    <film id="ID-8" voto="5">
+        <titolo>Quasi alla fine</titolo>
+        <sottotitolo>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, labore.</sottotitolo>
+        <attori>
+            <attore>
+                <nome>Foo</nome>
+                <cognome>Bar</cognome>
+            </attore>
+        </attori>
+        <compagnie>
+            <compagnia>Paramount</compagnia>
+        </compagnie>
+        <categorie>
+            <categoria>Horror</categoria>
+            <categoria>Splatter</categoria>
+        </categorie>
+    </film>
+    <film id="ID-9" voto="3">
+        <titolo>Ciao a tutti</titolo>
+        <sottotitolo>Lorem ipsum dolor.</sottotitolo>
+        <attori>
+            <attore>
+                <nome>Foo</nome>
+                <cognome>Bar</cognome>
+            </attore>
+            <attore>
+                <nome>Bar</nome>
+                <cognome>Biz</cognome>
+            </attore>
+        </attori>
+        <compagnie>
+            <compagnia>Mediaset</compagnia>
+        </compagnie>
+        <categorie>
+            <categoria>Sport</categoria>
+        </categorie>
+    </film>
+    <film id="ID-10" voto="5">
+        <titolo>Fine</titolo>
+        <sottotitolo>This is the end</sottotitolo>
+        <attori>
+            <attore>
+                <nome>Cristian</nome>
+                <cognome>Baldi</cognome>
+            </attore>
+        </attori>
+        <compagnie>
+            <compagnia>Bye Bye Inc.</compagnia>
+        </compagnie>
+        <categorie>
+            <categoria>Animazione</categoria>
+            <categoria>Documentario</categoria>
+        </categorie>
+    </film>
+</films>

@@ -1,0 +1,16 @@
+<!ELEMENT films (film*) >
+<!ELEMENT film (titolo, sottotitolo?, attori, compagnie, descrizione?, categorie)>
+<!ATTLIST film
+	id ID #REQUIRED
+	voto (0|1|2|3|4|5) #REQUIRED >
+<!ELEMENT titolo (#PCDATA)>
+<!ELEMENT sottotitolo (#PCDATA)>
+<!ELEMENT attori (attore+)>
+	<!ELEMENT attore (nome, cognome)>
+		<!ELEMENT nome (#PCDATA)>
+		<!ELEMENT cognome (#PCDATA)>
+<!ELEMENT compagnie (compagnia+)>
+	<!ELEMENT compagnia (#PCDATA)>
+<!ELEMENT descrizione (#PCDATA)>
+<!ELEMENT categorie (categoria+)>
+	<!ELEMENT categoria (#PCDATA)>

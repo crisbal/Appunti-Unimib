@@ -1,0 +1,260 @@
+XML PREAMBLE: <?xml version="1.0" encoding="UTF-8" ?>
+Doctype root tag: films
+DOCTYPE_SYSTEM: SYSTEM "films.dtd"
+OPENING TAG: films
+OPENING TAG: film
+	ATTRIBUTE-NAME:  id
+		ATTRIBUTE-VALUE: ID-1
+OPENING TAG: film
+	ATTRIBUTE-NAME:  id
+		ATTRIBUTE-VALUE: ID-1
+	ATTRIBUTE-NAME:  voto
+		ATTRIBUTE-VALUE: 4
+OPENING TAG: titolo
+	TAG-CONTENT:Shrek 1
+OPENING TAG: attori
+OPENING TAG: attore
+OPENING TAG: nome
+	TAG-CONTENT:Sh
+OPENING TAG: cognome
+	TAG-CONTENT:Rek
+OPENING TAG: attore
+OPENING TAG: nome
+	TAG-CONTENT:Ciu
+OPENING TAG: cognome
+	TAG-CONTENT:Chino
+OPENING TAG: compagnie
+OPENING TAG: compagnia
+	TAG-CONTENT:Pixar
+OPENING TAG: compagnia
+	TAG-CONTENT:Disney
+OPENING TAG: descrizione
+	TAG-CONTENT:
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus maxime officia laudantium cumque ea fugit vel consequatur ab repellat odit, aspernatur, recusandae labore doloribus hic iure enim, corporis ratione adipisci.
+        
+OPENING TAG: categorie
+OPENING TAG: categoria
+	TAG-CONTENT:Animazione
+OPENING TAG: categoria
+	TAG-CONTENT:Drammatico
+OPENING TAG: categoria
+	TAG-CONTENT:Guerra
+OPENING TAG: film
+	ATTRIBUTE-NAME:  id
+		ATTRIBUTE-VALUE: ID-2
+	ATTRIBUTE-NAME:  voto
+		ATTRIBUTE-VALUE: 5
+OPENING TAG: titolo
+	TAG-CONTENT:Shrek 2
+OPENING TAG: sottotitolo
+	TAG-CONTENT:A volte ritornano
+OPENING TAG: attori
+OPENING TAG: attore
+OPENING TAG: nome
+	TAG-CONTENT:Ciu
+OPENING TAG: cognome
+	TAG-CONTENT:Chino
+OPENING TAG: attore
+OPENING TAG: nome
+	TAG-CONTENT:Senza
+OPENING TAG: cognome
+	TAG-CONTENT:Nome
+OPENING TAG: compagnie
+OPENING TAG: compagnia
+	TAG-CONTENT:Disney
+OPENING TAG: compagnia
+	TAG-CONTENT:Netflix
+OPENING TAG: categorie
+OPENING TAG: categoria
+	TAG-CONTENT:Drammatico
+OPENING TAG: film
+	ATTRIBUTE-NAME:  id
+		ATTRIBUTE-VALUE: ID-3
+	ATTRIBUTE-NAME:  voto
+		ATTRIBUTE-VALUE: 1
+OPENING TAG: titolo
+	TAG-CONTENT:Shrek 3
+OPENING TAG: sottotitolo
+	TAG-CONTENT:Il terzo film
+OPENING TAG: attori
+OPENING TAG: attore
+OPENING TAG: nome
+	TAG-CONTENT:Ciu
+OPENING TAG: cognome
+	TAG-CONTENT:Chino
+OPENING TAG: attore
+OPENING TAG: nome
+	TAG-CONTENT:Fio
+OPENING TAG: cognome
+	TAG-CONTENT:Na
+OPENING TAG: attore
+OPENING TAG: nome
+	TAG-CONTENT:Brad
+OPENING TAG: cognome
+	TAG-CONTENT:Pitt
+OPENING TAG: compagnie
+OPENING TAG: compagnia
+	TAG-CONTENT:Disney Pixar
+OPENING TAG: categorie
+OPENING TAG: categoria
+	TAG-CONTENT:Fantascienza
+OPENING TAG: categoria
+	TAG-CONTENT:Documentario
+OPENING TAG: film
+	ATTRIBUTE-NAME:  id
+		ATTRIBUTE-VALUE: ID-4
+	ATTRIBUTE-NAME:  voto
+		ATTRIBUTE-VALUE: 1
+OPENING TAG: titolo
+	TAG-CONTENT:Shrek 4
+OPENING TAG: attori
+OPENING TAG: attore
+OPENING TAG: nome
+	TAG-CONTENT:Ciu
+OPENING TAG: cognome
+	TAG-CONTENT:Chino
+OPENING TAG: compagnie
+OPENING TAG: compagnia
+	TAG-CONTENT:Amazon
+OPENING TAG: descrizione
+	TAG-CONTENT:
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus libero, quibusdam aliquam! Rem explicabo natus assumenda fugit ducimus excepturi sint autem, culpa eaque ut, id rerum illum laboriosam dolor delectus.
+        
+OPENING TAG: categorie
+OPENING TAG: categoria
+	TAG-CONTENT:Realismo
+OPENING TAG: categoria
+	TAG-CONTENT:Documentario
+OPENING TAG: film
+	ATTRIBUTE-NAME:  id
+		ATTRIBUTE-VALUE: ID-5
+	ATTRIBUTE-NAME:  voto
+		ATTRIBUTE-VALUE: 3
+OPENING TAG: titolo
+	TAG-CONTENT:10 film sono troppi
+OPENING TAG: sottotitolo
+	TAG-CONTENT:Ma proprio tanti
+OPENING TAG: attori
+OPENING TAG: attore
+OPENING TAG: nome
+	TAG-CONTENT:Cristian
+OPENING TAG: cognome
+	TAG-CONTENT:Baldi
+OPENING TAG: compagnie
+OPENING TAG: compagnia
+	TAG-CONTENT:Bicocca
+OPENING TAG: categorie
+OPENING TAG: categoria
+	TAG-CONTENT:Horror
+OPENING TAG: film
+	ATTRIBUTE-NAME:  id
+		ATTRIBUTE-VALUE: ID-6
+	ATTRIBUTE-NAME:  voto
+		ATTRIBUTE-VALUE: 3
+OPENING TAG: titolo
+	TAG-CONTENT:Prova 123
+OPENING TAG: attori
+OPENING TAG: attore
+OPENING TAG: nome
+	TAG-CONTENT:Nome attore
+OPENING TAG: cognome
+	TAG-CONTENT:Cognome attore
+OPENING TAG: compagnie
+OPENING TAG: compagnia
+	TAG-CONTENT:Di esempio
+OPENING TAG: categorie
+OPENING TAG: categoria
+	TAG-CONTENT:Placeholder
+OPENING TAG: film
+	ATTRIBUTE-NAME:  id
+		ATTRIBUTE-VALUE: ID-7
+	ATTRIBUTE-NAME:  voto
+		ATTRIBUTE-VALUE: 1
+OPENING TAG: titolo
+	TAG-CONTENT:Altro film
+OPENING TAG: attori
+OPENING TAG: attore
+OPENING TAG: nome
+	TAG-CONTENT:Nome nome
+OPENING TAG: cognome
+	TAG-CONTENT:Cognome cognome
+OPENING TAG: compagnie
+OPENING TAG: compagnia
+	TAG-CONTENT:Pixar
+OPENING TAG: compagnia
+	TAG-CONTENT:Disney
+OPENING TAG: categorie
+OPENING TAG: categoria
+	TAG-CONTENT:Animazione
+OPENING TAG: film
+	ATTRIBUTE-NAME:  id
+		ATTRIBUTE-VALUE: ID-8
+	ATTRIBUTE-NAME:  voto
+		ATTRIBUTE-VALUE: 5
+OPENING TAG: titolo
+	TAG-CONTENT:Quasi alla fine
+OPENING TAG: sottotitolo
+	TAG-CONTENT:Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, labore.
+OPENING TAG: attori
+OPENING TAG: attore
+OPENING TAG: nome
+	TAG-CONTENT:Foo
+OPENING TAG: cognome
+	TAG-CONTENT:Bar
+OPENING TAG: compagnie
+OPENING TAG: compagnia
+	TAG-CONTENT:Paramount
+OPENING TAG: categorie
+OPENING TAG: categoria
+	TAG-CONTENT:Horror
+OPENING TAG: categoria
+	TAG-CONTENT:Splatter
+OPENING TAG: film
+	ATTRIBUTE-NAME:  id
+		ATTRIBUTE-VALUE: ID-9
+	ATTRIBUTE-NAME:  voto
+		ATTRIBUTE-VALUE: 3
+OPENING TAG: titolo
+	TAG-CONTENT:Ciao a tutti
+OPENING TAG: sottotitolo
+	TAG-CONTENT:Lorem ipsum dolor.
+OPENING TAG: attori
+OPENING TAG: attore
+OPENING TAG: nome
+	TAG-CONTENT:Foo
+OPENING TAG: cognome
+	TAG-CONTENT:Bar
+OPENING TAG: attore
+OPENING TAG: nome
+	TAG-CONTENT:Bar
+OPENING TAG: cognome
+	TAG-CONTENT:Biz
+OPENING TAG: compagnie
+OPENING TAG: compagnia
+	TAG-CONTENT:Mediaset
+OPENING TAG: categorie
+OPENING TAG: categoria
+	TAG-CONTENT:Sport
+OPENING TAG: film
+	ATTRIBUTE-NAME:  id
+		ATTRIBUTE-VALUE: ID-10
+	ATTRIBUTE-NAME:  voto
+		ATTRIBUTE-VALUE: 5
+OPENING TAG: titolo
+	TAG-CONTENT:Fine
+OPENING TAG: sottotitolo
+	TAG-CONTENT:This is the end
+OPENING TAG: attori
+OPENING TAG: attore
+OPENING TAG: nome
+	TAG-CONTENT:Cristian
+OPENING TAG: cognome
+	TAG-CONTENT:Baldi
+OPENING TAG: compagnie
+OPENING TAG: compagnia
+	TAG-CONTENT:Bye Bye Inc.
+OPENING TAG: categorie
+OPENING TAG: categoria
+	TAG-CONTENT:Animazione
+OPENING TAG: categoria
+	TAG-CONTENT:Documentario
