@@ -1,0 +1,618 @@
+<meta charset="utf-8">
+<style>
+	h1{
+		page-break-before: always; 
+	}
+	body {
+        counter-reset: h1counter;
+    }
+    h1 {
+        counter-reset: h2counter;
+    }
+    h2 {
+        counter-reset: h3counter;
+    }
+    h1:before {
+        content: counter(h1counter) ".\0000a0\0000a0";
+        counter-increment: h1counter;
+        counter-reset: h2counter;
+    }
+    h2:before {
+        content: counter(h1counter) "." counter(h2counter) ".\0000a0\0000a0";
+        counter-increment: h2counter;
+    }
+    h3:before {
+        content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
+        counter-increment: h3counter;
+    }
+</style>
+<h1 id="processi-di-sviluppo">Processi di sviluppo</h1>
+<h2 id="software">Software</h2>
+<p>Il software è un qualcosa di complesso (sia per dimensione, sia per numero di interconnessioni), costruito da più persone, versionato nel tempo, in uso per un lungo periodo e che cambia nella struttura, nel funzionamento e nei requisiti nel corso del tempo.</p>
+<p>Distinguiamo due tipi di progetti software:</p>
+<ul>
+<li>di routine, cioè quelli che vanno a risolvere well-known problems e che nella loro implementazione fanno utilizzo di soluzioni parzialmente già esistenti</li>
+<li>innovativi, cioè quelli che si propongono come soluzioni nuove a problemi nuovi.</li>
+</ul>
+<p>Generalmente si lavora a progetti innovativi: riuscire a trasformare progetti innovativi in progetti di routine è una tecnica che richiede grossa abilità.</p>
+<p>Il Sommerville propone anche un altra classificazione:</p>
+<ul>
+<li>progetti generici, cioè che producono software vendibili al mondo intero. La software house controlla le specifiche.</li>
+<li>progetti personalizzati, cioè costruiti a partire dalle necessità di un particolare cliente. Il cliente controlla le specifiche.</li>
+</ul>
+<p>Un software deve avere proprietà (cioè una caratteristica misurabile, ad esempio il tempo di esecuzione), ed in base a queste proprietà è possibile andare a definire le qualità del SW (cioè i vincoli che le proprietà devono rispettare, ad esempio il tempo di esecuzione deve essere minore di X secondi)</p>
+<p>Il SW deve inoltre:</p>
+<ul>
+<li>fornire le funzionalità e le prestazioni richieste dal committente</li>
+<li>essere manutenibile, cioè deve essere scritto in modo che possa essere modficato in caso dei cambiamenti di necessità del cliente</li>
+<li>essere affidabile, cioè deve avere una bassa probabilità di malfunzionamento</li>
+<li>essere efficiente, cioè non deve usare in modo sproporzionato le risorse</li>
+<li>essere usabile, cioè non deve avere una difficoltà di utilizzo sproporzionata</li>
+</ul>
+<h2 id="ingegneria-del-software">Ingegneria del software</h2>
+<p>L'ingegneria del software è una disciplina molto nuova. Pur sembrando simile ad ogni altro tipo di ingegneria è semplice osservare delle enormi differenze che la rendono una disciplina separata dalle altre. In particolare:</p>
+<ul>
+<li>le specifiche di un progetto sono completamente variabili, sia nel corso del suo sviluppo che al completamento di esso</li>
+<li>un software è quindi soggetto a cambiamenti ed evoluzioni continue (patch, bugfix, perfezionamenti)</li>
+<li>è una disciplina che esiste da pochissimo tempo, molto più giovane dei software</li>
+<li>essendo molto giovane ha pochissima storia</li>
+</ul>
+<p>L'ing. del SW è necessaria al giorno d'oggi: più e più persone usano e necessitano di nuovo software ogni giorno, la necessità di produrre software affidabile e funzionante è fondamentale. Inoltre nel lungo termine è molto più efficace ed economico applicare i fondamenti dell'ing. del SW al posto che scrivere codice direttamente.</p>
+<h2 id="processo-di-sviluppo">Processo di sviluppo</h2>
+<p>Il processo di sviluppo è l'insieme di attività che portano alla sviluppo di un software, cioè le fasi del ciclo di vita di un software, che lo portano da essere una semplice idea ad un prodotto completo.</p>
+<p>Distinguiamo 5 fasi del processo di sviluppo:</p>
+<ul>
+<li>analisi dei requisiti, si capisce cosa deve fare il software che si vuole realizzare</li>
+<li>progettazione, si progetta come il nostro software deve essere implementato</li>
+<li>sviluppo, si programma il software</li>
+<li>convalida, si verifica che il SW rispetti i requisiti</li>
+<li>evoluzione, si modifica il software in base alle necessità del cliente o del mercato</li>
+</ul>
+<h2 id="modelli-di-processo">Modelli di processo</h2>
+<p>Un processo di sviluppo è basato su un modello di processo, una rappresentazione semplificata di un processo di sviluppo: questi modelli non sono soluzione definitive, ma semplici astrazioni utili a spiegare le differenti modalità di approcciare il processo di sviluppo.</p>
+<h3 id="modello-a-cascata">Modello a cascata</h3>
+<p>Il modello a cascata prende le varie fasi del processo di sviluppo e le mette una di seguito all'altra. Ogni fase non può cominciare se la precedente non è ancora iniziata.</p>
+<p>Il modello a cascata è stato introdotto da Royce nel 1970. E' un processo basato sulla pianificazione: tutto deve essere pianificato prima di iniziare a lavorare. Il passaggio da una fase all'altra produce uno o più documenti che la fase utilizzzerà per completare il proprio lavoro.</p>
+<p>Guarda ad esempio: https://en.wikipedia.org/wiki/Cleanroom_software_engineering</p>
+<p>Viene difficile cambiare le specifiche in caso di necessità: molte volte è addirittura necessario rifare da capo alcune fasi del processo.</p>
+<p>Un processo di sviluppo basato sul modello a cascata è applicabile solo quando i requisiti sono ben noti e difficilmente modificabili.</p>
+<p>Il modello a cascate riflette il processo di sviluppo di altre ingegnerie diverse da quelle del software. E' applicabile tranquillamente ad esempio nella produzione industriale meccanina, elettronica o di qualsiasi altro tipo.</p>
+<h3 id="modello-a-sviluppo-incrementale">Modello a sviluppo incrementale</h3>
+<p>Questo approccio alterna le attività di specifica, sviluppo e validazione. Il sistema è sviluppato come una serie di versioni (incrementi), ad ogni incremento si aggiungono funzionalità alla versione precedente.</p>
+<p>Lo sviluppo incrementale rappresenta il modo in cui risolviamo problemi: difficilmente affrontiamo un problema nella sua interezza e complessità, piuttosto ci muoviamo verso la soluzione a piccoli step, facendo backtracking solo quando ci accorgiamo di aver fatto errori.</p>
+<p>Ogni versione introduce nuove funzionalità, dalle quali si può ricevere feedback dal cliente per progettare e pianificare i cicli di sviluppo successivi. Le funzionalità core vengono sviluppate prima, in questo modo sono più testate e facilmente modificabili in caso i requisiti non fossero precisi.</p>
+<p>Tra una versione/ciclo e l'altra è impossibile cambiare i requisiti: saranno modicabili solo all'inizio del ciclo successivo.</p>
+<p>Il modello di sviluppo incrementale produce processi di sviluppo iterativi ed evolutivi.</p>
+<p>Lo sviluppo incrementale ha come vantaggi:</p>
+<ul>
+<li>minor costo in termine di tempo e di risorse in caso di cambiamento di requisiti</li>
+<li>maggior semplicità nella raccolta di feedback dal cliente, può vedere il software da subito</li>
+<li>maggior velocità di delivery e deployment del SW al cliente, che lo può usare anche quando non è ancora completato</li>
+<li>minor rischio di fallimento</li>
+<li>abbracciare il cambiamento</li>
+</ul>
+<p>Svantaggi:</p>
+<ul>
+<li>può essere difficile identificare le &quot;common facilities&quot; necessarie da tutti gli incrementi, visto che i requisiti non sono definiti fino a che un incremento non è completato.</li>
+<li>è difficile sviluppare in modo agile un rimpiazzamento, gli utenti vogliono tutta la funzionalità del sistema vecchio e non vogliono sperimentare con il sistema nuovo.</li>
+<li>molte volte i contratti sono scritti con tutte le specifiche spiegate e complete. Questo non è possibile con uno sviluppo iterativo: può diventare difficile scrivere contratti per clienti di grandi dimensioni come multinazionali o agenzie governative.</li>
+</ul>
+<p>Il modello iterativo non si adatta bene ovunque: ad esempio è difficile applicarlo su team che lavorano in locazioni differenti, su progetti che necessitano di un hardware completo prima di scrivere il software e su alcuni sistemi particolarmente critici dove la safety e la secutrity sono fondamentali e dove è quindi necessario controllare a priori l'interazione di tutte le specifiche.</p>
+<h4 id="modello-a-spirale">Modello a spirale</h4>
+<p>Una specializzazione del modello a sviluppo incrementale la si ha con il modello a spirale, formulato da Boehm nel 1988. Il processo di sviluppo è rappresentato con una spirale. Ogni quarto della spirale rappsenta una fase dello sviluppo. Più la spirale si allarga più il progetto prosegue nella sua esecuzione.</p>
+<p>In particolare le 4 fasi che si ripetono sono:</p>
+<ul>
+<li>determinazione di obbiettivi, alternative e vincoli</li>
+<li>valutazione di alternative e rischi</li>
+<li>sviluppo e test</li>
+<li>pianificazione (per la fase successiva)</li>
+</ul>
+<p>Si differenzia da altri modelli per la esplicita analisi dei rischi. Una volta che i rischi sono stati analizzati e definiti, lo sviluppo prosegue, seguita da una pianificazione. Rischio = qualcosa che può andare storto.</p>
+<h4 id="modello-agile">Modello agile</h4>
+<p>Basato su:</p>
+<ul>
+<li>sviluppo incrementale ed iterativo</li>
+<li>iterazioni brevi (mentre nel modello a spirale non c'è limite) e timeboxed (tempi fissi, si misura il ciclo totale, non la singola attività)</li>
+<li>usa le pratiche e i principi agili:
+<ul>
+<li>comunicazione, tutti sanno tutto di tutti</li>
+<li>semplicità, test driven development</li>
+<li>feedback da parte degli utenti</li>
+<li>coraggio, di buttare via il lavoro già fatto ed innovare</li>
+</ul></li>
+</ul>
+<p><strong>Manifesto agile</strong></p>
+<ul>
+<li>Individuals and interactions over processes and tools</li>
+<li>Working software over comprehensive documentation</li>
+<li>Customer collaboration over contract negotiation</li>
+<li>Responding to change over following a plan</li>
+</ul>
+<p><strong>Agile principles</strong></p>
+<ul>
+<li>Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.</li>
+<li>Welcome changing requirements, even late in development. Agile processes harness change for the customer's competitive advantage.</li>
+<li>Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to the shorter timescale.</li>
+<li>Business people and developers must work together daily throughout the project.</li>
+<li>Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done.</li>
+<li>The most efficient and effective method of conveying information to and within a development team is face-to-face conversation.</li>
+<li>Working software is the primary measure of progress.</li>
+<li>Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely.</li>
+<li>Continuous attention to technical excellence and good design enhances agility.</li>
+<li>Simplicity--the art of maximizing the amount of work not done--is essential.</li>
+<li>The best architectures, requirements, and designs emerge from self-organizing teams.</li>
+<li>At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.</li>
+</ul>
+<h4 id="modello-rup">Modello RUP</h4>
+<p>Metodologia simil-agile prima del manifesto agile. E' un processo basato sul linguaggi di modellazione UML. E' particolarmente utile per progetti non innovativi, e non è applicabile ad esempio per startup.</p>
+<p>Caratteristiche:</p>
+<ul>
+<li>Iterativo ed incrementale</li>
+<li>Basato sull'UML e i suoi modelli e non sul linguaggio naturale</li>
+<li>Incentrato sull'architettura</li>
+</ul>
+<p>Fasi RUP:</p>
+<ul>
+<li>Avviamento
+<ul>
+<li>stabilire &quot;business rationale&quot; del progetto</li>
+<li>stabilire obiettivi e stime dei costi e dei tempi</li>
+<li>analisi di fattibilità</li>
+<li>produce: Live-Cycle Objective Milestone</li>
+<li>stabilire le entità e le interazioni che hanno all'interno del sistema</li>
+</ul></li>
+<li>Elaborazione
+<ul>
+<li>raccoglie requisiti in modo dettagliato</li>
+<li>analisi ad alto livello per stabilire l'architettura di base</li>
+<li>analizzare i rischi principali</li>
+<li>produrre stime affidabili</li>
+<li>produce: Life-Cycle Architecture Milestone</li>
+<li>capire il dominio del problema, definire un architettura ed piano</li>
+</ul></li>
+<li>Costruzone
+<ul>
+<li>costruisce parte del sistema</li>
+<li>test ed integrazione</li>
+<li>Sulle slide di esercitazione questa è una fase a parte</li>
+<li>preparazione al rilascio</li>
+<li>produce: initial operational capacity milestone</li>
+<li>il software è documentato e funziona</li>
+</ul></li>
+<li>Transizione
+<ul>
+<li>transizione dagli sviluppatori agli utenti</li>
+<li>fine-tuning delle funzionalità, prestazione, qualità, ottimizzazione</li>
+<li>produce: produt release milestone</li>
+<li>il software documentato e funzionante e completamente inserito nel suo ambiente di esecuzione</li>
+</ul></li>
+</ul>
+<h4 id="modello-scrum">Modello Scrum</h4>
+<p>Basato sui principi agili di</p>
+<ul>
+<li>Comunicazione
+<ul>
+<li>Meeting giornalieri</li>
+</ul></li>
+<li>Semplicità
+<ul>
+<li>Il codice fa solo quello che deve fare</li>
+</ul></li>
+<li>Feedback
+<ul>
+<li>Il cliente da continuamente il suo feedback</li>
+</ul></li>
+<li>Coraggio
+<ul>
+<li>Coraggio di prendere parti di codice e riscriverle</li>
+</ul></li>
+</ul>
+<p>Caratteristiche:</p>
+<ul>
+<li>Release brevi
+<ul>
+<li>Il tempo tra una release e l'altra deve essere minimo</li>
+</ul></li>
+<li>Progetto semplice
+<ul>
+<li>In ogni istante tutti i test devono essere eseguibili</li>
+<li>Non esiste logica duplicata</li>
+<li>Ci sono tutte e sole le funzionalità minime richieste</li>
+</ul></li>
+<li>Refactoring
+<ul>
+<li>Miglioramento continuo del codice</li>
+<li>Si riscrivono parti del codice tra una release e l'altra a favore dell'atomicità e semplicità dei metodi</li>
+</ul></li>
+<li>Test Driven Development
+<ul>
+<li>Prima si scrivono i test e poi si implementa il codice</li>
+</ul></li>
+<li>Pair Programming
+<ul>
+<li>Si programma a coppie</li>
+<li>In questo modo si evitano gli errori più comuni</li>
+<li>Ha la stessa efficienza del singolo programmatore</li>
+</ul></li>
+<li>Collective Ownership
+<ul>
+<li>Il codice è di tutti</li>
+<li>Si evitano situazioni dove non si trova il responsabile di una determinata parte del programma</li>
+<li>Si evitano situazioni dove si incolpa un singolo programmatore per un bug critico</li>
+</ul></li>
+<li>Continuous Integration
+<ul>
+<li>Daily Builds del codice</li>
+<li>Check-in/Integrazioni frequenti tra tutti i componenti</li>
+</ul></li>
+<li>Presenza del cliente on-site
+<ul>
+<li>Dove non è possibile il cliente, presenza del Product Owner
+<ul>
+<li>Si interpone tra il team di sviluppo e il cliente</li>
+<li>Fa da intermediario per lo sviluppo di feature e per la raccolta di feedback</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Ruoli:</p>
+<ul>
+<li>Team
+<ul>
+<li>Il team di sviluppo</li>
+</ul></li>
+<li>Scrum Master
+<ul>
+<li>Colui che è responsabile di mandare avanti il workflow Scrum</li>
+</ul></li>
+<li>Product Owner
+<ul>
+<li>Gestisce l'interazione tra team e cliente</li>
+</ul></li>
+<li>Stakeholder
+<ul>
+<li>Ogni interessato (per un qualsiasi motivo) al progetto</li>
+</ul></li>
+</ul>
+<p>Fasi:</p>
+<p>Tutte le fasi sono supervisionate da uno Scrum master, una persona con esperienza nello sviluppo Scrum che guida tutte le parti coinvolte nel progetto verso il rispetto del ciclo Scrum.</p>
+<ul>
+<li>Startup
+<ul>
+<li>Raccolta requisiti</li>
+<li>Analisi eventuale backlog</li>
+<li>Pianificazione Sprint (e backlog sprint)</li>
+<li>PO+Team</li>
+</ul></li>
+<li>Sprint
+<ul>
+<li>Daily Meetings</li>
+<li>Durata di 30 giorni</li>
+<li>Partecipa il team</li>
+</ul></li>
+<li>Review
+<ul>
+<li>Revisione dello sprint</li>
+<li>Parrecipano PO+Team+Stakeholders</li>
+</ul></li>
+</ul>
+<h1 id="tipi-di-sistema-e-proprietà">Tipi di Sistema e Proprietà</h1>
+<p>Sistema = collezione significativa di componenti che lavorano per un obiettivo comune.</p>
+<p>Distringuiamo i sistemi in due categorie:</p>
+<ul>
+<li>tecnico-informatici
+<ul>
+<li>hardware e software. Non includono ne gli operatori ne i processi operazionali</li>
+<li>il sistema non conosce lo scopo del suo utilizzo</li>
+</ul></li>
+<li>socio-tecnici
+<ul>
+<li>includo sia sistemi tecnici che processi operazionali ed operatori</li>
+<li>sono fortemente condizionati da politiche e regole aziendali</li>
+</ul></li>
+</ul>
+<h2 id="proprietà">Proprietà</h2>
+<p>Categorie:</p>
+<ul>
+<li>non emergenti
+<ul>
+<li>misurabili sui singoli componenti</li>
+<li>LOC</li>
+</ul></li>
+<li>emergenti
+<ul>
+<li>proprietà del sistema finale, dipende da tutti i componenti</li>
+<li>le posso misurare solo alla fine</li>
+<li>volume, affidabilit, protezione, riparabilità, usabilità</li>
+</ul></li>
+<li>Non deve accadere
+<ul>
+<li>Misure di prestazione e di affidabilià</li>
+<li>Downtime NON superiore a XXX secondi</li>
+<li>Page load NON superiore a XXX secondi</li>
+<li>Oppure comportamenti che non decono accadere</li>
+<li>Sono difficili da gestire e da garantire</li>
+</ul></li>
+<li>Altre proprietà
+<ul>
+<li>Riparabilità (facilita di essere riparato)</li>
+<li>Manutenibilità (facilità con cui un sistema può essere modificato per nuovi requisiti)</li>
+<li>Sopravvivenza (capacità di fornire servizio anche sotto attacco)</li>
+<li>Tolleranza all'errore (quanti errori/problemi può evitare)</li>
+</ul></li>
+</ul>
+<h2 id="sistemi-critici">Sistemi critici</h2>
+<ul>
+<li>Safety Critical
+<ul>
+<li>il fallimento implica la perdita di vite umane, danni o infortuni a cose e persone</li>
+</ul></li>
+<li>Mission Critical
+<ul>
+<li>il fallimento implica il non completamento un obiettivo</li>
+</ul></li>
+<li>Business Critical
+<ul>
+<li>il fallimento implica la perdia di denaro</li>
+</ul></li>
+</ul>
+<h3 id="sistemi-critici-socio-tecnici">Sistemi Critici Socio-Tecnici</h3>
+<ul>
+<li>Fallimenti Hardware
+<ul>
+<li>E' l'HW che fallisce</li>
+</ul></li>
+<li>Fallimenti Software
+<ul>
+<li>Il SW contiene un bug che fa fallire</li>
+</ul></li>
+<li>Fallimenti operativi
+<ul>
+<li>L'utente sbaglia ad usare SW/HW</li>
+</ul></li>
+</ul>
+<h3 id="fidatezza-dependability">Fidatezza (dependability)</h3>
+<p>Dato un sistema critico misuro la sua fidatezza, riflette il livello di confidenza dell'utente nei confronti del sistema, un sistema può essere utile anche se gli utenti non hanno confidenza nel suo buon funzionamento.</p>
+<p>Si misura combinando disponibilità, affidabilità, sicurezza e protezione.</p>
+<h1 id="analisi-dei-requisiti">Analisi dei Requisiti</h1>
+<h2 id="requisiti">Requisiti</h2>
+<p>I requisiti sono una descrizione di ciò che il sistema deve fare: i servizi che deve fornire e vincoli operativi a cui deve sottostare.</p>
+<h3 id="ingegnerizzazione-dei-requisiti">Ingegnerizzazione dei requisiti</h3>
+<p>E' il processo di ricerca, analisi, documentazione e verifica dei servizi richiesti dal cliente e i vincoli entro i quali i servizi devono operare.</p>
+<h2 id="requisiti-utente-e-di-sistema">Requisiti utente e di sistema</h2>
+<ul>
+<li><strong>Requisiti utenti</strong>, espressi in linguaggio naturale (e completati con diagrammi), ci dicono quello che il sistema deve offire e i vincoli operazionali. Sono scritti per i clienti e devono quindi essere comprensibili dagli utenti non tecnici.</li>
+<li><strong>Requisiti di sistema</strong>, definiscono precisamente e dettagliatamente quello che deve essere implementato. E' il punto di contatto tra il compratore e gli sviluppatori software. Stanno alla base per il progetto della soluzione.</li>
+</ul>
+<p>E' importante scrivere i requisiti a diversi livelli: tutte le parti coinvolte nel progetto devono essere in grado di leggerli!</p>
+<h2 id="requisiti-funzionali-e-non-funzionali">Requisiti funzionali e non funzionali</h2>
+<ul>
+<li><strong>Funzionali</strong>, i servizi che il sistema deve fornire, cioè come il sistema deve reagire agli input e come il sistema deve comportarsi in particolari situazioni.
+<ul>
+<li>In alcuni casi i requisiti funzionali possono specificare quello che il sistema <em>NON</em> deve fare.</li>
+</ul></li>
+<li><strong>Non funzionali</strong>, i vincoli imposti alle funzioni offerte dal sistema. Ad esempio vincoli temporali, sul processo di sviluppo e vincoli imposti da standard da rispettare. Sono generalmente applicati al sistema &quot;as a whole&quot; e non alle singole funzionalità.
+<ul>
+<li>Sono requisiti molto spesso critici: se non li si rispetta il sistema può essere inutilizzabile.</li>
+</ul></li>
+</ul>
+<p>Sfortunatamente, nella realtà, questa divisione non è sempre così netta.</p>
+<p>E' possiible che i requisiti siano tra di loro dipendenti, una funzionalità può dipendere da un altrà, oppure una caratteristica del sistema può richiedere l'implementazione di una o più funzionalità.</p>
+<h3 id="requisiti-non-funzionali">Requisiti non funzionali</h3>
+<p>I requisiti non funzionali li suddividiamo a sua volta in altre categorie:</p>
+<ul>
+<li><strong>di prodotto</strong>, che specificano come il software deve comportarsi.
+<ul>
+<li>Si classificano a loro volta in requisiti di usabilità, efficienza (a sua volta in prestazionali e di spazio), affidabilità e portabilità.</li>
+<li>Ad esempio: &quot;L'interfaccia sarà implementata in HTML&quot;</li>
+<li>Usabilità, efficienza, prestazioni, spazio, affidabilità, portabilità</li>
+</ul></li>
+<li><strong>organizzativi</strong>, che derivano dalle policies e dalle procedure adattate all'interno dell'organizzazione che richiede il software.
+<ul>
+<li>Possono anche includere requisiti su come il software deve essere sviluppato (modello di processo, linguaggi, tecnologie)</li>
+<li>Consegna, standard, implementazione</li>
+</ul></li>
+<li><strong>esterni</strong>, che derivano da fattori esterni che influenzano il sistema.
+<ul>
+<li>Leggi e regolamenti.</li>
+<li>Interoperabilità, etici, sicurezza, riservatezza</li>
+</ul></li>
+</ul>
+<h2 id="problemi-nella-raccolta-dei-requisiti">Problemi nella raccolta dei requisiti</h2>
+<ul>
+<li><strong>Ambiguità</strong>, data dal fatto che i requisiti utente sono troppo generici.
+<ul>
+<li>L'utilizzo di aggettivi come &quot;appropriato&quot; o &quot;adatto&quot; rende il requisito ambiguo: come capisco cosa vuol dire l'utente con &quot;adatto&quot;?</li>
+</ul></li>
+<li><strong>Incompletezza</strong>, i requisiti non riescono a descrivere tutto quello che c'è nel sistema.
+<ul>
+<li>In pratica, nella SW. Eng., è impossibile descrivere tutto il sistema</li>
+<li>E' necessario essere pronti a gestire i cambiamenti</li>
+</ul></li>
+<li><strong>Inconsistenza</strong>, le descrizioni contengono conflitti e contraddizione.
+<ul>
+<li>E' raro avere consistenza.</li>
+<li>Ad esempio &quot;l'utente riceve tutte le news pubblicate dall'accesso; le news dopo 7 giorni si cancellano&quot;, quindi deve riceve tutte le news o solo quelle degli ultimi 7 giorni?</li>
+</ul></li>
+</ul>
+<p>Questi problemi non sono facilmente risolvibili, anzi sono spesso intrinsechi alal natura del progetto software. Una raccolta di requisiti potrebbe essere incompleta perchè il requisito di oggi è diverso dal requisito di domani.</p>
+<h2 id="come-scrivere-i-requisiti">Come scrivere i requisiti</h2>
+<p>Scrivere i requisiti in linguaggio naturale è molto pericoloso. Il linguaggio naturale, per sfortuna nostra, porta con se diverse problematiche:</p>
+<ul>
+<li>Ambiguità
+<ul>
+<li>una cosa si può fraintendere</li>
+</ul></li>
+<li>Mancanza di chiarezza
+<ul>
+<li>E' difficile essere precisi senza scrivere troppo testo</li>
+</ul></li>
+<li>Eccesso di flessibilità
+<ul>
+<li>una stessa cosa si può dire in molti modi diversi</li>
+</ul></li>
+</ul>
+<p>Questo genera:</p>
+<ul>
+<li>Confusione tra requisiti</li>
+<li>Amalgama dei requsiti</li>
+<li>Mancanza di struttura</li>
+</ul>
+<h3 id="alternative-al-linguaggio-natuale">Alternative al linguaggio natuale</h3>
+<p>Informali:</p>
+<ul>
+<li>Linguaggio naturale strutturato</li>
+<li>Modello visuale informale</li>
+</ul>
+<p>Formali:</p>
+<ul>
+<li>Specifica testuale formale</li>
+<li>Modello visuale formale</li>
+</ul>
+<h3 id="scrittura-dei-requisiti">Scrittura dei requisiti</h3>
+<ul>
+<li>Attraverso un formato standard utilizzato per tutti i requisiti
+<ul>
+<li>Un po' come adottare delle convenzioni di codice</li>
+</ul></li>
+<li>Usare il linguaggio in modo consistente
+<ul>
+<li>Usare termini come DEVE e DOVREBBE</li>
+</ul></li>
+<li>Evidenziare i concetti importanti</li>
+<li>Evitare il gergo informatico</li>
+</ul>
+<p>Si potrebbe scrivere anche seguendo lo standard IEEE830 (Software Requirements Specifications).</p>
+<h4 id="modello-moscow">Modello MoSCoW</h4>
+<p>Si classificano i requisiti in:</p>
+<ul>
+<li>Must
+<ul>
+<li>Una feature che il sistema DEVE avere</li>
+<li>Priorità massima</li>
+</ul></li>
+<li>Should
+<ul>
+<li>Una feature che il sistema DOVREBBE avere</li>
+<li>Priorità Alta</li>
+</ul></li>
+<li>Could
+<ul>
+<li>Una feature che il sistema POTREBBE avere</li>
+<li>Priorità Media-Bassa</li>
+</ul></li>
+<li>Want/Wishlist
+<ul>
+<li>Una feature che si VORREBBE il sistema avesse, prima o poi</li>
+<li>Priorità Bassa</li>
+</ul></li>
+</ul>
+<h1 id="casi-duso">Casi d'uso</h1>
+<p>Un caso d'uso è una storia testuale, utilizzata per scoprire e catalogare i requisiti.</p>
+<h2 id="elementi-di-un-caso-duso">Elementi di un caso d'uso</h2>
+<ul>
+<li>Attore, qualcosa che interagisce con il sistema</li>
+<li>Scenario, una specifica sequenza di azioni tra gli attori e il sistema
+<ul>
+<li>Detta anche <strong>istanza di un caso d'uso</strong></li>
+</ul></li>
+<li>Goal, obiettivo che lo scenario vuole portare a raggiungere</li>
+</ul>
+<p>Un caso d'uso è una collezione di scenari <em>successfull</em> e <em>failure</em> che descrivono un attore usante un sistema in supporto ad un goal.</p>
+<h2 id="tipi-di-attore">Tipi di attore</h2>
+<ul>
+<li><strong>Attore primario</strong>: raggiunge degli obiettivi utente usando i servizi del sistema</li>
+<li><strong>Attore di supporto</strong>: offre un servizio, spesso è un sistema informatico</li>
+<li><strong>Attore fuori scena</strong>: ha un interesse nel caso d'uso, ma non rientra nelle prime due categorie</li>
+</ul>
+<h2 id="tipo-di-caso-duso">Tipo di caso d'uso</h2>
+<ul>
+<li><strong>brief</strong>, un paragrafo scarso
+<ul>
+<li>generalmente descrive un solo scenario di successo</li>
+</ul></li>
+<li><strong>informale</strong>, più paragrafi che coprono vari scenari sia di successoc che di fallimento</li>
+<li><strong>full</strong>, tutti gli step e le variazioni del caso d'uso sono descritte in dettaglio
+<ul>
+<li>Nome del caso d'uso
+<ul>
+<li>Inizia con un verbo</li>
+</ul></li>
+<li>Portata
+<ul>
+<li>Il sistema che si sta progettando</li>
+</ul></li>
+<li>Livello
+<ul>
+<li>Obiettivo utente o sottofunzione</li>
+</ul></li>
+<li>Attore primario</li>
+<li>Parti interessate e interessi</li>
+<li>Pre-condizioni</li>
+<li>Garanzia di successo
+<ul>
+<li>Cosa deve essere vero se il caso d'uso viene completato con successo</li>
+</ul></li>
+<li>Scenario principale di successo</li>
+<li>Estensioni
+<ul>
+<li>Scenari alternativi di successo e di fallimento</li>
+</ul></li>
+<li>Requisiti speciali
+<ul>
+<li>Non funzionali</li>
+</ul></li>
+<li>Elenco delle variabili tecnologiche e dei dati
+<ul>
+<li>&quot;Varianti nei metodi I/O e nel formato dei dati&quot;</li>
+<li></li>
+</ul></li>
+<li>Frequenza di ripetizione</li>
+<li>Altre note</li>
+</ul></li>
+</ul>
+<h2 id="come-scrivere-casi-duso">Come scrivere casi d'uso</h2>
+<p>Concentrarsi su:</p>
+<ul>
+<li>lo scopo dell'attore</li>
+<li>cosa deve fare il sistema</li>
+</ul>
+<p>Ignorare:</p>
+<ul>
+<li>l'interfaccia utente</li>
+<li>come il sistema fa le azioni richieste</li>
+</ul>
+<h2 id="verificare-un-caso-duso">Verificare un caso d'uso</h2>
+<ul>
+<li>Test del Capo
+<ul>
+<li>Se rispondendo con il nome del caso d'uso alla domanda del capo &quot;Cosa hai fatto tutto il giorno?&quot;, il capo non si arrabbierà</li>
+</ul></li>
+<li>Test EBP
+<ul>
+<li>Ci si chiede se il caso d'uso aggiunge valore di business e lascia i dati in uno stato coerente</li>
+</ul></li>
+<li>Tese della dimensione
+<ul>
+<li>Il caso d'uso deve essere tra le 3 e le 10 pagine nel formato dettagliato</li>
+</ul></li>
+</ul>
+<h1 id="modelli-di-dominio">Modelli di dominio</h1>
+<p>Un modello di dominio è una rappresentazione visuale di classi concettuali o di oggetti del mondo reale di un dominio.</p>
+<p>NON rappresenta oggetti software.</p>
+<p>Astrazione visuale della terminologia e del contenuto informativo del dominio.</p>
+<p>Applicando UML, il modello di dominio è un insieme di diagramma delle classi in cui non sono definite le operazioni, ma sono descritte solamente le classi concettuali, le associazioni tra classi e gli attributi.</p>
+<h1 id="diagrammi-di-sequenza-e-contratti">Diagrammi di Sequenza e Contratti</h1>
+<p>Fanno parte dei diagrammi di interazione.</p>
+<p>Un diagramma di sequenza di sistema è un elaborato che illustra eventi di input ed output relativi ai sistemi in discussione.</p>
+<p>Un diagramma di sequenza di sistema è una figura che mostra, per un particolare scenario di un caso d'uso, gli eventi generati da attori esterni, il loro ordine e gli eventi tra i vari sistemi.</p>
+<h2 id="contratti">Contratti</h2>
+<p>I contratti delle operazioni usano pre-condizioni e post-condizione per descrivere i cambiamenti agli oggetti in un modello di dominio.</p>
+<h3 id="esempio-di-contratto">Esempio di Contratto</h3>
+<p>Operazione: enterItem(itemId: ItemID, quantity: Integer) Riferimenti: caso d'uso Process Sale Pre-Condizioni: E' in corso una vendita Post-Condizioni: E' stata creata una istanza di SalesItem, associata con la Sale corrente. SalesItem.quantity è diventata quantity, SalesItem è stata associata con una ProductDescription, in base alla corrispondenza con itemID</p>
+<h3 id="sezioni-del-contratto">Sezioni del contratto</h3>
+<ul>
+<li>Operazioni: nome e parametri dell'operazione</li>
+<li>Riferimenti: casi d'uso in cui può verificarsi questa operazione</li>
+<li>Pre-condizioni: ipotesi significati sullo stato del sistema</li>
+<li>Post-condizioni: lo stato degli oggetti dopo il completamente dell'operazione (istanze, associazioni, modifica attributi)</li>
+</ul>

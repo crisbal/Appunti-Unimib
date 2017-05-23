@@ -5,7 +5,7 @@ doubleLen([_,_|R],[_|R2]) :- doubleLen(R,R2).
 
 reverse(S,R) :- reverse(S, [], R).
 reverse([], Acc, Acc).
-reverse([H|Tail], Acc, Ret) :- reverse(Tail, [H|Acc], Ret).
+reverse([H|Tail], Acc, Ret) - reverse(Tail, [H|Acc], Ret).
 
 compress([],[]) :- !.
 compress([X],[X]) :- !.
@@ -40,3 +40,7 @@ loopOr([Pred|Rest], N) :-
 loopOr([_Pred|Rest], N):- %trovo un not
     loopOr(Rest, N). %proseguo
 
+
+replace([], X, Y, []).
+replace([X|Resto], X, Y, [Y|Altro]) :- !, replace(Resto, X, Y, Altro).
+replace([O|Resto], X, Y, [O|Altro]) :- replace(Resto, X, Y, Altro).

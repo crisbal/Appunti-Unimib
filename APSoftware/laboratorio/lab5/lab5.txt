@@ -1,0 +1,35 @@
+# Casi d'uso
+
+* Creazione simulazione
+ * Selezione dimensioni "mappa"
+ * Selezione vegetazione
+ * Selezione animali
+ 
+* Creazione nuovi animali
+* Creazione nuovi vegetali
+* Simulazione
+ * Avanzamento di un giorno
+ * Avanzamento multiplo
+ * Rollback
+ * Modifica simulazione 
+
+# Diagramma sequenza
+
+Utente
+
+Interfaccia
+
+Libreria
+
+Simulazione
+
+
+# Architettura logica
+
+UI Layer
+
+Simulation Layer
+
+Library Layer
+
+Data Layer

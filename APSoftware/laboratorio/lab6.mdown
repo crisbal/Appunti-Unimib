@@ -1,0 +1,19 @@
+Operazione: creaPianta(nome: String)
+Riferimenti: caso d'uso Gestione Libreria - Gestione Pianta
+Pre-Condizioni: E' in corso la gestione della libreria delle piante
+Post-Condizioni: E' stata creata una istanza di Pianta, ed è stata associata con la Libreria. L'attributo nome della pianta è stato inizializzato al parametro nome del costruttore. Sono stati inizializzate le varie caratteristiche vitali della pianta.
+
+Operazione: setAltezzaPianta(Pianta p, altezza: float)
+Riferimenti: caso d'uso Gestione Libreria - Gestione Pianta
+Pre-Condizioni: E' in corso la modifica di una pianta
+Post-Condizioni: L'attributo altezza della pianta p viene settato al valore passato come parametro.
+
+Operazione: deletePianta(Pianta: p)
+Riferimenti: caso d'uso Gestione Libreria - Gestione Pianta
+Pre-Condizioni: E' in corso la modifica di una pianta
+Post-Condizioni: Viene eliminata la Pianta p dalla Libreria
+
+Diagramma classi:
+
+Libreria
+Pianta
