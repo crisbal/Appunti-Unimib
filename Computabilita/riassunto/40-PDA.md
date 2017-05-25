@@ -18,7 +18,7 @@ Un automa a pila $P$ è una n-upla così composta:
 * $\delta$, la funzione di transizione. Prende come argomento tre parametri, lo stato corrente, il simbolo di input (oppure $\epsilon$) e il *top()* dello stack. Ritorna un insieme di coppie $(p, \gamma)$ dove $p$ è il nuovo stato e $\gamma$ è il simbolo o i simboli da pushare sullo stack.
 * $q_0$, lo stato di inizio
 * $Z_0$, il simbolo posto inizialmente sullo stack
-* $F$, l'insieme degli stati di accettazione 
+* $F$, l'insieme degli stati di accettazione
 
 ## Descrizioni istantanee
 
@@ -27,10 +27,10 @@ $$(q, aw, XB) \to (p,w,AB)$$
 \begin{definition}
 
 $\to^*$ è definita per induzione:
-
-* $I \to^* I$ per ogni descrizione istantanea
-* $I \to^* J$ se esiste $K$, $I \to K$ e $K \to^* J$.
-
+\begin{itemize}
+\item $I \to^* I$ per ogni descrizione istantanea
+\item $I \to^* J$ se esiste $K$, $I \to K$ e $K \to^* J$.
+\end{itemize}
 \end{definition}
 
 ### Inoltre
@@ -41,9 +41,9 @@ $\to^*$ è definita per induzione:
 
 ## Accettazione
 
-Un PDA può accettare sia per stato finale che per stack vuoto. 
+Un PDA può accettare sia per stato finale che per stack vuoto.
 
-Un linguaggio ha un PDA che accetta per stato finale se e solo se ha un PDA che lo accetta per stack vuoto. 
+Un linguaggio ha un PDA che accetta per stato finale se e solo se ha un PDA che lo accetta per stack vuoto.
 
 Generalmente un PDA che accetta per stato finale è diverso da uno che accetta per stack vuoto.
 
@@ -57,7 +57,7 @@ $$L(P) = \{w | (q_0,w,Z_0) \to^* (q,\epsilon,A) \}$$ con q appratenente all'insi
 
 Per prima cosa si pusha un simbolo $X_0$ sullo stack. Si crea uno stato aggiuntivo che svuota lo stack e a questo stato si collegano tutti gli stati finali con una e-transizione.
 
-## Per stack vuoto 
+## Per stack vuoto
 
 $$N(P) = \{w | (q_0,w,Z_0) \to^* (q, \epsilon, \epsilon)\}$$ per un qualsiasi stato $q$.
 
@@ -69,7 +69,7 @@ Per prima cosa si aggiunge un simbolo $X_0$ in fondo allo stack. In seguito si a
 ## PDA deterministici
 
 I PDA possono essere deterministici o non deterministici.
-Intuitivamente un PDA è deterministico quando non c'è possibilità di scegliere quale mossa svolgere in ogni determinata situazione. 
+Intuitivamente un PDA è deterministico quando non c'è possibilità di scegliere quale mossa svolgere in ogni determinata situazione.
 
 In particolare se $\delta(q,a,X)$ produce come risultato più coppie $(s, \gamma)$ allora l'automa è ovviamente non deterministico. Inoltre è non deterministico se mentre esiste un $\delta(q,a,X)$ esiste anche un $\delta(q,\epsilon,X)$.
 
@@ -82,3 +82,4 @@ Inanzitutto un DPDA riconosce per stato finale tutti i linguaggi regolari. Quest
 Il DPDA può accettare per stack vuoto se e solo se il linguaggio che si sta cercando di accettare gode della proprietà del prefisso.
 
 Se un linguaggio è accettato per stack vuoto da un DPDA allora L è generato da una grammatica context-free non ambigua.
+

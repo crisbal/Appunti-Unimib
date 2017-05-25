@@ -7,6 +7,7 @@ Le grammatiche regolari sono tutte quelle accettabili con un DFA e rappresentabi
 ## Definizione formale
 
 \begin{definition}
+\end{definition}
 Chiamiamo grammatica regolare una 4-upla $G=(V,T,P,S)$ dove:
 
 * $V$ è l'insieme delle variabili, esse verrano usate nelle regole di produzione, sono dette anche non-terminali.
@@ -19,7 +20,6 @@ Imponiamo su $P$ dei vincoli:
 * $\epsilon$ può solo comparire in $S \to \epsilon$
 * Le produzioni sono tutte lineari a sinistra o a destra
 
-\end{definition}
 
 ## Lineare a destra o sinistra
 
@@ -54,6 +54,8 @@ Non sempre è possibile convertire da lineare a destra a lineare a sinistra, o v
 Definiamo induttivamente un'espressione regolare
 
 \begin{definition}
+\end{definition}
+
 Base:
 
 * $\epsilon$ e $\emptyset$ sono espressioni regolari
@@ -64,9 +66,8 @@ Induzione:
 
 * Se $E$ ed $F$ sono E.R. allora $E+F$ (unione) è espressione regolare. $$L(E+F) = L(E) \cup L(F)$$.
 * Se $E$ ed $F$ sono E.R. allora $EF$ (concatenazione) è espressione regolare. $$L(EF) = L(E)L(F)$$.
-* Se $E$ è E.R. allora $E^*$ è espressione regolare. $$L(E)$ = (L(E))^*$$
+* Se $E$ è E.R. allora $E^*$ è espressione regolare. $$L(E) = (L(E))^*$$
 * SE $E$ è E.R. allora $(E)$ è espressione regolare. $$L((E)) = L(E)$$
-\end{definition}
 
 
 ## Pumping Lemma per linguaggi regolari
@@ -76,3 +77,4 @@ Supponiamo $L$ un linguaggio regolare. Esiste quindi una costante $n$ tale che s
 * $y \neq \epsilon$
 * $|xy| \leq n$
 * Per ogni $k \geq 0$, $xy^kz$ è in L
+

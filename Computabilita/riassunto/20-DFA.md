@@ -25,14 +25,15 @@ $\delta^*$ è detta funzione di transizione estesa. Essa prende in input uno sta
 E' definita per induzione come segue:
 
 \begin{definition}
+\end{definition}
 
 * Caso base: $\delta^*(q,\lambda) = q$
 * Passo induttivo: suppniamo $w = xa$, quindi: $$\delta^*(q,w) = \delta(\delta^*(q,x),a)$$
 
-\end{definition}
 
 ## Linguaggio dei DFA
 
 Dato un DFA $A$, chiamiamo $L(A)$ il linguaggio accettato da $A$, cioè: $$L(A) = \{w | \delta^*(q_0,w) \in F\}$$
 
 Tutti i linguaggi accettabili da un DFA qualsiasi sono **linguaggi regolari**.
+

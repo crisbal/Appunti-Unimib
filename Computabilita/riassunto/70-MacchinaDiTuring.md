@@ -4,9 +4,9 @@
 
 Ogni problema (e quindi ogni linguaggio associato al problema) può essere rappresentato in binario, usando soltanto le cifre 0 ed 1.
 
-* I linguaggi sono tutti i possibili sottoinsiemi dell'insieme infinito $\{ w | w = (0+1)* \}$ (quindi l'insieme potenza) 
+* I linguaggi sono tutti i possibili sottoinsiemi dell'insieme infinito $\{ w | w = (0+1)* \}$ (quindi l'insieme potenza)
 * La macchine di Turing sono $N$ (numerabili ma infinite)
-* $|MdT| = \mathbb{N}$ e $|Linguaggi|=2^\mathbb{N}$ 
+* $|MdT| = \mathbb{N}$ e $|Linguaggi|=2^\mathbb{N}$
 * $N<2^N$
 
 Quindi ci sono sicuramente problemi/linguaggi che non possono essere associati ad alcuna macchina di Turing, od ad alcun algoritmo.
@@ -24,7 +24,7 @@ Non esiste algoritmo che dice se un programma stampa "Ciao mondo" come primo out
 Dimostriamo per assurdo che non esiste.
 
 + Supponiamo di avere un programma $H$ che prende in input un programma $P$ ed un input $I$ e ci dice, tramite "yes" or "no", se il programma $P$, con input $I$ stampa "Ciao mondo".
-+ Costruiamo $H_1$, basato su $H$, che stampa $Ciao mondo" al posto di stampare "no". $H_2$ stampa quindi "Ciao mondo" se $P$ con input $I$ non stampa "Ciao mondo" 
++ Costruiamo $H_1$, basato su $H$, che stampa $Ciao mondo" al posto di stampare "no". $H_2$ stampa quindi "Ciao mondo" se $P$ con input $I$ non stampa "Ciao mondo"
 + Costruiamo $H_2$, basato su $H_1$, che prende come input solo $P$ e si chiede cosa faccia $P$ dato in input se stesso. $H_2$ stampa "si" se $P$ stampa "Ciao mondo", oppure stampa "Ciao mondo" se $P$ non stampa "Ciao mondo".
 + Costruiamo $H_p$, basato su $H_2$, che prende come input il codice di se stesso. Questo programma non può esistere: se $H_p$ (in input) stampasse "Ciao mondo", $H_p$ dovrebbe stampare "yes" (che è assurdo visto che abbiamo detto che stampa "Ciao mondo"), mentre se $H_p$ (in input) stampasse "yes", $H_P$ dovrebbe stampare "Ciao mondo" (perchè $H_p$ in input non ha stampato "Ciao mondo", che è assurdo).
 
@@ -33,22 +33,24 @@ Il **problema "Ciao mondo" è indecidibile**.
 ## Macchina di Turing
 
 Una macchina di Touring è formata da:
+
 * un controllo finito, che può trovarsi in uno tra un insieme di stati possibili.
 * un nastro, diviso in celle che possono contenere simboli, di lunghezza infinita
 * un input, cioè una stringa di lunghezza finita di simboli scelti da un alfabeto di input, piazzato sul nastro
 * una testina, un elemento che punta sempre ad una sola cella del nastro, serve a leggere/scrivere la cella.
 
 La macchina di Touring può effettuare una mossa, una funzione dipendente dallo stato del controllo finito e dal simbolo letto dalla testina. In una mossa la macchina di Touring:
+
 * Cambierà stato (e il nuovo stato potrebbe essere quello in cui già si trovava)
 * Scriverà sulla cella corrente un nuovo simbolo
-* Sposterà la testina di una posizione a sinistra o a destra (in alcune versioni potrebbe anche rimanere ferma, senza limitazioni). 
+* Sposterà la testina di una posizione a sinistra o a destra (in alcune versioni potrebbe anche rimanere ferma, senza limitazioni).
 
 $$M = (Q, \Sigma, \Gamma, \delta, q_0, B, F)$$
 
 * $Q$: insieme degli stati del controllo finito
 * $\Sigma$: insieme dei simboli di input
-* $\Gamma$: insieme dei simboli del nastro; \Sigma è sottoinsieme di \Gamma
-* $\delta$: la funzione di transizione (q, X) -> (p, Y, Dir) 
+* $\Gamma$: insieme dei simboli del nastro; $\Sigma$ è sottoinsieme di $\Gamma$
+* $\delta$: la funzione di transizione (q, X) -> (p, Y, Dir)
 * $q_0$: stato iniziale
 * $B$: simbolo di blank
 * $F$: insieme degli stati finali
@@ -92,7 +94,7 @@ Un PDA multistack (cioè un PDA che ha più stack su cui fa push/pop in ogni tra
 In uno stack viene messo quello che è a sinistra della testina, in un altro quello che è a destra.
 
 * In input al PDA passo $wZ$, gli stack sono vuoti
-* $w\$$ viene copiato nel primo stack, smettendo di copiare quando c'è $Z$.
+* $wZ$ viene copiato nel primo stack, smettendo di copiare quando c'è $Z$.
 * Viene pushato tutto dal primo al secondo stato, in questo modo avrò la prima lettera di $w$ in cima al secondo stato.
 * Il PDA inizia a simulare: la "testina" legge il simbolo in cima al secondo stack e agisce in base a quello. Se si sposta a DX lo sposterà sul primo stack, se si sposta a sx, lo riscriverà sul secondo, insieme ad un simbolo di Blank. E così prosegue l'esecuzione.
 

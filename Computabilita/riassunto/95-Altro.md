@@ -1,31 +1,6 @@
 # Altra Teoria
 
-## Descrivere la macchina di Touring
-
-Una macchina di Touring è formata da:
-* un controllo finito, che può trovarsi in uno tra un insieme di stati possibili.
-* un nastro, diviso in celle che possono contenere simboli, di lunghezza infinita
-* un input, cioè una stringa di lunghezza finita di simboli scelti da un alfabeto di input, piazzato sul nastro
-* una testina, un elemento che punta sempre ad una sola cella del nastro, serve a leggere/scrivere la cella.
-
-La macchina di Touring può effettuare una mossa, una funzione dipendente dallo stato del controllo finito e dal simbolo letto dalla testina. In una mossa la macchina di Touring:
-* Cambierà stato (e il nuovo stato potrebbe essere quello in cui già si trovava)
-* Scriverà sulla cella corrente un nuovo simbolo
-* Sposterà la testina di una posizione a sinistra o a destra (in alcune versioni potrebbe anche rimanere ferma, senza limitazioni). 
-
-M = (Q, \Sigma, \Gamma, \delta, q0, B, F)
-
-* Q: insieme degli stati del controllo finito
-* \Sigma: insieme dei simboli di input
-* \Gamma: insieme dei simboli del nastro; \Sigma è sottoinsieme di \Gamma
-* \delta: la funzione di transizione (q, X) -> (p, Y, Dir) 
-* q0: stato iniziale
-* B: simbolo di blank
-* F: insieme degli stati finali
-
-----
-
-## Con quale criterio riempiamo la tabella del linguaggio diagonale? 
+## Con quale criterio riempiamo la tabella del linguaggio diagonale?
 
 La tabella, di dimensioni infinite è costruita mettendo sulle colonne numeri 1..n che indichiamo con j, mentre sulle righe numeri 1..m che indichiamo con i.
 
@@ -49,24 +24,6 @@ Visto che Wi non può essere e non essere in LD allo stesso tempo, concludiamo c
 
 ----
 
-## Come si codifica una macchina di Touring in binario e a cosa serve questa codifica?
-
-Per codificare una MdT in binario iniziamo con la codifica delle sue transizioni.
-Prendiamo ad esempio la regola di transizione
-d(qi,Sj) = (qk,Sl,Dm)
-Essa si rappresenta con la stringa binaria
-0^i 1 0^j 1 0^k 1 0^l 1 0^m 
-(Si vede come non ci sono mai due 1 di fila)
-
-Possiamo ora concatenare tra loro le transizioni per arrivare al codice della nostra TM
-T1 11 T2 11 T3 11 .... 11 Tn
-Non ci sono mai tre 1 di fila.
-Visto che le transizioni possono essere messe nell'ordine che vogliamo, la stessa MdT può essere scritta in vari modi apparentemente diversi, ma alla fine equivalenti.
-
-A cosa serve questa codifica?
-
-Antecedento un 1 alla stringa binaria della MdT e convertendo in base 10 otteniamo un numero che possiamo usare per identificare la MdT in modo univoco. La MdT i-esima è quella che ha come codifica binaria il valore in binario di i senza il primo 1.
-
 ## Linguaggi Ricorsivi e Ricorsivamente Enumerabili
 
 (Uso la definizione data in classe, non quella del libro)
@@ -89,9 +46,9 @@ Il linguaggio universale Lu è il linguaggio formato dalle stringhe binarie Mi11
 2) A quale classi di linguaggi appartiene? Come si dimostra tale appartenenza?
 
 Lu è RE ma non ricorsivo. Lu è indecidibile.
-Questo perchè riducendo Lu ad un problema P e si puo' dimostrare che non c'è algoritmo per risolvere P. 
+Questo perchè riducendo Lu ad un problema P e si puo' dimostrare che non c'è algoritmo per risolvere P.
 
-Teorema: Lu è RE ma non ricorsivo. 
+Teorema: Lu è RE ma non ricorsivo.
 "Sappiamo da sopra che LU è RE" (perchè possiamo costruire la TM, usando una TM multinastro)
 Supponiamo che Lu sia ricorsivo. Anche -Lu (il suo complemento) è ricorsivo. Quindi se abbiamo una MdT M che accetta -Lu possiamo anche costruire una macchina di Touring che accetta Ld. Visto che sappiamo che Ld è non-RE (e quindi non esiste MdT per Ld) abbiamo una contraddizione.
 
@@ -104,16 +61,17 @@ Spesso si sente dire che l'halting problem è simile a Lu. Infatti la macchina o
 
 Perchè si è sicuri?????? (BOH?)
 
-Prendiamo due linguaggi: Le ed Lne. Entrambi consistono di stringhe binarie. 
+Prendiamo due linguaggi: Le ed Lne. Entrambi consistono di stringhe binarie.
 Se w è una stringa binaria rappresentante una MdT, w appartine a Le se la MdT non accetta stringhe, altrimenti a Lne se MdT accetta stringhe.
 Lne è il linguaggio più semplice da dimostrae ed è RE ma non ricorsivo.
 Le è non RE.
 
 Per prima cosa si dimostra che Lne è ricorsivamente enumerabile.
 Per fare questo basta mostrare una TM (non-deterministica) che accetta Lne.
+
 * M prende in input una MdT codificata da Mi.
 * Usando le sue capacità non-deterministiche, M indovina l'input di w per cui Mi potrebbe accettare
-* M testa se Mi accetta w. 
+* M testa se Mi accetta w.
 * Se Mi accetta w, alloara M accetta Mi.
 
 Proviamo ora che Lne non è ricorsivo.

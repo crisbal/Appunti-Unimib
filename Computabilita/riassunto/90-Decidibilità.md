@@ -1,14 +1,14 @@
 # Indecidibilità
 
-# Problemi
+## Problemi
 
 * Decidibili: la macchina di Turing si ferma e mi dice se accetta o no.Questi linguaggi sono ricorsivi. Esiste quindi un algoritmo.
 * Semi-decidibli: la macchian di Turing si ferma se accetta ma non è detto che si fermi in caso di non accettazione
 * Indecidibili: la macchina di Turing non può rispondere.
 
-# Ricorsivamente Enumerabile
+## Ricorsivamente Enumerabile
 
-Un linguaggio è ricorsivamente enumerabile se $L=L(M)$ per una qualche macchina di Turing M, cioè se L è accettato da qualche macchina di Turing. 
+Un linguaggio è ricorsivamente enumerabile se $L=L(M)$ per una qualche macchina di Turing M, cioè se L è accettato da qualche macchina di Turing.
 
 ## MdT come stringhe binarie
 
@@ -18,7 +18,7 @@ Ogni stringa binaria può essere vista come una macchina di Turing, se la string
 
 Se $w$ è una stringa binaria allora $1w$ è un intero.
 
-Ad esempio $1w$ è la $1w_{10}-esima$ stringa. 
+Ad esempio $1w$ è la $1w_{10}-esima$ stringa.
 
 #### Esempi
 
@@ -49,8 +49,8 @@ Una coppia $(TM,w)$ può essere rappresentata come $TM 111 w$
 
 ## Linguaggio diagonale
 
-E' fatto da tutte le stringhe $w_i$ tali che la MdT rappresentata da $w_i$ non accetta in input $w_i$ stesso. 
-$${w_i | w_1 \not \in L(M_i)}$$
+E' fatto da tutte le stringhe $w_i$ tali che la MdT rappresentata da $w_i$ non accetta in input $w_i$ stesso.
+$$\{w_i | w_1 \not \in L(M_i)\}$$
 
 ### Perchè si chiama diagonale?
 
@@ -73,17 +73,18 @@ Supponiamo che $L_d$ sia $L(M)$ di una MdT $M$. $M$ sarebbe nella lista di macch
 Chiediamoci se $w_i$ sta in $L_d$.
 
 * Se $w_i$ sta in $L_d$ quindi $M_i$ accetta $w_i$. Ma per definizione di Ld, $w_i$ non è in Ld, perchè $L_d$ contiene i $w_j$ che non sono accettati da $M_j$.
-* Se $w_i$ non sta in Ld, $M_i$ non accetta $w_i$, Quindi per definizione di $L_d$, $w_i$ si trova in $L_d$. 
+* Se $w_i$ non sta in Ld, $M_i$ non accetta $w_i$, Quindi per definizione di $L_d$, $w_i$ si trova in $L_d$.
 
 E' un assurdo!
 
 ## Linguaggi ricorsivi
 
 Chiamiamo L un linguaggio ricorsivo se $L = L(M)$ per qualche macchina di Turing M tale che:
-* Se $w$ sta in $L$, quindi $M$ accetta
-* Se $w$ non sta in $L$, quindi $M$ si ferma, prima o poi. 
 
-$$Ricorsivi \sub RE \sub Non-RE$$
+* Se $w$ sta in $L$, quindi $M$ accetta
+* Se $w$ non sta in $L$, quindi $M$ si ferma, prima o poi.
+
+$$\text{Ricorsivi} \subset \text{RE} \subset \text{Non-RE}$$
 
 ## Complementi di linguaggi
 
@@ -95,11 +96,11 @@ Se $L$ e il suo complemento sono $RE$, $L$ è ricorsio (e quindi anche $\not L$)
 
 %L_u$ è il linguaggio universale. L'insieme delle stringhe binarie che rappresentano una coppia $(M,w)$ dove $M$ è una $TM$ e $w$ una stringa di $(0+1)*$ in modo tale che $w$ sta in $L(M)$.
 
-$L_u$ è l'insieme delle stringhe rappresentati una $TM$ e un input accettato dalla $TM$. 
+$L_u$ è l'insieme delle stringhe rappresentati una $TM$ e un input accettato dalla $TM$.
 
-C'è annche una TMU, la macchina di Turing universale tale che $L_u = L(TMU)$. 
+C'è annche una TMU, la macchina di Turing universale tale che $L_u = L(TMU)$.
 
-Per descrivere $TMU$ si puo' usare una macchina multinastro a 4 nastri. 
+Per descrivere $TMU$ si puo' usare una macchina multinastro a 4 nastri.
 
 + Nel primo nastro si tengono le transizioni di $M$, seguite dalla stringa $w$ nel formato $M111w$.
 + Il secondo nastro viene usato per tenere il nastro simulato di $M$, usando lo stesso formato di $M$: $X_i$ viene rappresentato come $0^i$ e i vari $X$ sono separati da un $1$.
@@ -124,17 +125,17 @@ Supponiamo l'esistenza di una MdT $M$ che accetta $\not L_u$. Modifichiamo $M$ i
 
 + Dato in input $w$, $M'$ lo cambia in $w111w$
 + $M'$ simula $M$ sul nuovo input. Se $w$ è $w_i$, $M'$ determina se $M_i$ accetta $w_i$. Quindi $M$ accetta $\not L_u$ se e solo se $M_i$ non accetta $w_i$, cioè se $w_i$ non è in $L_d$.
-+ Quindi $M'$ accetta $w$ se e solo se $w$ è in $L_d$. Visto che sappiamo che $M'$ non può esistere, allora $L_u$ è non ricorsivo.   
++ Quindi $M'$ accetta $w$ se e solo se $w$ è in $L_d$. Visto che sappiamo che $M'$ non può esistere, allora $L_u$ è non ricorsivo.
 
-# Riduzione 
+## Riduzione
 
-Il concetto di riduzione: se abbiamo un algoritmo che converte istanze di un problema P1 in istanze di P2 che hanno la stessa risposta, diciamo che P1 riduce a P2. 
+Il concetto di riduzione: se abbiamo un algoritmo che converte istanze di un problema P1 in istanze di P2 che hanno la stessa risposta, diciamo che P1 riduce a P2.
 
 P2 è quindi difficile tanto quanto P1. Quindi se P1 non è ricorsivo, neanche P2 può esserlo. Se p1 è non RE, p2 non può essere RE.
 
 ## Esempio
 
-Prendiamo due linguaggi: Le e Lne. Se w è una stringa binaria quindi rappresenta una macchina di Turing Mi. Se il linguaggio L(Mi)=0 w sta in Le. 
+Prendiamo due linguaggi: Le e Lne. Se w è una stringa binaria quindi rappresenta una macchina di Turing Mi. Se il linguaggio L(Mi)=0 w sta in Le.
 Le è il linguaggio di tutte le TM che non accettano input. Lne è il complemento.
 
 Lne è il linguaggio "più semplice". E' RE ma non ricorsivo. Le non è RE.
@@ -143,10 +144,11 @@ Lne è RE
 Lne è non ricorsivo.
 Le è non RE
 
-# Proprietà 
+## Proprietà
 
-Una proprieàt di un linguaggio RE è un insieme di linguaggi RE. La prorpietà di essere CF è l'insieme di tutti i linguaggi CF.
+Una proprieàt di un linguaggio RE è un insieme di linguaggi RE. La proprietà di essere CF è l'insieme di tutti i linguaggi CF.
 
 Banale: vuota o tutti i linguaggi RE.
 
 Teorema di rice: Ogni proprietà non banale del linguaggio RE è indecidibile.
+
