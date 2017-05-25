@@ -4,7 +4,6 @@ Refactoring is the process of changing a software system in such a way that it d
 
 Refactoring is a change to the system that leaves its behavior unchanged, but enhances some nonfunctional quality, simplicity, flexibility, understandability, performance
 
-
 ## Step del refactoring
 
 1) I test devono passare
@@ -55,3 +54,30 @@ Quando non farlo: quanto il design è pessimo, il codice non funziona o si è vi
 * InstanceOf: Si usa instanceof per capire la classe o l'interfaccia di un oggetto.
 * Primitive Obsession: Si usano variabili primitive al posto che classi/tipi specifici (ad esempio una string al posto di TelephoneNumber)
 * Magic numbers: A literal value is used directly, rather than through a named constant.
+
+
+### Other Code Smells
+
+* Data Clumps
+
+Duplicazione frequente di blocchi di dati dentro il codice
+
+* Message Chain
+
+Una serie di metodi vengono usati in sequenza per raggiungere un oggetto
+
+* Typecast
+
+Si usa frequentemente l'operazione di casting. In alcuni ambienti potrebbe essere considerato non ottimale.
+
+* InstanceOf
+
+Si usa instanceof per capire la classe o l'interfaccia di un oggetto.
+
+* Primitive Obsession
+
+Si usano variabili primitive al posto che classi/tipi specifici (ad esempio una string al posto di TelephoneNumber)
+
+* Magic numbers
+
+A literal value is used directly, rather than through a named constant.
