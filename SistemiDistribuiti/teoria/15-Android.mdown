@@ -1,0 +1,90 @@
+# App mobile e Android
+
+## App Web Mobile
+
+Normali app web che simulano l'aspetto delle interfacce di app native. 
+
+Vantaggi:
+
+* Scritte in HTML+CSS+JS
+* Tempi di sviluppo più bassi
+* Non devono essere approvate dai Market
+
+Svantaggi:
+
+* Difficile interagire con l'hardware e il software del dispositivo
+* Non possono essere pubblcate sugli store
+* Non sempre vanno offline
+
+## Applicazioni native
+
+* Scrite con codice e librerie proprietarie
+* Installabili su smartphone
+
+Svantaggi:
+
+* Necessarie implementazioni diverse a seconda del dispositivo
+* tempi e costi di sviluppo alti
+
+Vantaggi:
+
+* Interazione completa con il device
+* Pubblicazione sugli store
+* Prestazioni ottime
+* Funzionano offline
+
+## App ibride
+
+App native a partire da HTML e Web App.
+
+Vantaggi:
+
+* più facile il multi platform
+* tempi di sviluppo più bassi
+
+Svantaggi:
+
+* acceso al dispositivo passando dal framework
+* Possono avere problemi di performance
+
+
+## Architettura Android
+
+
+* Kernel Linux: astrazione tra l'hardware e il software; gestisce i processi e la memoria, lo stack di rete
+* Librarie: in C/C++ e sono usati dai componenti del sistema operativo android, accessibili tramite l'android framework
+	* Surface Manager (gestice le view), OpenGLES (per la grafica 3D), MediaFramework (codec formati multimediali), SSL, SQLite
+* Core libraries: forniscono le funzionalita delle core library java (Data structures, File access, Network)
+* Dalvik Virtual Machine: fornisce l'ambiente su cui ogni applicazione gira. Ogni applicazione gira sul suo processo, che è un istanza della Dalvik VM
+* ART: AndroidRunTime, un'altra VM che funziona sul concetto di ahead-of-time compilation; le app vengono compilate in codice nativo al momento dell'installazione e non al momento dell'avvio.
+* Application framework: fornisce al programmatore l'API per fare tutto; Gestione Activity, package, Window, Telephony, Content Provider, Location Manager
+
+### Intent
+
+Oggetto che fornisce binding runtime tra due componenti separati (come ad esempio due attività)
+
+Un Intent porta con se dei dati extra in una mappa key-value.
+
+Generalmente sono usati per far partire un' altra attività.
+
+Un intent:
+
+* definisce l'azione da eseguire
+* può specificare l'uri del dato su cui l'azione deve essere eseguita
+* rappresenta il risultato di un activity
+
+### Componenti delle Applicazioni
+
+Activity: singola schermata. Una app è fatta da più activiy. 
+
+Service: agiscono in background, nessuna interfaccia grafica. Ad esempio la riproduzione dell'audio.
+
+ContentProvider: gestice e condivide dati tra applicazioni. Storage persistente. Una app può leggere i dati di un'altra.
+
+BroadcastReceiver: componenti che rispondo a notifiche ricevute dal sistema o da altre applicazioni.
+
+### Manifest.xml
+
+Per capire come è fatta l'applicazione.
+
+Contiene i permessi, l'activity principale, l'API richiesta, la dichiarazione dei service, broadcast e content provider.
