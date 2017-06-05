@@ -1,0 +1,209 @@
+# Docker e Microservizi
+
+## Sistemi enterprise
+
+(Questa parte non credo sia utile)
+
+I sistemi enterprise sono composti da due parti complementari:
+
+* Sistemi di "engagement": composto dalle parti visibili del sistema come i prodotti e le persone coinvolte, molto variabile
+* Sistemi dei record: composto dalle parti interne ed invisibii del sistema, con focus sui processi di business, generalmente statico
+
+
+## Design dei sistemi
+
+E' richiesto un cambiamento nel design dei sistemi. Una volta erano realizzati top down e con alto livello di coupling.
+
+Oggi i sistemi coinvolgono componenti di terze parti. E' necessario avere basso livello di coupling. Ogni componente deve essere in grado di servire sistemi diversi.
+
+
+## Ecosistemi software
+
+A Software Ecosystem consists of the set of software solutions that enable, support and automate the activities and transactions by the actors in the associated ecosystem and the organizations that provide these solutions.
+
+
+## Componenti vs Servizi
+
+I servizi tendono ad essere monolitici, i componenti sono piccoli e fanno una sola cosa bene.
+
+I componenti sono autonomi ed indipendenti.
+
+I componenti sono piccoli tanto da essere gestiti da una solo team.
+
+Vantaggi dei componenti:
+
+* Possono essere composti
+* Possono essere rimpiazzati
+* Permettono lo scaling selettivo (scalo solo un singolo componente e non il sistema intero)
+* resilienza al fallimento
+* piu' semplici da mantenere
+
+## Microservizi
+
+In una architettura a microservizi ogni funzione viene messa in un servizio separato, ogni servizi e' un unita' indipendente di deploy.
+
+I microservizi promuovono principi come:
+
+* low coupling che facilita la coordinazione
+* high coesion che facilita il management
+* async al posto che sync
+
+Ma allo stesso tempo potrebbero rivelarsi pericolosi perche' provuovono la complessita' della composizione alla semplicita' del monolitico.
+
+Permettono anche di automatizzare e rendere piu' snelle le procedure di deploy infrastrutturale.
+
+I microservizzi accellerano lo sviluppo minimizzando la comunicazione tra team e riducendo lo scope dei progetti e i rischi derivati dal cambiamento.
+
+The Microservices Architecture pattern is SOA without the commercialization and perceived baggage of web service specifications (WS‑*) and an Enterprise Service Bus (ESB).
+
+## Architettura monolitica
+
+Nonostante l'architettura sia composta da vari servizi logicamente separati il deploy viene fatto a blocco intero monolitico.
+
+Questo ha dei limiti.
+
+Inanzitutto diventa difficile mantenere l'architettura, un singolo sviluppatore non puo' conoscere tutto il progetto, quindi implementare una feature o fixare un bug diventa un'operazione complessa.
+
+Diventa anche difficile scalare un'applicazione monolitica, alcuni suoi moduli potrebbero avere necessita' di piu' CPU, altri di piu' memoria, quindi, non essendoci separazione, si e' costretti a fare compromessi sull'hardware.
+
+Infine, se salta un modulo, salta tutta l'applicazione.
+
+## Architettura a microservizi
+
+Ogni microservizio e' una micro applicazione.
+
+Ogni microservizio espone vari modi per comunicare (API, Interfaccia Web, ...)
+
+Al momento del deploy ogni microservizio va nella sua VM o nel suo Docker Container, ottendendo una separazione logica e fisica dagli altri microservizi.
+
+L'accesso ai microservizi e' gestito generalmente da un API Gateway, che si occupa di fare caching, gestire il rate limit e i permessi di accesso.
+
+I microservizi sono progettati con il principio di single responsibility: ogni modulo o classe deve essere responsabile solo di una singola funzione.
+
+La scalabilita' e' piu' semplice, basta creare nuove istante di un determinato microservizio e metterle dietro ad un load balancer.
+
+Svantaggi dei microservizi:
+
+* complessita' della comunicazione: e' necessario scegliere protocolli di comunicazione, implementare handling dei fallimenti...
+* difficile gestire i database, ogni microservizio deve avere il suo database, ma non e' possibile definire delle transazioni distribuite, quindi la complessita' aumenta per il programmatore. Ci sono anche dati replicati
+* difficile testare l'applicazione, per testare un servizio devo tirare su i servizi dipendenti
+* difficile implementare cambiamenti su piu' microservizi: Se A dipende da B che dipende da C, prima si aaggiorna C, poi B e poi A. Fortunatamente i cambiamenti di solito riguardano un solo microservizio.
+* Deployare una applicazione basata sui microservizi e' molto difficile, e' necessario implementare un servizio di service discovery, inoltre e' complicato gestire le istanze dei microservizi
+
+## The hidden dividens of microservices
+
+* Possibilita' di creare nuove cose sopra i microservizi gia' esistenti
+* Sopportano i fallimenti, un singolo servizio puo' fallire, ma cio' non consegue il fallimento di tutti gli altri.
+* "You build, you own": ogni microservizio ha associato un team responsabile del servizio, che lo segue dalla progettazione al rilascio.
+* Deprecazione accellerata, viene piu' semplice deprecare i microservizi
+* I dati non sono centralizzati
+* E' possibile sviluppare ogni microservizio al ritmo che si vuole, i microservizi piu' cruciali avranno release piu' lente
+* possibilita' di fare test di continuous integration, smoke teste ed altri, aumentnando l'affidabilita' dei microservizi.
+
+# Programmable paltforms
+
+Nascono dalla necessita' di pacchettizzare le app con i componenti aggiuntivi di cui hanno bisogno (Apps+libs+tools).
+
+Questo lo si puo' fare con i container, un modo standard di pacchettizzare le applicazioni e le sue dipendenze in modo che puo' essere eseguito su piu' piattaforme senza cambiamenti.
+
+I container isolano l'interno dall'esterno dell'applicazione, garantendo standardizzazione.
+
+## Container e VMM
+
+I container sono piu' light della macchine virtuali e sono indipendenti dall'infrastruttura.
+
+Una app che gira in una VMM dipende dal sistema operativo della VM.
+
+## Docker
+
+Docker e' un implementazione della tecnologia dei container che si propone  di rendere semplice a tutti la creazione di applicazioni distribuite.
+
+### Docker basics
+
+* Container: unita' dove l'applicazione vive e viene eseguita, una istanza eseguibile di un immagine
+	* Un container puo' interagire con altri container o condividere risorse con il sistema operativo che lo sta eseguendo
+* Image: uno snapshot read only di un container, disponibile su Docker Hub, usato per la creazione di altri container.
+	* To build an image, you create a Dockerfile with a simple syntax for defining the steps needed to create the image and run it. Each instruction in a Dockerfile creates a layer in the image. When you change the Dockerfile and rebuild the image, only
+those layers which have changed are rebuilt.
+* Docker Hub: una registry che salva e rende disponibili le immagini
+* Docker engine: un programma che crea e gestisce i container
+	* composto da un server, un API REST che specifica come i programmi possono interagire con il server, una applicazione da linea di comando (che comunica comunque tramite l'API REST, tanto che posso connettermi a docker engine remoti)
+
+### Docker Swarm
+
+Multi-container, multi-machine applications are made possible by joining multiple machines into a “Dockerized” cluster called a swarm.
+
+A swarm is a group of machines that are running Docker and have been joined into a cluster.
+
+The machines in a swarm can be physical or virtual. After joining a swarm, they are referred to as nodes.
+
+### Benefici Docker
+
+* Facilita' di utilizzo (gira ovunque, anche su un laptop, e scrivere le configurazioni e' semplice)
+* Velocita' ed efficienza: usano meno risorse di una VM e si accendono in meno di qualche secondo
+* Disponibilita' di una catalogo centrale (Docker Hub) nel quale posso cercare l'immagine che fa al caso mio
+* Modulare e facilmente scalabile: segue molto la logica dei microservizi, posso spezzettare in molti container a praticamente costo zero
+
+# Fog Computing
+
+## System insights
+
+Systems of insight “power the digital business of the future”
+
+E' un ciclo di attivita':
+
+* scoprire gli  insights  piu' importanti
+* inserirli nel software usato dagli utenti
+* misura e apprendi dai risultati derivati dall'espansione del software
+
+A system of insight is equal parts people, process, and technology
+
+## Fog Computing
+
+Fog Computing estende il paradigma cloud ai nodi esterni della rete abilitando nuovi tipi di software e servizi.
+
+Caratteristiche:
+
+* Bassa latenza
+* Location awareness
+* Distribuzione geografica: funziona particolarmente bene per consegnare dati a veicoli in movimento, o per coordinare applicazioni a livello di citta'
+* Mobilita': it is essential for many Fog applications to communicate directly with mobile devices, and thus support mobility techniques decoupling host identity from location identity, and requiring a distributed directory system.
+* Numero elevato di nodi: conseguenza diretta della distribuzione geografica
+* Accesso Wireless
+* Usa lo streaming di dati e applicazioni in tempo reale
+* Eterogeneo: i nodi fog sono in diversi formati sia di dimensione che ambito di applicazione
+* Interoperabilita' e federazione con vari provider: e' necessario che i provider dei servizi collaborino in modo da garantire il funzionamento dei dispositivi fog con performance accettabili
+
+Il Fog va bene per fare servizi di Internet of Things e servizi come quelli di guida autonoma, smart cities e in generale "Wireless Sensors and Actuators Networks (WSANs)"
+
+Il Fog computing e' una piattaforma altamente virtualizzata che fornisce potenza di calcolo, storage, e servizi di networking tra i dispositivi dell'utente e i centri di cloud computing.
+
+The origins of the Fog can be traced to early proposals to support endpoints with rich services at the edge of the network, including applications with low latency requirements
+
+
+## Fog e Cloud
+
+While Fog nodes provide localization, therefore enabling low latency and context awareness, the Cloud provides global centralization.
+
+Alcuni dati raccolti vengono analizzati direttamente sui nodi fog, mentre altri devono essere inviati a tier di calcolo superiori, in particolare per gestire le attivita' di "visualization and reporting" e "systems and processes", che non richiedono risoluzione temporale alta tanto quanto quella dei nodi edge.
+
+Piu' si sale piu' ci si avvicina alla cloud, che fornisce il controllo e la tier a livello globale.
+
+* An edge data center quite likely will be accommodated in an existing computer room (~20 m2) or small data center (~150 m2) where an IT infrastructure is present.
+* The cloud data center is a typical large data center (~6000 m2) usually established at a cloud provider location.
+* The enterprise data center (ranging from ~600 m2 to ~6000 m2) is the traditional legacy data center.
+
+## Compound Data Center
+
+Paradigma di realizzazione dei data center che consiste nel separe i data center a seconda di quello che devono fare, con hardware e software
+
+Combinando questi data center si ottiene un data center composto piu' ottimizzato a gestire il data processing di tutto il procedimentod di decisione.
+
+In particolare identifichiamo 3 tipi di data center
+
+* edge data center: che fornisce servizi di data collection, formattazione, filtering, aggregazione
+	* processa i dati locali con una latenza ridotta
+	* necessari anche perche' certi tipi di dati non possono essere mandati a causa di determinate leggi
+* cloud data center: forniscono servizi agli edge data center, il loro scopo principale e' derivare conoscenza dai dati proveniente dagli edge.
+	* Si applicano algoritmi di analytics, analisi semantiche ed altro. Offrono anche servizi di deep learning usati poi dal layer di data representation e abstraction
+* entrerprise data center: a partire dalle conoscenze prese da tutti i middle layer cloud data center utilizzano la conoscenza per eseguir e le azioni piu' appropriate.
