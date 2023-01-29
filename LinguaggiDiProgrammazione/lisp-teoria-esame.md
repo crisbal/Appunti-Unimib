@@ -81,7 +81,7 @@ Ricorsione in coda:
 
 # Quali sono le tre fasi che permettono di applicare il paradigma funzionale?
 
-???????????
+Le tre fasi sono READ, EVAL, PRINT. In particolare, l'ambiente di programmazione viene chiamato REPL, perchè è un ciclo (LOOP) che ad ogni interazione accetta input da parte dell'utente (READ), li valuta (EVAL) e restituisce il risultato all'utente (PRINT). Di questo tipo è il sistema LISP.
 
 # Programmazione Funzionale
 
